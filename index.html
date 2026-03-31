@@ -3476,17 +3476,30 @@ function addTooltips(html) {
   }).join('');
 }
 // ── Read / Unread system ──────────────────────────────────────────────────────
-const READ_KEY = 'fieldguide_read_v1';
 let showUnreadOnly = false;
 
 function getRead() {
-  try { return new Set(JSON.parse(localStorage.getItem(READ_KEY) || '[]')); }
-  catch(e) { return new Set(); }
+  const m = location.hash.match(/[#&]r=([^&]*)/);
+  if (m && m[1]) return new Set(m[1].split(',').filter(Boolean).map(Number));
+  return new Set();
 }
 
 function saveRead(readSet) {
-  try { localStorage.setItem(READ_KEY, JSON.stringify([...readSet])); } catch(e) {}
+  const val = [...readSet].sort((a, b) => a - b).join(',');
+  history.replaceState(null, '', val ? '#r=' + val : location.pathname);
 }
+
+// Migrate from localStorage if present and no hash yet
+(function migrateLegacy() {
+  if (location.hash && location.hash !== '#') return;
+  try {
+    const stored = localStorage.getItem('fieldguide_read_v1');
+    if (!stored) return;
+    const ids = JSON.parse(stored);
+    if (ids.length) saveRead(new Set(ids));
+    localStorage.removeItem('fieldguide_read_v1');
+  } catch(e) {}
+})();
 
 function toggleRead(id) {
   const r = getRead();

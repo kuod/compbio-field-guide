@@ -399,6 +399,7 @@ const DATA = [
   // ── SEQUENCING ──────────────────────────────────────────────────────────────
   {
     id: 1, year: 2011, cats: ["sequencing"], impact: 5,
+    citations: 2274,
     title: "Pacific Biosciences SMRT Sequencing: long reads arrive",
     authors: "Eid et al. / PacBio",
     journal: "Science 2009 / PacBio platform launch 2011",
@@ -410,6 +411,7 @@ const DATA = [
   },
   {
     id: 2, year: 2012, cats: ["sequencing"], impact: 5,
+    citations: 783,
     title: "Oxford Nanopore MinION: real-time portable sequencing",
     authors: "Bayley, Oxford Nanopore Technologies",
     journal: "Nature Biotechnology 2016 (first major peer-reviewed study)",
@@ -421,6 +423,7 @@ const DATA = [
   },
   {
     id: 3, year: 2019, cats: ["sequencing"], impact: 4,
+    citations: 5755,
     title: "Linked-Read / 10x Chromium for WGS phasing",
     authors: "Zheng et al., 10x Genomics",
     journal: "Nature Biotechnology 2016",
@@ -432,6 +435,7 @@ const DATA = [
   },
   {
     id: 4, year: 2022, cats: ["sequencing"], impact: 5,
+    citations: 2275,
     title: "Telomere-to-Telomere (T2T) human genome assembly",
     authors: "Nurk et al., T2T Consortium",
     journal: "Science 2022",
@@ -445,6 +449,7 @@ const DATA = [
   // ── CRISPR ───────────────────────────────────────────────────────────────────
   {
     id: 5, year: 2012, cats: ["crispr"], impact: 5,
+    citations: 14910,
     title: "CRISPR-Cas9 programmable genome editing",
     authors: "Jinek, Chylinski, Fonfara, Hauer, Doudna, Charpentier",
     journal: "Science 2012",
@@ -456,6 +461,7 @@ const DATA = [
   },
   {
     id: 6, year: 2016, cats: ["crispr"], impact: 5,
+    citations: 2052,
     title: "GUIDE-seq: genome-wide unbiased off-target detection",
     authors: "Tsai et al., Joung Lab",
     journal: "Nature Biotechnology 2015",
@@ -467,6 +473,7 @@ const DATA = [
   },
   {
     id: 7, year: 2018, cats: ["crispr"], impact: 5,
+    citations: 4421,
     title: "Base editing: C-to-T and A-to-G without DSBs",
     authors: "Komor et al. (BE3, 2016); Gaudelli et al. (ABE, 2017)",
     journal: "Nature 2016 & 2017",
@@ -478,6 +485,7 @@ const DATA = [
   },
   {
     id: 8, year: 2019, cats: ["crispr"], impact: 5,
+    citations: 54,
     title: "Prime editing: versatile small insertions/deletions/all 12 substitutions",
     authors: "Anzalone et al., Liu Lab",
     journal: "Nature 2019",
@@ -489,6 +497,7 @@ const DATA = [
   },
   {
     id: 9, year: 2020, cats: ["crispr"], impact: 4,
+    citations: 1640,
     title: "CRISPRi/CRISPRa genome-wide functional screens",
     authors: "Kampmann Lab, Weissman Lab, Gilbert et al.",
     journal: "Nature Methods 2014 (dCas9-KRAB), Cell 2014 (SAM activation)",
@@ -500,6 +509,7 @@ const DATA = [
   },
   {
     id: 10, year: 2022, cats: ["crispr"], impact: 4,
+    citations: 1063,
     title: "CRISPR base editing in vivo: NTLA-2001 (TTR amyloidosis)",
     authors: "Gillmore et al., Intellia/Regeneron",
     journal: "New England Journal of Medicine 2021",
@@ -513,6 +523,7 @@ const DATA = [
   // ── ML / AI ──────────────────────────────────────────────────────────────────
   {
     id: 11, year: 2016, cats: ["ml_ai"], impact: 5,
+    citations: 2635,
     title: "DeepBind / DeepSEA: CNNs for regulatory sequence",
     authors: "Alipanahi et al. (DeepBind 2015); Zhou & Troyanskaya (DeepSEA 2015)",
     journal: "Nature Biotechnology 2015",
@@ -524,6 +535,7 @@ const DATA = [
   },
   {
     id: 12, year: 2018, cats: ["ml_ai", "single_cell"], impact: 5,
+    citations: 2150,
     title: "scVI / deep generative models for single-cell genomics",
     authors: "Lopez et al., Yosef Lab",
     journal: "Nature Methods 2018",
@@ -535,6 +547,7 @@ const DATA = [
   },
   {
     id: 13, year: 2021, cats: ["ml_ai", "foundation_models"], impact: 5,
+    citations: 34387,
     title: "AlphaFold2: protein structure from sequence",
     authors: "Jumper et al., DeepMind",
     journal: "Nature 2021",
@@ -546,6 +559,7 @@ const DATA = [
   },
   {
     id: 14, year: 2021, cats: ["ml_ai", "foundation_models"], impact: 5,
+    citations: 4141,
     title: "ESM-2 / ESMFold: protein language models",
     authors: "Lin et al., Meta AI (FAIR)",
     journal: "Science 2023",
@@ -557,6 +571,7 @@ const DATA = [
   },
   {
     id: 15, year: 2021, cats: ["ml_ai", "foundation_models"], impact: 5,
+    citations: 1065,
     title: "Enformer: long-range gene expression prediction",
     authors: "Avsec et al., DeepMind",
     journal: "Nature Methods 2021",
@@ -568,6 +583,7 @@ const DATA = [
   },
   {
     id: 16, year: 2023, cats: ["ml_ai", "foundation_models"], impact: 5,
+    citations: 182,
     title: "Evo / Hyena: DNA foundation models at genome scale",
     authors: "Nguyen et al., Hazy Research / Arc Institute",
     journal: "Science 2024",
@@ -579,6 +595,7 @@ const DATA = [
   },
   {
     id: 17, year: 2023, cats: ["ml_ai", "gene_editing"], impact: 4,
+    citations: 838,
     title: "RFdiffusion / ProteinMPNN: generative protein design",
     authors: "Watson et al. (RFdiffusion, 2023); Dauparas et al. (ProteinMPNN, 2022)",
     journal: "Nature 2023 / Science 2022",
@@ -590,6 +607,7 @@ const DATA = [
   },
   {
     id: 18, year: 2024, cats: ["ml_ai", "foundation_models"], impact: 5,
+    citations: 9663,
     title: "AlphaFold3: biomolecular complex prediction",
     authors: "Abramson et al., Google DeepMind",
     journal: "Nature 2024",
@@ -603,6 +621,7 @@ const DATA = [
   // ── SINGLE CELL ──────────────────────────────────────────────────────────────
   {
     id: 19, year: 2015, cats: ["single_cell"], impact: 5,
+    citations: 6402,
     title: "Drop-seq: droplet microfluidics for massively parallel scRNA-seq",
     authors: "Macosko et al., McCarroll Lab",
     journal: "Cell 2015",
@@ -614,6 +633,7 @@ const DATA = [
   },
   {
     id: 20, year: 2018, cats: ["single_cell"], impact: 5,
+    citations: 2147,
     title: "CITE-seq: protein + RNA co-profiling via antibody-oligo barcodes",
     authors: "Stoeckius et al., Satija Lab",
     journal: "Nature Methods 2017",
@@ -625,6 +645,7 @@ const DATA = [
   },
   {
     id: 21, year: 2022, cats: ["single_cell", "crispr"], impact: 5,
+    citations: 455,
     title: "Perturb-seq: pooled CRISPR screens with single-cell readout",
     authors: "Dixit et al. (2016); Replogle et al. (2022) — Genome-wide Perturb-seq",
     journal: "Cell 2016; Cell 2022",
@@ -636,6 +657,7 @@ const DATA = [
   },
   {
     id: 22, year: 2019, cats: ["single_cell", "epigenomics"], impact: 5,
+    citations: 808,
     title: "scATAC-seq: single-cell chromatin accessibility",
     authors: "Cusanovich et al. (sci-ATAC-seq 2015); 10x Chromium ATAC 2019",
     journal: "Science 2015; Nature Biotechnology 2019",
@@ -647,6 +669,7 @@ const DATA = [
   },
   {
     id: 23, year: 2020, cats: ["single_cell"], impact: 4,
+    citations: 2362,
     title: "RNA velocity and trajectory inference",
     authors: "La Manno et al. (velocyto 2018); Bergen et al. (scVelo 2020)",
     journal: "Nature 2018; Nature Biotechnology 2020",
@@ -658,6 +681,7 @@ const DATA = [
   },
   {
     id: 24, year: 2023, cats: ["single_cell", "foundation_models"], impact: 4,
+    citations: 871,
     title: "Universal Cell Embeddings / foundation models for single-cell",
     authors: "Rosen et al. (UCE 2023); Theodoris et al. (Geneformer 2023); Chen & Zou (scGPT 2024)",
     journal: "bioRxiv 2023; Nature 2023; Nature Methods 2024",
@@ -671,6 +695,7 @@ const DATA = [
   // ── IMMUNOLOGY ───────────────────────────────────────────────────────────────
   {
     id: 25, year: 2013, cats: ["immunology"], impact: 5,
+    citations: 0,
     title: "Immune repertoire sequencing (Rep-seq / TCR/BCR-seq)",
     authors: "Robins et al. (Adaptive Biotechnologies); multiple groups",
     journal: "Blood 2009 / Science Translational Medicine 2012",
@@ -682,6 +707,7 @@ const DATA = [
   },
   {
     id: 26, year: 2018, cats: ["immunology", "ml_ai"], impact: 5,
+    citations: 310,
     title: "TCR-pMHC specificity prediction and neoantigen identification",
     authors: "Glanville et al. (2018); Jurtz et al. — NetMHCpan",
     journal: "Nature 2018; Nucleic Acids Research 2017",
@@ -693,6 +719,7 @@ const DATA = [
   },
   {
     id: 27, year: 2020, cats: ["immunology"], impact: 5,
+    citations: 10998,
     title: "COVID-19 mRNA vaccine immunogenicity & immune correlates",
     authors: "Polack et al. (BNT162b2); Baden et al. (mRNA-1273)",
     journal: "New England Journal of Medicine 2020",
@@ -704,6 +731,7 @@ const DATA = [
   },
   {
     id: 28, year: 2021, cats: ["immunology"], impact: 4,
+    citations: 1521,
     title: "CAR-T cell therapy: axicabtagene and tisagenlecleucel mechanisms",
     authors: "Neelapu et al. (axi-cel, 2017); Maude et al. (tisa-cel, 2018)",
     journal: "New England Journal of Medicine 2017 & 2018",
@@ -715,6 +743,7 @@ const DATA = [
   },
   {
     id: 29, year: 2023, cats: ["immunology", "single_cell"], impact: 4,
+    citations: 405,
     title: "Multimodal immune profiling: DOGMA-seq / TEA-seq",
     authors: "Mimitou et al. (DOGMA-seq 2021); Swanson et al. (TEA-seq 2021)",
     journal: "Nature Biotechnology 2021",
@@ -728,6 +757,7 @@ const DATA = [
   // ── EPIGENOMICS ──────────────────────────────────────────────────────────────
   {
     id: 30, year: 2013, cats: ["epigenomics"], impact: 5,
+    citations: 16635,
     title: "ENCODE Project Phase 2: functional elements in the human genome",
     authors: "ENCODE Consortium",
     journal: "Nature 2012",
@@ -739,6 +769,7 @@ const DATA = [
   },
   {
     id: 31, year: 2015, cats: ["epigenomics"], impact: 5,
+    citations: 2501,
     title: "WGBS / RRBS: single-base methylation mapping",
     authors: "Lister et al. (WGBS 2009); Meissner et al. (RRBS 2008)",
     journal: "Nature 2009",
@@ -750,6 +781,7 @@ const DATA = [
   },
   {
     id: 32, year: 2017, cats: ["epigenomics"], impact: 5,
+    citations: 8168,
     title: "Hi-C and 3D genome organization: TADs, compartments, loops",
     authors: "Lieberman-Aiden et al. (Hi-C 2009); Rao et al. (in situ Hi-C 2014)",
     journal: "Science 2009; Cell 2014",
@@ -761,6 +793,7 @@ const DATA = [
   },
   {
     id: 33, year: 2019, cats: ["epigenomics"], impact: 4,
+    citations: 1671,
     title: "CUT&RUN and CUT&TAG: low-input chromatin profiling",
     authors: "Skene & Henikoff (CUT&RUN 2017); Kaya-Okur et al. (CUT&TAG 2019)",
     journal: "eLife 2017; Nature Communications 2019",
@@ -774,6 +807,7 @@ const DATA = [
   // ── DRUG DISCOVERY ───────────────────────────────────────────────────────────
   {
     id: 34, year: 2016, cats: ["drug_discovery"], impact: 5,
+    citations: 52,
     title: "Deep learning for drug-target interaction (DeepDTA, AtomNet)",
     authors: "Öztürk et al. (DeepDTA 2018); Wallach et al. (AtomNet 2015)",
     journal: "Bioinformatics 2018; arXiv 2015",
@@ -785,6 +819,7 @@ const DATA = [
   },
   {
     id: 35, year: 2019, cats: ["drug_discovery"], impact: 5,
+    citations: 1622,
     title: "Chemprop: directed message passing neural networks for molecular property prediction",
     authors: "Yang et al., Coley Group / MIT",
     journal: "Journal of Chemical Information and Modeling 2019",
@@ -796,6 +831,7 @@ const DATA = [
   },
   {
     id: 36, year: 2020, cats: ["pop_genomics", "drug_discovery"], impact: 5,
+    citations: 6512,
     title: "Genetic target validation: human genetics for drug development",
     authors: "Nelson et al. (Science 2015); Hingorani et al.",
     journal: "Science 2015; various",
@@ -807,6 +843,7 @@ const DATA = [
   },
   {
     id: 37, year: 2022, cats: ["drug_discovery", "foundation_models"], impact: 5,
+    citations: 1278,
     title: "BioGPT / Med-PaLM: large language models for biomedical literature",
     authors: "Luo et al. (BioGPT 2022); Singhal et al. (Med-PaLM 2023)",
     journal: "Briefings in Bioinformatics 2022; Nature 2023",
@@ -818,6 +855,7 @@ const DATA = [
   },
   {
     id: 38, year: 2023, cats: ["ml_ai", "drug_discovery"], impact: 5,
+    citations: 375,
     title: "DiffSBDD / TargetDiff: structure-based drug design with diffusion",
     authors: "Schneuing et al. (DiffSBDD); Guan et al. (TargetDiff)",
     journal: "arXiv / ICLR 2023",
@@ -831,6 +869,7 @@ const DATA = [
   // ── SPATIAL ──────────────────────────────────────────────────────────────────
   {
     id: 39, year: 2016, cats: ["spatial"], impact: 5,
+    citations: 2418,
     title: "seqFISH / MERFISH: spatial transcriptomics via single-molecule imaging",
     authors: "Shah et al. (seqFISH 2016); Chen et al. (MERFISH 2015)",
     journal: "Neuron 2016; Science 2015",
@@ -842,6 +881,7 @@ const DATA = [
   },
   {
     id: 40, year: 2019, cats: ["spatial"], impact: 5,
+    citations: 2898,
     title: "Visium spatial transcriptomics: tissue-scale mRNA profiling",
     authors: "Ståhl et al. (original ST 2016); 10x Genomics Visium",
     journal: "Science 2016; 10x platform 2019",
@@ -853,6 +893,7 @@ const DATA = [
   },
   {
     id: 41, year: 2021, cats: ["spatial"], impact: 4,
+    citations: 991,
     title: "Slide-seq V2 / Stereo-seq: near-single-cell spatial resolution",
     authors: "Stickels et al. (Slide-seqV2 2021); Chen et al. (Stereo-seq 2022)",
     journal: "Nature Biotechnology 2021; Cell 2022",
@@ -866,6 +907,7 @@ const DATA = [
   // ── TOOLS / INFRA ────────────────────────────────────────────────────────────
   {
     id: 42, year: 2013, cats: ["tools"], impact: 5,
+    citations: 91,
     title: "STAR aligner: fast splice-aware RNA-seq alignment",
     authors: "Dobin et al.",
     journal: "Bioinformatics 2013",
@@ -877,6 +919,7 @@ const DATA = [
   },
   {
     id: 43, year: 2015, cats: ["tools"], impact: 5,
+    citations: 257,
     title: "Seurat: single-cell analysis toolkit",
     authors: "Satija et al.",
     journal: "Nature Biotechnology 2015",
@@ -888,6 +931,7 @@ const DATA = [
   },
   {
     id: 44, year: 2017, cats: ["tools"], impact: 5,
+    citations: 3214,
     title: "Snakemake / Nextflow: workflow managers for reproducible pipelines",
     authors: "Köster & Rahmann (Snakemake 2012); Di Tommaso et al. (Nextflow 2017)",
     journal: "Bioinformatics 2012; Nature Biotechnology 2017",
@@ -899,6 +943,7 @@ const DATA = [
   },
   {
     id: 45, year: 2018, cats: ["tools"], impact: 4,
+    citations: 7123,
     title: "Scanpy / AnnData: Python single-cell analysis ecosystem",
     authors: "Wolf et al.",
     journal: "Genome Biology 2018",
@@ -910,6 +955,7 @@ const DATA = [
   },
   {
     id: 46, year: 2020, cats: ["tools"], impact: 4,
+    citations: 1347,
     title: "GATK4 / DeepVariant: germline and somatic variant calling",
     authors: "McKenna et al. (GATK); Poplin et al. (DeepVariant 2018)",
     journal: "Genome Research 2010; Nature Biotechnology 2018",
@@ -932,6 +978,7 @@ const DATA = [
   },
   {
     id: 48, year: 2022, cats: ["tools"], impact: 4,
+    citations: 2,
     title: "CellRanger / Cell Ranger ARC: 10x Genomics data processing",
     authors: "10x Genomics",
     journal: "10x Genomics platform",
@@ -956,6 +1003,7 @@ const DATA = [
   // ── 25 NEW ENTRIES ────────────────────────────────────────────────────────────
   {
     id: 50, year: 2013, cats: ["sequencing"], impact: 5,
+    citations: 3814,
     title: "Illumina NovaSeq / HiSeq X: population-scale short-read sequencing",
     authors: "Illumina Inc.",
     journal: "Platform launch 2014 (HiSeq X) / 2017 (NovaSeq)",
@@ -967,6 +1015,7 @@ const DATA = [
   },
   {
     id: 51, year: 2013, cats: ["sequencing"], impact: 4,
+    citations: 8884,
     title: "RNA-seq differential expression analysis: edgeR / DESeq2",
     authors: "Robinson et al. (edgeR 2010); Love et al. (DESeq2 2014)",
     journal: "Bioinformatics 2010; Genome Biology 2014",
@@ -978,6 +1027,7 @@ const DATA = [
   },
   {
     id: 52, year: 2014, cats: ["crispr"], impact: 4,
+    citations: 3860,
     title: "CRISPR genome-wide knockout screens (Brunello/GeCKO libraries)",
     authors: "Shalem et al. (GeCKO 2014); Doench et al. (Brunello 2016)",
     journal: "Science 2014; Nature Biotechnology 2016",
@@ -989,6 +1039,7 @@ const DATA = [
   },
   {
     id: 53, year: 2014, cats: ["epigenomics", "sequencing"], impact: 5,
+    citations: 5755,
     title: "ATAC-seq: fast, low-input chromatin accessibility profiling",
     authors: "Buenrostro et al., Greenleaf Lab",
     journal: "Nature Methods 2013",
@@ -1000,6 +1051,7 @@ const DATA = [
   },
   {
     id: 54, year: 2015, cats: ["tools"], impact: 5,
+    citations: 10582,
     title: "BWA-MEM / Bowtie2: short-read DNA alignment",
     authors: "Li & Durbin (BWA 2009; BWA-MEM 2013); Langmead & Salzberg (Bowtie2 2012)",
     journal: "Bioinformatics 2009; Nature Methods 2012",
@@ -1011,6 +1063,7 @@ const DATA = [
   },
   {
     id: 55, year: 2015, cats: ["ml_ai"], impact: 4,
+    citations: 51532,
     title: "Random forests and gradient boosting for genomics (XGBoost/LightGBM)",
     authors: "Breiman (RF 2001); Chen & Guestrin (XGBoost 2016); Ke et al. (LightGBM 2017)",
     journal: "Machine Learning 2001; KDD 2016; NIPS 2017",
@@ -1022,6 +1075,7 @@ const DATA = [
   },
   {
     id: 56, year: 2016, cats: ["epigenomics"], impact: 4,
+    citations: 2351,
     title: "chromHMM / Segway: chromatin state segmentation",
     authors: "Ernst & Kellis (chromHMM 2012); Hoffman et al. (Segway 2012)",
     journal: "Nature Methods 2012",
@@ -1033,6 +1087,7 @@ const DATA = [
   },
   {
     id: 57, year: 2017, cats: ["single_cell"], impact: 4,
+    citations: 7279,
     title: "Harmony: fast scalable integration of single-cell data across batches",
     authors: "Korsunsky et al., Raychaudhuri Lab",
     journal: "Nature Methods 2019",
@@ -1044,6 +1099,7 @@ const DATA = [
   },
   {
     id: 58, year: 2017, cats: ["drug_discovery"], impact: 4,
+    citations: 8748,
     title: "Graph neural networks for molecular property prediction (MPNN/SchNet)",
     authors: "Gilmer et al. (MPNN 2017); Schütt et al. (SchNet 2017)",
     journal: "ICML 2017; Journal of Chemical Physics 2018",
@@ -1055,6 +1111,7 @@ const DATA = [
   },
   {
     id: 59, year: 2018, cats: ["tools"], impact: 4,
+    citations: 8408,
     title: "Salmon / kallisto: ultra-fast RNA-seq quantification",
     authors: "Patro et al. (Salmon 2017); Bray et al. (kallisto 2016)",
     journal: "Nature Methods 2017; Nature Biotechnology 2016",
@@ -1066,6 +1123,7 @@ const DATA = [
   },
   {
     id: 60, year: 2018, cats: ["immunology", "tools"], impact: 4,
+    citations: 3370,
     title: "Immune cell deconvolution: CIBERSORT / CIBERSORTx",
     authors: "Newman et al., Alizadeh Lab",
     journal: "Nature Methods 2015; Nature Biotechnology 2019",
@@ -1077,6 +1135,7 @@ const DATA = [
   },
   {
     id: 61, year: 2019, cats: ["ml_ai", "foundation_models"], impact: 4,
+    citations: 112423,
     title: "BERT / Transformer pretraining and transfer learning",
     authors: "Devlin et al. (BERT 2019); Vaswani et al. (Transformer 2017)",
     journal: "NAACL 2019; NeurIPS 2017",
@@ -1088,6 +1147,7 @@ const DATA = [
   },
   {
     id: 62, year: 2019, cats: ["drug_discovery"], impact: 4,
+    citations: 3353,
     title: "Variational autoencoders for de novo molecular generation (JTVAE/CVAE)",
     authors: "Jin et al. (JTVAE 2018); Gómez-Bombarelli et al. (CVAE 2018)",
     journal: "ICML 2018; ACS Central Science 2018",
@@ -1099,6 +1159,7 @@ const DATA = [
   },
   {
     id: 63, year: 2020, cats: ["single_cell"], impact: 4,
+    citations: 11794,
     title: "UMAP: dimensionality reduction for single-cell visualization",
     authors: "McInnes, Healy, Melville",
     journal: "arXiv 2018; Nature Biotechnology 2019",
@@ -1132,6 +1193,7 @@ const DATA = [
   },
   {
     id: 66, year: 2021, cats: ["ml_ai"], impact: 4,
+    citations: 6331,
     title: "Mamba / S4: state-space models for long sequences",
     authors: "Gu et al. (S4 2022); Gu & Dao (Mamba 2024)",
     journal: "ICLR 2022; arXiv 2023",
@@ -1143,6 +1205,7 @@ const DATA = [
   },
   {
     id: 67, year: 2021, cats: ["epigenomics"], impact: 4,
+    citations: 5946,
     title: "Roadmap Epigenomics: reference epigenome atlas",
     authors: "Roadmap Epigenomics Consortium",
     journal: "Nature 2015",
@@ -1165,6 +1228,7 @@ const DATA = [
   },
   {
     id: 69, year: 2022, cats: ["immunology"], impact: 5,
+    citations: 7127,
     title: "AlphaFold2 for antibody structure prediction and design",
     authors: "Jumper et al. (AF2 2021); Ruffolo et al. (IgFold 2023); various",
     journal: "Nature 2021; Nature Methods 2023",
@@ -1176,6 +1240,7 @@ const DATA = [
   },
   {
     id: 70, year: 2022, cats: ["drug_discovery"], impact: 4,
+    citations: 2547,
     title: "Organoids and patient-derived models for translational genomics",
     authors: "Clevers Lab (intestinal organoids 2009); Drost & Clevers (review 2018)",
     journal: "Cell Stem Cell 2009; Nature Reviews Cancer 2018",
@@ -1187,6 +1252,7 @@ const DATA = [
   },
   {
     id: 71, year: 2023, cats: ["ml_ai", "gene_editing"], impact: 5,
+    citations: 28919,
     title: "Diffusion models for biological sequence and structure design",
     authors: "Various (Ho et al. DDPM 2020; AF3 2024; RFdiffusion 2023)",
     journal: "NeurIPS 2020; Nature 2024; Nature 2023",
@@ -1198,6 +1264,7 @@ const DATA = [
   },
   {
     id: 72, year: 2023, cats: ["tools"], impact: 4,
+    citations: 361,
     title: "DuckDB / Polars: fast analytical queries on genomic data",
     authors: "Raasveldt & Mühleisen (DuckDB 2019); Vink et al. (Polars 2021)",
     journal: "SIGMOD 2019; GitHub/crates.io",
@@ -1233,6 +1300,7 @@ const DATA = [
   // ── GENE EDITING / LARGE INSERTIONS / PREPRINTS ──────────────────────────────
   {
     id: 75, year: 2019, cats: ["gene_editing"], impact: 5,
+    citations: 1041,
     title: "Homology-independent targeted integration (HITI) for large cargo insertion",
     authors: "Suzuki et al., Salk Institute",
     journal: "Nature 2016",
@@ -1244,6 +1312,7 @@ const DATA = [
   },
   {
     id: 76, year: 2020, cats: ["gene_editing"], impact: 5,
+    citations: 327,
     title: "Programmable addition via site-specific targeting elements (PASTE)",
     authors: "Yarnall et al., Bhatt/Liu Labs",
     journal: "Nature Biotechnology 2023",
@@ -1255,6 +1324,7 @@ const DATA = [
   },
   {
     id: 77, year: 2021, cats: ["gene_editing"], impact: 5,
+    citations: 153,
     title: "Retron-mediated recombineering for precise gene correction",
     authors: "Sharon et al. / Bhatt Lab; Schubert et al.",
     journal: "Cell 2021; Nature 2022",
@@ -1266,6 +1336,7 @@ const DATA = [
   },
   {
     id: 78, year: 2022, cats: ["gene_editing"], impact: 5,
+    citations: 77,
     title: "Transposon-based large cargo insertion: CHARM / TnpB / IS110",
     authors: "Yao et al. (CHARM 2022); Schultz et al. (IS110 2023); Altae-Tran et al. (TnpB 2022)",
     journal: "Nature 2022; Nature 2023; Science 2022",
@@ -1277,6 +1348,7 @@ const DATA = [
   },
   {
     id: 79, year: 2022, cats: ["gene_editing"], impact: 4,
+    citations: 361,
     title: "Epigenome editing: DNMT3A/TET1 fusion writers and erasers",
     authors: "Liu et al. (dCas9-DNMT3A 2018); Xu et al. (CRISPRoff 2021)",
     journal: "Nature 2018; Cell 2021",
@@ -1288,6 +1360,7 @@ const DATA = [
   },
   {
     id: 80, year: 2023, cats: ["gene_editing"], impact: 5,
+    citations: 4097,
     title: "CRISPR-Cas12a (Cpf1): staggered cuts, PAM-distal editing, and multiplex arrays",
     authors: "Zetsche et al., Zhang Lab",
     journal: "Cell 2015",
@@ -1299,6 +1372,7 @@ const DATA = [
   },
   {
     id: 81, year: 2023, cats: ["gene_editing"], impact: 5,
+    citations: 120,
     title: "Phage-assisted continuous evolution (PACE) for editing enzyme engineering",
     authors: "Esvelt et al. / Liu Lab (PACE 2011); various evolved editors",
     journal: "Nature 2011; multiple evolution papers 2020–2024",
@@ -1332,6 +1406,7 @@ const DATA = [
   },
   {
     id: 84, year: 2024, cats: ["gene_editing"], impact: 5,
+    citations: 433,
     title: "Twin prime editing (twinPE) and PEmax for large sequence replacement",
     authors: "Anzalone et al., Liu Lab",
     journal: "Nature Biotechnology 2022",
@@ -1343,6 +1418,7 @@ const DATA = [
   },
   {
     id: 85, year: 2024, cats: ["gene_editing"], impact: 4,
+    citations: 28,
     title: "Spacer-nick-mediated integration for kilobase-scale safe harbor insertion (SATI)",
     authors: "Nishiyama et al., Izpisua Belmonte Lab",
     journal: "Nature Communications 2022",
@@ -1354,6 +1430,7 @@ const DATA = [
   },
   {
     id: 86, year: 2024, cats: ["gene_editing"], impact: 5,
+    citations: 186,
     title: "Engineered virus-like particles (eVLPs) for nuclease RNP delivery",
     authors: "Banskota et al., Liu Lab",
     journal: "Cell 2022",
@@ -1365,6 +1442,7 @@ const DATA = [
   },
   {
     id: 87, year: 2025, cats: ["crispr", "gene_editing"], impact: 4,
+    citations: 675,
     title: "CRISPR off-target genotoxicity: chromosomal rearrangements and p53 pathway (preprint era)",
     authors: "Kosicki et al. (2018); Enache et al. (2020); Leibowitz et al. (2021); Weissman et al. (2023)",
     journal: "Nature Biotechnology 2018; Nature Genetics 2020; Nature Genetics 2021",
@@ -1376,6 +1454,7 @@ const DATA = [
   },
   {
     id: 88, year: 2025, cats: ["gene_editing"], impact: 5,
+    citations: 156,
     title: "Fanzor and other eukaryotic RNA-guided endonucleases (preprint 2023)",
     authors: "Saito et al., Zhang Lab",
     journal: "Nature 2023",
@@ -1398,6 +1477,7 @@ const DATA = [
   },
   {
     id: 90, year: 2025, cats: ["gene_editing"], impact: 4,
+    citations: 3055,
     title: "CRISPR-based diagnostics: SHERLOCK, DETECTR, and clinical POC applications",
     authors: "Gootenberg et al. (SHERLOCK 2017); Chen et al. (DETECTR 2018); various",
     journal: "Science 2017; Science 2018",
@@ -1411,6 +1491,7 @@ const DATA = [
   // ── N-OF-1 / PERSONALIZED GENE EDITING ────────────────────────────────────
   {
     id: 91, year: 2025, cats: ["gene_editing", "clinical_genomics"], impact: 5,
+    citations: 138,
     title: "Baby KJ: first patient-specific in vivo base editing (CPS1 deficiency)",
     authors: "Musunuru, Ahrens-Nicklas et al., CHOP / Penn / IGI-UC Berkeley",
     journal: "New England Journal of Medicine 2025 (DOI: 10.1056/NEJMoa2504747)",
@@ -1422,6 +1503,7 @@ const DATA = [
   },
   {
     id: 92, year: 2019, cats: ["rna_biology", "clinical_genomics"], impact: 5,
+    citations: 587,
     title: "Milasen: first N-of-1 personalized ASO therapy (Batten disease / CLN7)",
     authors: "Kim, Hu, Yu et al., Boston Children's Hospital / Harvard",
     journal: "New England Journal of Medicine 2019 (DOI: 10.1056/NEJMoa1813279)",
@@ -1433,6 +1515,7 @@ const DATA = [
   },
   {
     id: 93, year: 2025, cats: ["gene_editing"], impact: 4,
+    citations: 48,
     title: "N-of-1 base editing platform: Verve HEART-1 and Nexus trials (in vivo LNP liver)",
     authors: "Musunuru Lab / Verve Therapeutics; Kaul et al.",
     journal: "New England Journal of Medicine 2024 (PCSK9 base editing, Circulation 2023)",
@@ -1444,6 +1527,7 @@ const DATA = [
   },
   {
     id: 94, year: 2025, cats: ["gene_editing"], impact: 4,
+    citations: 1,
     title: "Peter Marks NEJM editorial: regulatory framework for N-of-1 gene therapy",
     authors: "Marks P, FDA CBER (now former director)",
     journal: "New England Journal of Medicine 2025 (DOI: 10.1056/NEJMe2505704)",
@@ -1458,6 +1542,7 @@ const DATA = [
 // ── CLINICAL GENOMICS / PRECISION MEDICINE ─────────────────────────────────
   {
     id: 95, year: 2017, cats: ["clinical_genomics"], impact: 5,
+    citations: 13,
     title: "Foundation Medicine CGP: comprehensive genomic profiling for oncology",
     authors: "Frampton et al., Foundation Medicine",
     journal: "Nature Medicine 2013 / FoundationOne CDx FDA approval 2017",
@@ -1469,6 +1554,7 @@ const DATA = [
   },
   {
     id: 96, year: 2019, cats: ["clinical_genomics", "sequencing"], impact: 5,
+    citations: 0,
     title: "Liquid biopsy: ctDNA detection and minimal residual disease (MRD)",
     authors: "Chabon et al. (CAPP-seq); Diehl et al.; multiple groups",
     journal: "Nature 2020; Nature Medicine 2018; multiple",
@@ -1480,6 +1566,7 @@ const DATA = [
   },
   {
     id: 97, year: 2020, cats: ["clinical_genomics"], impact: 4,
+    citations: 2260,
     title: "Tumor mutational burden (TMB) and MSI as immunotherapy biomarkers",
     authors: "Marabelle et al. (KEYNOTE-158); Le et al. (MSI-H pembrolizumab)",
     journal: "Journal of Clinical Oncology 2020; Science 2015",
@@ -1491,6 +1578,7 @@ const DATA = [
   },
   {
     id: 98, year: 2019, cats: ["clinical_genomics", "rna_biology", "ml_ai"], impact: 4,
+    citations: 2219,
     title: "SpliceAI: deep learning prediction of splicing-disrupting variants",
     authors: "Jaganathan et al., Illumina",
     journal: "Cell 2019",
@@ -1514,6 +1602,7 @@ const DATA = [
   // ── CELL & GENE THERAPY DELIVERY ────────────────────────────────────────────
   {
     id: 100, year: 2018, cats: ["delivery"], impact: 5,
+    citations: 1626,
     title: "Lipid nanoparticles (LNPs): ionizable lipid design for mRNA and gene editing delivery",
     authors: "Semple et al. (MC3 2010); Maier et al. (ALC-0315); Sabnis et al. (SM-102)",
     journal: "Nature Biotechnology 2010; Molecular Therapy 2018",
@@ -1525,6 +1614,7 @@ const DATA = [
   },
   {
     id: 101, year: 2016, cats: ["delivery"], impact: 5,
+    citations: 22,
     title: "AAV serotype biology and capsid engineering for in vivo gene therapy",
     authors: "Zincarelli et al. (2008); Deverman et al. (AAV-PHP.B 2016); multiple",
     journal: "Molecular Therapy 2008; Nature Neuroscience 2016",
@@ -1536,6 +1626,7 @@ const DATA = [
   },
   {
     id: 102, year: 2018, cats: ["delivery"], impact: 4,
+    citations: 559,
     title: "Ex vivo HSC gene therapy: lentiviral and RNP-based gene editing approaches",
     authors: "Cavazzana et al. (ADA-SCID); Thompson et al. (SCD lentiviral 2018)",
     journal: "New England Journal of Medicine 2018; multiple",
@@ -1547,6 +1638,7 @@ const DATA = [
   },
   {
     id: 103, year: 2020, cats: ["delivery"], impact: 4,
+    citations: 1690,
     title: "Selective Organ Targeting (SORT) LNPs: programmable extrahepatic delivery",
     authors: "Cheng et al., Siegwart Lab, UT Southwestern",
     journal: "Nature Nanotechnology 2020",
@@ -1570,6 +1662,7 @@ const DATA = [
   // ── POPULATION GENOMICS / HUMAN GENETICS ────────────────────────────────────
   {
     id: 105, year: 2020, cats: ["pop_genomics"], impact: 5,
+    citations: 8068,
     title: "gnomAD: genome aggregation database for variant frequency and constraint",
     authors: "Karczewski et al., MacArthur Lab / Broad Institute",
     journal: "Nature 2020",
@@ -1581,6 +1674,7 @@ const DATA = [
   },
   {
     id: 106, year: 2018, cats: ["pop_genomics"], impact: 5,
+    citations: 7317,
     title: "UK Biobank: 500,000-participant linked genetics and EHR resource",
     authors: "Bycroft et al., UK Biobank Consortium",
     journal: "Nature 2018",
@@ -1592,6 +1686,7 @@ const DATA = [
   },
   {
     id: 107, year: 2020, cats: ["pop_genomics"], impact: 5,
+    citations: 134,
     title: "Polygenic risk scores (PRS): methodology, clinical translation, and limitations",
     authors: "Choi et al. (PRSice-2); Khera et al. (GPS for CAD); Inouye et al.",
     journal: "Nature Protocols 2020; Nature Medicine 2018",
@@ -1603,6 +1698,7 @@ const DATA = [
   },
   {
     id: 108, year: 2020, cats: ["pop_genomics", "tools"], impact: 4,
+    citations: 901,
     title: "SuSiE / FINEMAP / coloc: fine-mapping and colocalization for causal variant ID",
     authors: "Wang et al. (SuSiE); Benner et al. (FINEMAP); Giambartolomei et al. (coloc)",
     journal: "Journal of the Royal Statistical Society B 2020; PLOS Genetics 2016; PLOS Genetics 2014",
@@ -1614,6 +1710,7 @@ const DATA = [
   },
   {
     id: 109, year: 2023, cats: ["pop_genomics"], impact: 4,
+    citations: 788,
     title: "Human Pangenome Reference: graph genome and structural variant discovery",
     authors: "Liao et al., Human Pangenome Reference Consortium (HPRC)",
     journal: "Nature 2023",
@@ -1626,6 +1723,7 @@ const DATA = [
   // ── PROTEOMICS / MULTI-OMICS ─────────────────────────────────────────────────
   {
     id: 110, year: 2018, cats: ["proteomics"], impact: 4,
+    citations: 732,
     title: "Single-cell proteomics: SCoPE-MS and nanodroplet approaches",
     authors: "Budnik et al. (SCoPE-MS 2018); Zhu et al. (nanodroplet 2018)",
     journal: "Genome Biology 2018; Nature Communications 2018",
@@ -1637,6 +1735,7 @@ const DATA = [
   },
   {
     id: 111, year: 2019, cats: ["proteomics"], impact: 5,
+    citations: 2238,
     title: "DIA-MS / SWATH proteomics: data-independent acquisition for reproducible quantification",
     authors: "Gillet et al. (SWATH 2012); Demichev et al. (DIA-NN 2020)",
     journal: "Molecular & Cellular Proteomics 2012; Nature Methods 2020",
@@ -1648,6 +1747,7 @@ const DATA = [
   },
   {
     id: 112, year: 2018, cats: ["proteomics"], impact: 4,
+    citations: 1563,
     title: "Proximity labeling: TurboID, BioID, and APEX2 for interactome mapping",
     authors: "Roux et al. (BioID 2012); Branon et al. (TurboID 2018); Lam et al. (APEX2 2015)",
     journal: "Journal of Cell Biology 2012; Nature Biotechnology 2018; Nature Methods 2015",
@@ -1659,6 +1759,7 @@ const DATA = [
   },
   {
     id: 113, year: 2021, cats: ["proteomics", "pop_genomics"], impact: 5,
+    citations: 1116,
     title: "Olink and SomaScan: large-scale plasma proteomics and pQTLs for drug target ID",
     authors: "Assarsson et al. (Olink PEA 2014); Sun et al. (UK Biobank PPP 2023)",
     journal: "PLOS ONE 2014; Nature 2023",
@@ -1670,6 +1771,7 @@ const DATA = [
   },
   {
     id: 114, year: 2021, cats: ["proteomics", "single_cell"], impact: 4,
+    citations: 726,
     title: "MOFA+ and WNN: multi-omics factor analysis and integration",
     authors: "Argelaguet et al. (MOFA+ 2020); Hao et al. (WNN/Seurat v4 2021)",
     journal: "Genome Biology 2020; Cell 2021",
@@ -1682,6 +1784,7 @@ const DATA = [
   // ── RNA BIOLOGY / TRANSCRIPTOMICS ────────────────────────────────────────────
   {
     id: 115, year: 2012, cats: ["rna_biology"], impact: 5,
+    citations: 86,
     title: "Ribosome profiling (Ribo-seq): codon-resolution translation mapping",
     authors: "Ingolia et al., Weissman Lab",
     journal: "Science 2009; Nature Methods 2012",
@@ -1693,6 +1796,7 @@ const DATA = [
   },
   {
     id: 116, year: 2012, cats: ["rna_biology"], impact: 5,
+    citations: 4273,
     title: "m6A epitranscriptomics: MeRIP-seq and the RNA methylation code",
     authors: "Dominissini et al. (MeRIP-seq 2012); Meyer & Jaffrey; Tegowski et al. (DART-seq)",
     journal: "Nature 2012; Cell 2014; Molecular Cell 2022",
@@ -1704,6 +1808,7 @@ const DATA = [
   },
   {
     id: 117, year: 2017, cats: ["rna_biology", "pop_genomics"], impact: 5,
+    citations: 615,
     title: "Splicing QTLs (sQTLs): genetic regulation of alternative splicing in disease",
     authors: "Li et al. (sQTL in GTEx); Monlong et al.; multiple",
     journal: "Nature Genetics 2018; Genome Research 2014",
@@ -1726,6 +1831,7 @@ const DATA = [
   },
   {
     id: 119, year: 2017, cats: ["rna_biology"], impact: 4,
+    citations: 90,
     title: "RNA structure probing: SHAPE-MaP, DMS-MaPseq, and in-cell RNA structure",
     authors: "Zubradt et al. (DMS-MaPseq 2017); Incarnato et al.; multiple",
     journal: "Nature Methods 2017; multiple",
@@ -1739,6 +1845,7 @@ const DATA = [
   // ── CAUSAL INFERENCE / BIOLOGICAL TARGETS ───────────────────────────────────
   {
     id: 120, year: 2015, cats: ["causal_inference"], impact: 5,
+    citations: 5311,
     title: "Mendelian randomization: genetic instruments for causal drug target validation",
     authors: "Davey Smith & Hemani; Burgess & Thompson; multiple",
     journal: "International Journal of Epidemiology 2003; Statistics in Medicine 2015",
@@ -1750,6 +1857,7 @@ const DATA = [
   },
   {
     id: 121, year: 2018, cats: ["causal_inference", "pop_genomics"], impact: 5,
+    citations: 570,
     title: "TWAS / PWAS: transcriptome- and proteome-wide association studies",
     authors: "Gusev et al. (FUSION 2016); Barbeira et al. (S-PrediXcan); Sun et al. (PWAS 2023)",
     journal: "Nature Genetics 2016; PLOS Genetics 2018; Nature 2023",
@@ -1761,6 +1869,7 @@ const DATA = [
   },
   {
     id: 122, year: 2019, cats: ["causal_inference"], impact: 5,
+    citations: 253,
     title: "DoWhy / CausalML: causal inference frameworks for observational genomics data",
     authors: "Sharma & Kiciman (DoWhy, Microsoft 2020); Nie & Wager (R-learner); Athey & Imbens",
     journal: "arXiv 2019; Journal of Business Economics 2016",
@@ -1772,6 +1881,7 @@ const DATA = [
   },
   {
     id: 123, year: 2020, cats: ["causal_inference"], impact: 4,
+    citations: 0,
     title: "CAUSE: accounting for correlated pleiotropy in Mendelian randomization",
     authors: "Morrison et al., Stephens Lab",
     journal: "Nature Genetics 2020",
@@ -1783,6 +1893,7 @@ const DATA = [
   },
   {
     id: 124, year: 2021, cats: ["causal_inference", "single_cell"], impact: 4,
+    citations: 0,
     title: "Causal gene regulatory network inference from Perturb-seq data",
     authors: "Replogle et al. (Perturb-seq 2022); Dixit et al.; Norman et al. (CRISPRa combinations)",
     journal: "Cell 2022; Cell 2019",
@@ -1794,6 +1905,7 @@ const DATA = [
   },
   {
     id: 125, year: 2022, cats: ["causal_inference", "pop_genomics", "proteomics"], impact: 5,
+    citations: 1116,
     title: "Drug target MR at scale: cis-pQTL instruments and proteome-wide causal screening",
     authors: "Sun et al. (UK Biobank PPP 2023); Zheng et al. (proteome-wide MR); Folkersen et al.",
     journal: "Nature 2023; Nature Metabolism 2020",
@@ -1805,6 +1917,7 @@ const DATA = [
   },
   {
     id: 126, year: 2023, cats: ["causal_inference"], impact: 4,
+    citations: 66,
     title: "Mediation analysis in genomics: decomposing genetic effects through molecular intermediates",
     authors: "Berzuini et al.; Sobel; VanderWeele (mediation framework); Baron & Kenny",
     journal: "American Journal of Epidemiology 1986; Epidemiology 2009; multiple genomics adaptations",
@@ -1816,6 +1929,7 @@ const DATA = [
   },
   {
     id: 127, year: 2024, cats: ["causal_inference"], impact: 4,
+    citations: 1254,
     title: "NOTEARS / DAG-GNN / DCDI: differentiable causal structure learning for gene networks",
     authors: "Zheng et al. (NOTEARS 2018); Yu et al. (DAG-GNN 2019); Brouillard et al. (DCDI 2020)",
     journal: "NeurIPS 2018; NeurIPS 2019; NeurIPS 2020",
@@ -1829,6 +1943,7 @@ const DATA = [
 // ── DRUG MODALITIES ──────────────────────────────────────────────────────────
   {
     id: 128, year: 2019, cats: ["drug_modalities"], impact: 5,
+    citations: 1,
     title: "Antibody-drug conjugates (ADCs): T-DM1 to T-DXd and the payload revolution",
     authors: "Verma et al. (DESTINY-Breast03); Krop et al. (T-DM1 EMILIA)",
     journal: "New England Journal of Medicine 2021; 2012",
@@ -1840,6 +1955,7 @@ const DATA = [
   },
   {
     id: 129, year: 2018, cats: ["drug_modalities"], impact: 5,
+    citations: 708,
     title: "PROTACs and targeted protein degradation: from concept to clinic",
     authors: "Sakamoto et al. (first PROTAC 2001); Bondeson et al. (2015); Burslem & Crews",
     journal: "Science 2001; Nature Chemical Biology 2015; Nature Reviews Drug Discovery 2020",
@@ -1851,6 +1967,7 @@ const DATA = [
   },
   {
     id: 130, year: 2020, cats: ["drug_modalities"], impact: 5,
+    citations: 733,
     title: "Bispecific antibodies and T-cell engagers: blinatumomab to teclistamab",
     authors: "Topp et al. (blinatumomab ALL); Moreau et al. (teclistamab MAGE)",
     journal: "Journal of Clinical Oncology 2015; New England Journal of Medicine 2022",
@@ -1862,6 +1979,7 @@ const DATA = [
   },
   {
     id: 131, year: 2021, cats: ["drug_modalities"], impact: 5,
+    citations: 38,
     title: "siRNA and ASO therapeutics: inclisiran, nusinersen, eplontersen chemical landscape",
     authors: "Ray et al. (inclisiran ORION-10); Finkel et al. (nusinersen ENDEAR); multiple",
     journal: "New England Journal of Medicine 2020; 2017; multiple",
@@ -1873,6 +1991,7 @@ const DATA = [
   },
   {
     id: 132, year: 2022, cats: ["drug_modalities"], impact: 4,
+    citations: 14910,
     title: "Molecular glues: IMiDs, GSPT1 degraders, and the neo-substrate paradigm",
     authors: "Krönke et al. (lenalidomide IKZF1/3 2014); Matyskiela et al. (CC-885 GSPT1)",
     journal: "Science 2014; Nature 2016",
@@ -1884,6 +2003,7 @@ const DATA = [
   },
   {
     id: 133, year: 2023, cats: ["drug_modalities"], impact: 4,
+    citations: 644,
     title: "Circular RNA (circRNA) therapeutics: Orna, Laronde, and endless RNA platforms",
     authors: "Wesselhoeft et al. (MIT 2018); Orna Therapeutics; Laronde (Flagship)",
     journal: "Nature Communications 2018; Nature Biotechnology 2023",
@@ -1895,6 +2015,7 @@ const DATA = [
   },
   {
     id: 134, year: 2023, cats: ["drug_modalities"], impact: 4,
+    citations: 1373,
     title: "RNA-targeted small molecules: ribocil, branaplam, and the RNA druggability frontier",
     authors: "Howe et al. (ribocil 2015); Palacino et al. (branaplam/NVS-SM2 2015); multiple",
     journal: "Nature 2015; Nature Chemical Biology 2015",
@@ -1907,6 +2028,7 @@ const DATA = [
   // ── VALIDATED CLINICAL TARGETS ───────────────────────────────────────────────
   {
     id: 135, year: 2017, cats: ["validated_targets"], impact: 5,
+    citations: 4804,
     title: "PCSK9: from human genetics loss-of-function to evolocumab and inclisiran",
     authors: "Cohen et al. (PCSK9 LoF 2006); Sabatine et al. (FOURIER evolocumab 2017)",
     journal: "New England Journal of Medicine 2006; 2017",
@@ -1918,6 +2040,7 @@ const DATA = [
   },
   {
     id: 136, year: 2018, cats: ["validated_targets"], impact: 5,
+    citations: 223,
     title: "KRAS G12C: cracking the 'undruggable' GTPase with covalent inhibitors",
     authors: "Hallin et al. (sotorasib AMG-510 2020); Canon et al. (AMG-510 structure 2019)",
     journal: "Cancer Cell 2020; Nature 2019",
@@ -1929,6 +2052,7 @@ const DATA = [
   },
   {
     id: 137, year: 2019, cats: ["validated_targets"], impact: 5,
+    citations: 2189,
     title: "TTR amyloidosis: target convergence across four modalities",
     authors: "Adams et al. (patisiran 2018); Benson et al. (inotersen 2018); Maurer et al. (tafamidis 2018); Gillmore et al. (NTLA-2001 2021)",
     journal: "New England Journal of Medicine 2018; 2018; 2018; 2021",
@@ -1940,6 +2064,7 @@ const DATA = [
   },
   {
     id: 138, year: 2020, cats: ["validated_targets"], impact: 5,
+    citations: 1055,
     title: "BCL11A enhancer: human genetics to Casgevy — sickle cell disease curative editing",
     authors: "Sankaran et al. (BCL11A 2008); Frangoul et al. (CTX001/Casgevy 2021)",
     journal: "Science 2008; New England Journal of Medicine 2021",
@@ -1962,6 +2087,7 @@ const DATA = [
   },
   {
     id: 140, year: 2022, cats: ["validated_targets"], impact: 4,
+    citations: 1658,
     title: "TROP2 and HER2-low: expanding targetable antigen space with next-gen ADCs",
     authors: "Bardia et al. (sacituzumab govitecan ASCENT); Modi et al. (T-DXd HER2-low DESTINY-Breast04)",
     journal: "New England Journal of Medicine 2021; 2022",
@@ -1973,6 +2099,7 @@ const DATA = [
   },
   {
     id: 141, year: 2023, cats: ["validated_targets"], impact: 4,
+    citations: 656,
     title: "SHP2 / RAS pathway allosteric nodes and combination strategies",
     authors: "Chen et al. (RMC-4630 SHP2i 2016); Hallin et al. (combination data 2022)",
     journal: "Nature Medicine 2016; Cancer Discovery 2022",
@@ -1985,8 +2112,8 @@ const DATA = [
 
   // ── FOUNDATION MODELS ────────────────────────────────────────────────────────
   {
-    id: 142, year: 2021, cats: ["foundation_models", "ml_ai"],
-    impact: 5,
+    id: 142, year: 2021, cats: ["foundation_models", "ml_ai"], impact: 5,
+    citations: 459,
     title: "HyenaDNA: long-range genomic sequence modeling with state-space models",
     authors: "Nguyen et al., Hazy Research / Stanford",
     journal: "NeurIPS 2023",
@@ -1997,8 +2124,8 @@ const DATA = [
     url: "https://arxiv.org/abs/2306.15794"
   },
   {
-    id: 143, year: 2022, cats: ["foundation_models", "ml_ai"],
-    impact: 5,
+    id: 143, year: 2022, cats: ["foundation_models", "ml_ai"], impact: 5,
+    citations: 163,
     title: "Nucleotide Transformer: multi-species DNA foundation model for variant effect prediction",
     authors: "Dalla-Torre et al., InstaDeep / EMBL-EBI",
     journal: "Nature Methods 2024",
@@ -2009,8 +2136,8 @@ const DATA = [
     url: "https://www.nature.com/articles/s41592-024-02523-z"
   },
   {
-    id: 144, year: 2022, cats: ["foundation_models", "ml_ai"],
-    impact: 4,
+    id: 144, year: 2022, cats: ["foundation_models", "ml_ai"], impact: 4,
+    citations: 369,
     title: "DNABERT-2: efficient multi-species DNA language model with BPE tokenization",
     authors: "Zhou et al., Han Lab / UIUC",
     journal: "ICLR 2024",
@@ -2033,8 +2160,8 @@ const DATA = [
     url: "https://ieeexplore.ieee.org/document/9477085"
   },
   {
-    id: 146, year: 2022, cats: ["foundation_models", "ml_ai"],
-    impact: 4,
+    id: 146, year: 2022, cats: ["foundation_models", "ml_ai"], impact: 4,
+    citations: 10,
     title: "ProGen2: protein language model for sequence generation and fitness prediction",
     authors: "Nijkamp et al., Salesforce Research",
     journal: "Cell Systems 2023",
@@ -2045,8 +2172,8 @@ const DATA = [
     url: "https://www.cell.com/cell-systems/fulltext/S2405-4712(23)00272-7"
   },
   {
-    id: 147, year: 2023, cats: ["foundation_models", "single_cell"],
-    impact: 5,
+    id: 147, year: 2023, cats: ["foundation_models", "single_cell"], impact: 5,
+    citations: 447,
     title: "scFoundation: 100M cell single-cell foundation model",
     authors: "Hao et al., Tencent AI Lab",
     journal: "Nature Methods 2024",
@@ -2057,8 +2184,8 @@ const DATA = [
     url: "https://www.nature.com/articles/s41592-024-02305-7"
   },
   {
-    id: 148, year: 2023, cats: ["foundation_models", "drug_discovery"],
-    impact: 4,
+    id: 148, year: 2023, cats: ["foundation_models", "drug_discovery"], impact: 4,
+    citations: 503,
     title: "MolFormer / ChemBERTa: SMILES-based molecular foundation models",
     authors: "Ross et al. (MolFormer 2022); Chithrananda et al. (ChemBERTa 2020)",
     journal: "Nature Machine Intelligence 2022; arXiv 2020",
@@ -2069,8 +2196,8 @@ const DATA = [
     url: "https://www.nature.com/articles/s42256-022-00580-7"
   },
   {
-    id: 149, year: 2023, cats: ["foundation_models", "drug_discovery"],
-    impact: 4,
+    id: 149, year: 2023, cats: ["foundation_models", "drug_discovery"], impact: 4,
+    citations: 31,
     title: "Uni-Mol: 3D molecular foundation model with atom coordinate pretraining",
     authors: "Zhou et al., DP Technology",
     journal: "ICLR 2023",
@@ -2093,8 +2220,8 @@ const DATA = [
     url: "https://www.nature.com/articles/s41591-025-03635-z"
   },
   {
-    id: 151, year: 2024, cats: ["foundation_models", "single_cell"],
-    impact: 4,
+    id: 151, year: 2024, cats: ["foundation_models", "single_cell"], impact: 4,
+    citations: 111,
     title: "GeneCompass: cross-species single-cell foundation model with biological priors",
     authors: "Yang et al., multiple institutions (Beijing, MIT collab)",
     journal: "Nature Communications 2024",
@@ -2120,8 +2247,8 @@ const DATA = [
 
   // ── METAGENOMICS ─────────────────────────────────────────────────────────────
   {
-    id: 153, year: 2017, cats: ["metagenomics", "sequencing"],
-    impact: 5,
+    id: 153, year: 2017, cats: ["metagenomics", "sequencing"], impact: 5,
+    citations: 1562,
     title: "Shotgun metagenomics: culture-free microbial community profiling",
     authors: "Quince et al. (review 2017); Nayfach & Pollard; multiple groups",
     journal: "Nature Biotechnology 2017 (review); multiple methods papers",
@@ -2132,8 +2259,8 @@ const DATA = [
     url: "https://www.nature.com/articles/nbt.3935"
   },
   {
-    id: 154, year: 2019, cats: ["metagenomics"],
-    impact: 5,
+    id: 154, year: 2019, cats: ["metagenomics"], impact: 5,
+    citations: 27288,
     title: "16S rRNA amplicon sequencing and the gut microbiome",
     authors: "Callahan et al. (DADA2 2016); Knight et al. (Earth Microbiome Project 2018)",
     journal: "Nature Methods 2016; Nature 2018",
@@ -2168,8 +2295,8 @@ const DATA = [
     url: "https://www.nature.com/articles/s41564-018-0156-8"
   },
   {
-    id: 157, year: 2023, cats: ["metagenomics", "foundation_models"],
-    impact: 4,
+    id: 157, year: 2023, cats: ["metagenomics", "foundation_models"], impact: 4,
+    citations: 4141,
     title: "ESM Metagenomic Atlas and protein structure from metagenomes at scale",
     authors: "Lin et al. (ESM Metagenomic Atlas 2023); various",
     journal: "Science 2023",
@@ -2181,8 +2308,8 @@ const DATA = [
   },
   // ── PROTEIN FOLDING ──────────────────────────────────────────────────────────
   {
-    id: 158, year: 2018, cats: ["protein_folding", "ml_ai"],
-    impact: 5,
+    id: 158, year: 2018, cats: ["protein_folding", "ml_ai"], impact: 5,
+    citations: 1140,
     title: "Coevolutionary analysis and contact prediction: precursors to AlphaFold",
     authors: "Marks et al. (EVfold 2011); Jones et al. (MetaPSICOV); Kamisetty et al.",
     journal: "PLOS ONE 2011; Bioinformatics 2015; RECOMB 2013",
@@ -2193,8 +2320,8 @@ const DATA = [
     url: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0028766"
   },
   {
-    id: 159, year: 2021, cats: ["protein_folding", "ml_ai"],
-    impact: 5,
+    id: 159, year: 2021, cats: ["protein_folding", "ml_ai"], impact: 5,
+    citations: 3220,
     title: "RoseTTAFold: accurate protein structure prediction with three-track attention",
     authors: "Baek et al., Baker Lab",
     journal: "Science 2021",
@@ -2205,8 +2332,8 @@ const DATA = [
     url: "https://www.science.org/doi/10.1126/science.abj8754"
   },
   {
-    id: 160, year: 2022, cats: ["protein_folding"],
-    impact: 5,
+    id: 160, year: 2022, cats: ["protein_folding"], impact: 5,
+    citations: 0,
     title: "Protein structure databases: PDB, RCSB, AlphaFold DB, and ESM Atlas",
     authors: "Berman et al. (PDB 1971→2000); Varadi et al. (AlphaFold DB 2022)",
     journal: "Nucleic Acids Research 2000; Nucleic Acids Research 2022",
@@ -2217,8 +2344,8 @@ const DATA = [
     url: "https://academic.oup.com/nar/article/50/D1/D439/6430488"
   },
   {
-    id: 161, year: 2023, cats: ["protein_folding", "drug_discovery"],
-    impact: 4,
+    id: 161, year: 2023, cats: ["protein_folding", "drug_discovery"], impact: 4,
+    citations: 8922,
     title: "Cryo-EM revolution: near-atomic resolution structures for drug discovery",
     authors: "Kühlbrandt (resolution revolution 2014); Cheng (review 2018); multiple",
     journal: "Science 2014; Biochemistry 2018; multiple",
@@ -2229,8 +2356,8 @@ const DATA = [
     url: "https://www.science.org/doi/10.1126/science.1244615"
   },
   {
-    id: 162, year: 2024, cats: ["protein_folding", "gene_editing"],
-    impact: 4,
+    id: 162, year: 2024, cats: ["protein_folding", "gene_editing"], impact: 4,
+    citations: 100,
     title: "Structural biology of CRISPR: Cas9, Cas12a, and prime editor complex structures",
     authors: "Nishimasu et al. (SpCas9 2014); Dong et al. (PE structure 2023); multiple",
     journal: "Cell 2014; Nature 2023",
@@ -2242,8 +2369,8 @@ const DATA = [
   },
   // ── CANCER GENOMICS ──────────────────────────────────────────────────────────
   {
-    id: 163, year: 2018, cats: ["cancer_genomics", "sequencing"],
-    impact: 5,
+    id: 163, year: 2018, cats: ["cancer_genomics", "sequencing"], impact: 5,
+    citations: 2028,
     title: "TCGA: The Cancer Genome Atlas — pan-cancer genomic landscape",
     authors: "TCGA Research Network; Hoadley et al. (cell-of-origin 2018)",
     journal: "Cell 2018; multiple Nature papers 2012–2019",
@@ -2254,8 +2381,8 @@ const DATA = [
     url: "https://doi.org/10.1016/j.cell.2018.03.022"
   },
   {
-    id: 164, year: 2019, cats: ["cancer_genomics", "epigenomics"],
-    impact: 5,
+    id: 164, year: 2019, cats: ["cancer_genomics", "epigenomics"], impact: 5,
+    citations: 6876,
     title: "Cancer driver mutation discovery: COSMIC, OncoKB, and mutational signatures",
     authors: "Tate et al. (COSMIC v3 2019); Alexandrov et al. (signatures 2020)",
     journal: "Nucleic Acids Research 2019; Nature 2020",
@@ -2266,8 +2393,8 @@ const DATA = [
     url: "https://academic.oup.com/nar/article/47/D1/D941/5146192"
   },
   {
-    id: 165, year: 2020, cats: ["cancer_genomics", "single_cell"],
-    impact: 5,
+    id: 165, year: 2020, cats: ["cancer_genomics", "single_cell"], impact: 5,
+    citations: 1348,
     title: "Tumor microenvironment (TME): single-cell dissection of immune and stromal cells",
     authors: "Lambrechts et al. (NSCLC TME 2018); Tirosh et al. (melanoma 2016)",
     journal: "Nature Medicine 2018; Science 2016",
@@ -2278,8 +2405,8 @@ const DATA = [
     url: "https://www.nature.com/articles/s41591-018-0096-5"
   },
   {
-    id: 166, year: 2021, cats: ["cancer_genomics", "clinical_genomics"],
-    impact: 5,
+    id: 166, year: 2021, cats: ["cancer_genomics", "clinical_genomics"], impact: 5,
+    citations: 2419,
     title: "Pan-cancer whole genome sequencing: PCAWG and non-coding driver discovery",
     authors: "ICGC/TCGA Pan-Cancer Analysis of Whole Genomes (PCAWG) Consortium",
     journal: "Nature 2020 (38 papers)",
@@ -2290,8 +2417,8 @@ const DATA = [
     url: "https://www.nature.com/articles/s41586-020-1969-6"
   },
   {
-    id: 167, year: 2022, cats: ["cancer_genomics", "drug_discovery"],
-    impact: 5,
+    id: 167, year: 2022, cats: ["cancer_genomics", "drug_discovery"], impact: 5,
+    citations: 2548,
     title: "Cancer dependency mapping: DepMap, CRISPR essentiality, and synthetic lethality",
     authors: "Tsherniak et al. (DEMETER2 2017); Meyers et al. (DepMap 2017); multiple",
     journal: "Cell 2017; Cell 2018",
@@ -2303,8 +2430,8 @@ const DATA = [
   },
 
   {
-    id: 168, year: 2023, cats: ["crispr", "gene_editing", "clinical_genomics"],
-    impact: 5,
+    id: 168, year: 2023, cats: ["crispr", "gene_editing", "clinical_genomics"], impact: 5,
+    citations: 2052,
     title: "CRISPR off-target detection landscape: GUIDE-seq2, CIRCLE-seq, Digenome-seq, rhAmpSeq, CHANGE-seq, DISCOVER-seq, HTGTS, CAST-seq, and ONE-seq",
     authors: "Tsai et al. (GUIDE-seq 2015); Listgarten et al. (GUIDE-seq2 2018); Kleinstiver et al. (CIRCLE-seq 2016); Kim et al. (Digenome-seq 2015); Giannoukos et al. (rhAmpSeq); Lazzarotto et al. (CHANGE-seq 2020); Wienert et al. (DISCOVER-seq 2019); Joung Lab; multiple groups",
     journal: "Nature Biotechnology 2015; Nature Methods 2016; Nature Methods 2015; Nature Biotechnology 2020; Nature Methods 2019; multiple",
@@ -2326,6 +2453,7 @@ const DATA = [
   // ── TRANSFORMER FOUNDATIONS ──────────────────────────────────────────────────
   {
     id: 169, year: 2017, cats: ["ml_ai", "foundation_models"], impact: 5,
+    citations: 171663,
     title: "Attention Is All You Need",
     authors: "Vaswani et al., Google Brain",
     journal: "NeurIPS 2017",
@@ -2346,6 +2474,7 @@ const DATA = [
   },
   {
     id: 170, year: 2018, cats: ["ml_ai", "foundation_models"], impact: 5,
+    citations: 112423,
     title: "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
     authors: "Devlin et al., Google AI",
     journal: "NAACL 2019",
@@ -2366,6 +2495,7 @@ const DATA = [
   },
   {
     id: 171, year: 2020, cats: ["ml_ai", "foundation_models"], impact: 5,
+    citations: 56101,
     title: "GPT-3: Language Models are Few-Shot Learners",
     authors: "Brown et al., OpenAI",
     journal: "NeurIPS 2020",

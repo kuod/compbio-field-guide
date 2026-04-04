@@ -77,6 +77,7 @@
   .pill[data-cat="validated_targets"].active { background: #7f1d1d; }
   .pill[data-cat="drug_modalities"].active { background: #1e40af; }
   .pill[data-cat="causal_inference"].active { background: #92400e; }
+  .pill[data-cat="visualization"].active { background: #3730a3; }
 
   .sort-select { background: var(--bg3); border: 1px solid var(--border2); border-radius: 6px; padding: 7px 10px; color: var(--text); font-family: var(--mono); font-size: 12px; outline: none; cursor: pointer; }
 
@@ -373,6 +374,7 @@
     <button class="pill" data-cat="metagenomics">metagenomics <span class="pill-badge" id="pill-badge-metagenomics">—</span></button>
     <button class="pill" data-cat="validated_targets">validated targets <span class="pill-badge" id="pill-badge-validated_targets">—</span></button>
     <button class="pill" data-cat="drug_modalities">drug modalities <span class="pill-badge" id="pill-badge-drug_modalities">—</span></button>
+    <button class="pill" data-cat="visualization">visualization <span class="pill-badge" id="pill-badge-visualization">—</span></button>
   </div>
   <select class="sort-select" id="sort">
     <option value="year_desc">newest first</option>
@@ -2514,6 +2516,86 @@ const DATA = [
     details: "Architecture: 96-layer decoder-only transformer, 175B params, trained on 300B tokens (Common Crawl, WebText, books, Wikipedia). In-context learning: task specification via prompt examples with no weight update at inference. Scaling laws (Kaplan et al. 2020): loss follows a power law of compute, data, and parameters — larger scale is predictably beneficial. Biological equivalents: ProtGPT2 and ProGen2 (protein sequence generation), BioGPT (biomedical literature), scGPT (single-cell generative modeling). Instructed variants (InstructGPT → ChatGPT) now underpin most AI-assisted scientific writing and bioinformatics coding tools.",
     url: "https://arxiv.org/abs/2005.14165"
   },
+  {
+    id: 172, year: 2011, cats: ["visualization", "tools"], impact: 5,
+    title: "Integrative Genomics Viewer (IGV)",
+    authors: "Robinson et al., Broad Institute",
+    journal: "Nature Biotechnology 2011",
+    summary: "Desktop and web genome browser for interactive visual exploration of aligned reads, variant calls, and annotation tracks. The universal final-step tool for validating any genomic result before reporting it.",
+    job_impact: "IGV is required fluency for any genomics role. Verifying variant calls visually, spotting alignment artifacts (e.g., strand bias, low mapping quality), and inspecting RNA-seq splicing patterns are daily tasks. igv.js enables embedding genome views directly in web applications and notebooks.",
+    pros: [
+      "Handles gigabyte-scale BAM, CRAM, VCF, bigWig, and BED files both locally and from remote URLs/cloud buckets",
+      "igv.js port enables programmatic embedding in Jupyter notebooks, web apps, and reports",
+      "Broad format support: BAM, CRAM, VCF, BED, GFF3, GTF, bigWig, bedGraph, WIG, MAF, and more"
+    ],
+    cons: [
+      "Java desktop app is memory-hungry; opening many large BAMs simultaneously causes slowdowns or OOM crashes",
+      "Visual inspection does not scale to genome-wide analysis — IGV is confirmatory, not discovery",
+      "Session files are not reliably portable across machines with different file path structures"
+    ],
+    details: "IGV renders pileup views of short-read alignments with coverage tracks, soft-clip visualization, and base-quality coloring. Key diagnostic views: color by strand (strand bias artifacts), group by sample (somatic variant confirmation), split-read view (structural variant breakpoints). igv.js (2019) is the JavaScript port used in cBioPortal, the UCSC Genome Browser, and clinical reporting pipelines. IGV-reports generates self-contained HTML files with embedded genome views for sharing variant callsets without requiring software installation.",
+    url: "https://www.nature.com/articles/nbt.1754"
+  },
+  {
+    id: 173, year: 2009, cats: ["visualization", "tools"], impact: 4,
+    title: "Circos: An information aesthetic for comparative genomics",
+    authors: "Krzywinski et al., BCGSC",
+    journal: "Genome Research 2009",
+    summary: "Circular genome visualization framework for displaying structural variants, synteny, chromosomal rearrangements, and multi-track data in a radial layout. Established the iconic 'circus plot' figure type that defines cancer genomics papers.",
+    job_impact: "Circos figures appear on the cover of Nature and Science routinely for cancer genomics and comparative genomics studies. Understanding how to read and produce circular genome plots — even via R/Python wrappers — is expected for computational oncology and comparative genomics roles.",
+    pros: [
+      "Uniquely effective at showing genome-scale rearrangements (translocations, inversions, fusions) — linear browsers cannot capture these",
+      "Handles multi-species synteny and comparative genomics with ribbon tracks connecting orthologous regions",
+      "Highly customizable publication-quality output used directly in journal figures"
+    ],
+    cons: [
+      "Configuration uses a nested Perl text-format — steep learning curve and verbose setup for simple plots",
+      "Static, non-interactive output; modern alternatives (circlize in R, pyCirclize in Python) are easier for routine use",
+      "Circular layout wastes space compared to linear tracks for single-genome annotation"
+    ],
+    details: "Circos renders genomic data as concentric rings around a circular karyogram. Ribbon tracks connect genomic coordinates — used for SV breakpoints, synteny blocks, and gene fusions. Track types include histograms, scatter plots, heatmaps, tiles, and text. The R package `circlize` (Gu et al.) reimplements Circos logic in ggplot2-compatible R code and is now the primary tool for new work. Cancer genome atlases (TCGA, ICGC) popularized the format; virtually all pan-cancer papers include a Circos-style SV landscape figure.",
+    url: "https://genome.cshlp.org/content/19/9/1639"
+  },
+  {
+    id: 174, year: 2014, cats: ["visualization", "tools"], impact: 4,
+    title: "UpSet: Visualization of Intersecting Sets",
+    authors: "Lex et al., Harvard",
+    journal: "IEEE Transactions on Visualization and Computer Graphics 2014",
+    summary: "Matrix-based alternative to Venn diagrams for comparing overlaps across many sets simultaneously. Replaces unintelligible multi-circle Venn diagrams with sorted bar charts showing intersection sizes alongside a binary membership matrix.",
+    job_impact: "Standard figure type in multi-cohort genomics, comparing variant callsets, DEG lists, CRISPR hit lists, or genomic feature sets across conditions. UpSetR (R) and upsetplot (Python) are the go-to implementations — reviewers increasingly expect UpSet over Venn for >3 sets.",
+    pros: [
+      "Scales to any number of sets — practically handles 5–20 sets where Venn diagrams become impossible to read",
+      "Sorted by intersection size makes the largest overlaps immediately visible without mental area estimation",
+      "Supports additional metadata/annotation panels above bars for quantitative attributes of each intersection"
+    ],
+    cons: [
+      "Less immediately intuitive than Venn diagrams for general audiences — requires explanation in figure legends",
+      "Proportional area encoding is lost — all intersections shown as bars, not scaled circles, so relative magnitudes require reading axes",
+      "Intersections must be curated (e.g., minimum size filter) or the plot becomes cluttered with many near-zero bars"
+    ],
+    details: "UpSet uses a matrix where rows = sets and columns = intersections; filled dots indicate set membership. Bars above the matrix show intersection size (sorted descending by default). Horizontal bars on the left show total set size. Key implementations: UpSetR (Conway et al., 2017 — adds attribute boxplots above intersection bars), upsetplot (Python, matplotlib-based), ComplexUpset (R, ggplot2-based with full geom support). Common genomics use cases: overlap of differentially expressed genes across timepoints, comparison of variant callers, intersection of regulatory element annotations across cell types.",
+    url: "https://doi.org/10.1109/TVCG.2014.2346248"
+  },
+  {
+    id: 175, year: 2016, cats: ["visualization", "tools"], impact: 5,
+    title: "ComplexHeatmap: Complex heatmaps reveal patterns and correlations in multidimensional genomic data",
+    authors: "Gu et al., DKFZ",
+    journal: "Bioinformatics 2016",
+    summary: "R/Bioconductor package for richly annotated genomic heatmaps with synchronized row/column annotation bars, multiple concatenated heatmap panels, and publication-quality rendering. The de facto standard for genomic expression heatmap figures.",
+    job_impact: "ComplexHeatmap produces the heatmap figures in the majority of published genomics papers. Multi-omic integration panels, RNA-seq expression matrices with clinical annotation bars, and ChIP-seq signal heatmaps sorted by clustering all use this package — fluency is expected in any computational biology role requiring R.",
+    pros: [
+      "Rich annotation tracks — bar, box, violin, density, and genome-axis annotations attachable to any row/column",
+      "Multiple heatmaps concatenated with shared dendrograms enable multi-omic comparison panels in a single figure",
+      "Rasterization mode handles millions of rows without crashing R; legends, color scales, and clustering are fully programmable"
+    ],
+    cons: [
+      "Steep learning curve — S4 class-based API with many parameters; complex layouts require careful planning of draw() calls",
+      "Rendering large matrices (>50K rows) even with rasterization is slow and memory-intensive",
+      "Default color palette choices (red-white-blue) are perceptually non-uniform; requires manual override for publication figures"
+    ],
+    details: "Core concept: `Heatmap()` objects are combined with `+` (horizontal) or `%v%` (vertical) to build panels. Annotations use `HeatmapAnnotation()` with named list of vectors/matrices. Clustering: hierarchical (default) or k-means; clustering on subsets via `row_split`/`column_split`. Key extensions: `EnrichedHeatmap` for ChIP/ATAC signal around genomic features, `densityHeatmap` for expression distribution per sample. Used in virtually all TCGA, GTEx, and HCA analysis papers. The 2022 Bioinformatics update added interactive HTML output via `InteractiveComplexHeatmap`.",
+    url: "https://doi.org/10.1093/bioinformatics/btw313"
+  },
 ];
 
 
@@ -2535,6 +2617,7 @@ const catLabels = {
   validated_targets: "validated targets",
   drug_modalities: "drug modalities",
   causal_inference: "causal inference",
+  visualization: "visualization",
 };
 
 function impactDots(n) {

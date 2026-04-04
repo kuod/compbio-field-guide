@@ -2616,6 +2616,69 @@ const DATA = [
     details: "Core concept: `Heatmap()` objects are combined with `+` (horizontal) or `%v%` (vertical) to build panels. Annotations use `HeatmapAnnotation()` with named list of vectors/matrices. Clustering: hierarchical (default) or k-means; clustering on subsets via `row_split`/`column_split`. Key extensions: `EnrichedHeatmap` for ChIP/ATAC signal around genomic features, `densityHeatmap` for expression distribution per sample. Used in virtually all TCGA, GTEx, and HCA analysis papers. The 2022 Bioinformatics update added interactive HTML output via `InteractiveComplexHeatmap`.",
     url: "https://doi.org/10.1093/bioinformatics/btw313"
   },
+  {
+    id: 176, year: 2013, cats: ["ml_ai", "foundation_models"], impact: 5,
+    citations: 41000,
+    title: "Word2Vec: Efficient Estimation of Word Representations in Vector Space",
+    authors: "Mikolov et al., Google",
+    journal: "ICLR 2013",
+    summary: "Introduced shallow neural network architectures (Skip-gram and CBOW) that learn dense vector representations of words from raw text, capturing semantic and syntactic relationships via vector arithmetic (king − man + woman ≈ queen). The conceptual ancestor of all biological sequence embedding models.",
+    job_impact: "Word2Vec's embedding paradigm maps directly onto biological sequences: BioVectors (protein k-mers), Seq2Vec, and the training philosophy behind ESM and DNABERT all inherit skip-gram intuitions. Understanding why co-occurrence in context encodes meaning helps interpret why positional neighbors in protein sequences encode structural relationships.",
+    pros: [
+      "Extremely efficient — trains on billions of words in hours on a single machine; inspired all subsequent sequence embedding work",
+      "Vector arithmetic captures meaningful semantic structure (analogies, synonyms) in learned space",
+      "Negative sampling and hierarchical softmax make training tractable without a full vocabulary softmax"
+    ],
+    cons: [
+      "Static embeddings — each word gets one vector regardless of context; polysemy is not handled (unlike BERT)",
+      "Window-based context ignores long-range dependencies beyond the defined window size",
+      "Requires large corpora to learn high-quality representations; rare words have poor embeddings"
+    ],
+    details: "Two architectures: (1) Skip-gram — predict surrounding context words from a center word; (2) CBOW — predict center word from context bag. Training trick: negative sampling approximates the full softmax by contrasting the target word against k randomly sampled noise words. Subword extension: FastText (Bojanowski et al. 2017) decomposes words into character n-grams, enabling embeddings for out-of-vocabulary terms — analogous to BPE tokenization in DNABERT-2. Biological applications: ProtVec (Asgari & Mofrad 2015) applied 3-mer skip-gram to UniProt sequences; BioVectors extended this to DNA/RNA k-mers. The co-occurrence-encodes-function intuition is the conceptual foundation for all protein and DNA language model pretraining.",
+    url: "https://arxiv.org/abs/1301.3781"
+  },
+  {
+    id: 177, year: 2014, cats: ["ml_ai"], impact: 4,
+    citations: 17000,
+    title: "GloVe: Global Vectors for Word Representation",
+    authors: "Pennington et al., Stanford NLP",
+    journal: "EMNLP 2014",
+    summary: "Introduced a log-bilinear model trained on global word-word co-occurrence statistics rather than local windows, combining the efficiency of Word2Vec with the statistical power of matrix factorization methods like LSA. Demonstrated that global co-occurrence ratios encode semantic meaning more directly than local context prediction.",
+    job_impact: "GloVe's global co-occurrence framing influenced single-cell embedding methods: scGLUE and harmony use analogous cross-domain co-occurrence statistics. The contrast between GloVe (global statistics) and Word2Vec (local prediction) is the same design choice faced when choosing between count-based and neural embedding approaches for gene expression data.",
+    pros: [
+      "Explicit objective tied to global co-occurrence ratios — more interpretable training signal than Word2Vec's implicit compression",
+      "Produces representations that outperform Word2Vec on word analogy and similarity benchmarks",
+      "Factorization of the log co-occurrence matrix connects neural embeddings to classical LSA/SVD methods"
+    ],
+    cons: [
+      "Requires pre-computing a global co-occurrence matrix — memory-intensive for very large vocabularies",
+      "Still produces static embeddings with no contextual disambiguation",
+      "Largely superseded by contextual embeddings (ELMo, BERT) for NLP tasks; most relevant today as conceptual reference"
+    ],
+    details: "Objective: minimize Σ f(X_ij)(wᵢᵀw̃ⱼ + bᵢ + b̃ⱼ − log X_ij)² where X_ij is the co-occurrence count and f is a weighting function that downweights very frequent pairs. The ratio of co-occurrence probabilities (P(k|i)/P(k|j)) encodes semantic relationships — this is the quantity the model is implicitly learning to represent. Connection to LSA: GloVe is equivalent to factorizing a shifted log co-occurrence matrix, similar to PMI matrix factorization (Levy & Goldberg 2014). In biology: the global co-occurrence framing inspired cell-gene co-occurrence matrices used in topic models for single-cell data (cisTopic, LDA on scATAC), and the weighted factorization objective appears in ZINB-WaVE.",
+    url: "https://nlp.stanford.edu/pubs/glove.pdf"
+  },
+  {
+    id: 178, year: 2003, cats: ["ml_ai"], impact: 5,
+    citations: 56000,
+    title: "LDA: Latent Dirichlet Allocation",
+    authors: "Blei, Ng, Jordan, UC Berkeley / Stanford",
+    journal: "Journal of Machine Learning Research 2003",
+    summary: "Introduced a generative probabilistic model where documents are mixtures of latent topics and topics are distributions over words. Established the dominant framework for unsupervised topic discovery in text, and directly inspired an entire class of single-cell and epigenomics dimensionality reduction methods.",
+    job_impact: "LDA's document-topic-word framework maps cleanly onto biological data: cells as documents, topics as cell programs, genes as words. cisTopic (scATAC topic modeling), Topyfic, and bayesian NMF in single-cell all inherit LDA's generative logic. Understanding Dirichlet priors and variational inference is needed to interpret topic coherence and select the number of topics.",
+    pros: [
+      "Generative model with interpretable latent structure — topics are coherent distributions over vocabulary items, not abstract axes",
+      "Dirichlet priors on topic mixtures enforce sparsity — each document (cell) uses only a few topics (programs)",
+      "Scales to millions of documents with stochastic variational inference (Hoffman et al. 2013); GPU-accelerated implementations available"
+    ],
+    cons: [
+      "Number of topics K must be specified in advance; perplexity or coherence scores give imperfect guidance",
+      "Bag-of-words assumption discards word order — adapted versions (Structural Topic Model, CTM) add correlations at extra complexity",
+      "Collapsed Gibbs sampling is slow on large corpora; mean-field variational inference introduces approximation error"
+    ],
+    details: "Generative process: for each document d, draw topic proportions θ_d ~ Dir(α). For each word position, draw topic z ~ Categorical(θ_d), then word w ~ Categorical(β_z). Inference: the posterior p(θ, z | w) is intractable — original paper uses mean-field variational EM; Griffiths & Steyvers (2004) popularized collapsed Gibbs sampling. Extensions: correlated topic model (CTM) uses logistic-normal prior; structural topic model (STM) incorporates document metadata; dynamic topic model tracks topic evolution over time. Biological adaptations: cisTopic models single cells (documents) × chromatin regions (words) to identify cis-regulatory programs (topics); scETM uses amortized variational inference for speed; Topyfic is purpose-built for single-cell RNA programs. NMF (Lee & Seung 1999) is the non-probabilistic matrix factorization analogue widely used in the same biological contexts.",
+    url: "https://www.jmlr.org/papers/v3/blei03a.html"
+  },
 ];
 
 

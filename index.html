@@ -1160,7 +1160,7 @@ const DATA = [
     url: "https://pubs.acs.org/doi/10.1021/acscentsci.7b00572"
   },
   {
-    id: 63, year: 2020, cats: ["single_cell"], impact: 4,
+    id: 63, year: 2020, cats: ["single_cell", "visualization"], impact: 4,
     citations: 11794,
     title: "UMAP: dimensionality reduction for single-cell visualization",
     authors: "McInnes, Healy, Melville",
@@ -1170,6 +1170,26 @@ const DATA = [
     cons: ["Stochastic: different random seeds produce visually different but equally valid embeddings", "Distance in UMAP space is not Euclidean; cluster separation is not quantitatively meaningful", "Can create artificial structure by forcing high-dimensional manifolds into 2D"],
     details: "Algorithm: k-nearest neighbor graph → fuzzy simplicial set → low-dimensional embedding via cross-entropy optimization. Key params: n_neighbors (15–50), min_dist (0.1–0.5). Parametric UMAP (scArches) for reference-query projection.",
     url: "https://arxiv.org/abs/1802.03426"
+  },
+  {
+    id: 176, year: 2008, cats: ["visualization", "single_cell"], impact: 5,
+    title: "t-SNE: Visualizing High-Dimensional Data",
+    authors: "van der Maaten & Hinton",
+    journal: "Journal of Machine Learning Research 2008",
+    summary: "t-Distributed Stochastic Neighbor Embedding maps high-dimensional data to 2D by preserving local neighborhood structure. Became the dominant single-cell visualization method before UMAP, and remains widely used and cited.",
+    job_impact: "t-SNE plots defined the visual language of single-cell genomics for nearly a decade and are still routinely produced alongside UMAP. Understanding why t-SNE compresses dense clusters, why inter-cluster distances are meaningless, and when to prefer it over UMAP is expected knowledge in any single-cell role.",
+    pros: [
+      "Excellent local structure preservation — tight, well-separated clusters that are visually intuitive for biology audiences",
+      "Perplexity parameter is interpretable as an approximate neighborhood size, making tuning principled",
+      "FIt-SNE and openTSNE implementations scale to millions of cells with interpolation-based approximations"
+    ],
+    cons: [
+      "Global structure is not preserved — distances between clusters are meaningless and misleading",
+      "Slow for large datasets without approximations (Barnes-Hut or FFT); original O(n²) is impractical above ~10K cells",
+      "Different perplexity values or random seeds produce visually different embeddings; results require reproducibility reporting"
+    ],
+    details: "Algorithm: compute pairwise Gaussian similarities in high-D space, compute Student-t similarities in 2D, minimize KL divergence between the two distributions via gradient descent. Heavy tails of the t-distribution prevent crowding in 2D. Key params: perplexity (5–50; effectively controls neighborhood size), learning_rate, n_iter. Scalable implementations: Barnes-Hut tSNE (O(n log n)), FIt-SNE (FFT-accelerated, O(n log n)), openTSNE (Python, supports out-of-sample extension). In single-cell: Seurat and Scanpy both expose tSNE alongside UMAP; tSNE often shows sharper within-cluster structure while UMAP better reflects trajectory continuity.",
+    url: "https://jmlr.org/papers/v9/vandermaaten08a.html"
   },
   {
     id: 64, year: 2020, cats: ["drug_discovery"], impact: 5,

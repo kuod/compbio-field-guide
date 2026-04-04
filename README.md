@@ -1,12 +1,12 @@
 # Computational Biology Field Guide
 
-An interactive reference guide to landmark papers, assays, and tools in computational biology and genomics since 2010. ~170 curated entries spanning 22 domains, with pros/cons, technical details, and field impact ratings.
+An interactive reference guide to landmark papers, assays, and tools in computational biology and genomics since 2010. ~176 curated entries spanning 23 domains, with pros/cons, technical details, and field impact ratings.
 
 **[View the guide](https://kuod.github.io/compbio-field-guide/)**
 
 ## Domains covered
 
-sequencing · crispr · ml/ai · single-cell · immunology · epigenomics · drug discovery · spatial · tools/infra · gene editing · clinical genomics · delivery · population genomics · proteomics · RNA biology · foundation models · cancer genomics · protein folding · metagenomics · validated targets · drug modalities · causal inference
+sequencing · crispr · ml/ai · single-cell · immunology · epigenomics · drug discovery · spatial · tools/infra · gene editing · clinical genomics · delivery · population genomics · proteomics · RNA biology · foundation models · cancer genomics · protein folding · metagenomics · validated targets · drug modalities · causal inference · visualization
 
 ## Features
 
@@ -19,7 +19,7 @@ sequencing · crispr · ml/ai · single-cell · immunology · epigenomics · dru
 
 ## Technical details
 
-Zero dependencies, no build step. The entire app is a single `index.html` file (~3,600 lines) with embedded CSS and vanilla ES6+ JavaScript.
+Zero dependencies, no build step. The entire app is a single `index.html` file (~3,750 lines) with embedded CSS and vanilla ES6+ JavaScript.
 
 ```bash
 # Open directly

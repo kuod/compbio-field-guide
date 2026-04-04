@@ -2321,7 +2321,69 @@ const DATA = [
     ],
     details: "GUIDE-seq (Tsai 2015, Nat Biotech): dsODN integration at DSBs → translocation sequencing; ~1000x more sensitive than ChIP-seq; cell-based; standard for IND. GUIDE-seq2 (Listgarten 2018): improved dsODN design with UMIs for quantitative off-target frequency; reduces background. rhAmpSeq (IDT/Giannoukos): amplicon-based, uses RNase H-dependent primers for selective amplification at predicted off-target loci; high specificity, targeted. CIRCLE-seq (Kleinstiver 2016, Nat Methods): circularized naked genomic DNA + recombinant Cas9 in vitro; hypersensitive biochemical screen; no cellular context. CHANGE-seq (Lazzarotto 2020, Nat Biotech): tagmentation-based genome-wide in vitro cleavage; ~10x more sensitive than CIRCLE-seq; rapid library prep; discovers rare sites. ONE-seq (Hana et al. 2021): oligonucleotide-based enrichment of cleavage products; orthogonal biochemical screen. Digenome-seq (Kim 2015, Nat Methods): Cas9 digestion of naked genomic DNA + whole-genome sequencing for uniform cut ends; simple but lower throughput. DISCOVER-seq (Wienert 2019, Nat Methods): Cas9 recruits MRE11 (DSB sensor) → ChIP of MRE11 marks DSBs; cell-based, no exogenous tag. HTGTS (High-Throughput Genome-wide Translocation Sequencing, Frock 2015): prey-bait ligation capture of translocations; quantifies chromosomal rearrangements from all DSBs. CAST-seq (Turchiano 2021, Nat Protocols): targeted sequencing of chromosomal rearrangements around on-target site; clinically relevant structural variant detection. Recommended IND package: CHANGE-seq or CIRCLE-seq (biochemical screen) + GUIDE-seq or DISCOVER-seq (cell-based) + rhAmpSeq (deep targeted validation of top sites) + CAST-seq (translocation/rearrangement quantification). FDA guidance: 2024 draft guidance for genome editing recommends risk-stratified off-target assessment.",
     url: "https://www.nature.com/articles/nbt.3117"
-  }
+  },
+
+  // ── TRANSFORMER FOUNDATIONS ──────────────────────────────────────────────────
+  {
+    id: 169, year: 2017, cats: ["ml_ai", "foundation_models"], impact: 5,
+    title: "Attention Is All You Need",
+    authors: "Vaswani et al., Google Brain",
+    journal: "NeurIPS 2017",
+    summary: "Introduced the Transformer architecture, replacing recurrence and convolutions entirely with multi-head self-attention. Became the universal backbone for NLP, protein language models, genomics foundation models, and beyond.",
+    job_impact: "Every protein language model (ESM-2), DNA foundation model (Enformer, Evo), and single-cell transformer (scGPT) is built on this architecture — understanding attention, positional encoding, and the encoder/decoder stack is table stakes for modern computational biology.",
+    pros: [
+      "Parallelizable training over full sequence length — no sequential bottleneck of RNNs/LSTMs",
+      "Self-attention captures arbitrary long-range dependencies in a single pass",
+      "Scales predictably: larger models on more data consistently improve downstream task performance"
+    ],
+    cons: [
+      "O(n²) attention complexity is prohibitive for very long sequences (>100k tokens) without modifications",
+      "Requires massive training data and compute — transferability depends on domain relevance of pretraining corpus",
+      "Positional encodings are a design choice with meaningful downstream consequences (learned vs. sinusoidal vs. RoPE)"
+    ],
+    details: "Core components: multi-head self-attention (Q, K, V projections), positional encoding (sinusoidal in original), layer normalization, and feed-forward sublayers. Encoder-decoder for seq2seq; encoder-only (BERT) for representation; decoder-only (GPT) for generation. Scaled dot-product attention: softmax(QKᵀ/√d_k)V. In biology: every modern protein LM (ESM-1v, ESM-2, ProtTrans), DNA model (Enformer, Nucleotide Transformer, DNABERT), and single-cell model (scBERT, scGPT, Geneformer) inherits this architecture directly.",
+    url: "https://arxiv.org/abs/1706.03762"
+  },
+  {
+    id: 170, year: 2018, cats: ["ml_ai", "foundation_models"], impact: 5,
+    title: "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+    authors: "Devlin et al., Google AI",
+    journal: "NAACL 2019",
+    summary: "Introduced masked language modeling (MLM) and next sentence prediction for bidirectional transformer pre-training on unlabeled text. Established the pre-train → fine-tune paradigm that every biological sequence model follows.",
+    job_impact: "BERT's pre-train/fine-tune paradigm is directly instantiated in ESM-2 (proteins), DNABERT (DNA), and scBERT (single-cell) — interpreting embeddings, fine-tuning for variant effect, and understanding attention maps all require fluency with BERT concepts.",
+    pros: [
+      "Bidirectional context — sees both left and right sequence context simultaneously, unlike autoregressive models",
+      "MLM pretraining on unlabeled sequences transfers directly to biological sequence problems with no task-specific labels",
+      "Fine-tuning on small labeled datasets achieves strong performance — critical for data-scarce biology tasks"
+    ],
+    cons: [
+      "Training/inference mismatch: model learns to predict [MASK] tokens never seen at inference time",
+      "Fixed maximum sequence length (512 tokens in original) limits direct application to long genomic sequences",
+      "Encoder-only architecture not suited for open-ended generation without modification"
+    ],
+    details: "Pretraining tasks: (1) MLM — randomly mask 15% of tokens, predict original; (2) NSP — predict if sentence B follows sentence A. Architecture: 12–24 transformer encoder layers, 110M–340M params. Fine-tuning: add task-specific head, update all weights end-to-end. Biological instantiations: ESM-1v/ESM-2 (protein sequences, MLM on UniRef), DNABERT/DNABERT-2 (k-mer tokenized DNA), scBERT (gene expression profiles treated as token sequences), Nucleotide Transformer (multi-species DNA), and virtually every protein property predictor built post-2020.",
+    url: "https://arxiv.org/abs/1810.04805"
+  },
+  {
+    id: 171, year: 2020, cats: ["ml_ai", "foundation_models"], impact: 5,
+    title: "GPT-3: Language Models are Few-Shot Learners",
+    authors: "Brown et al., OpenAI",
+    journal: "NeurIPS 2020",
+    summary: "Demonstrated that autoregressive language models at 175B parameters exhibit emergent few-shot and zero-shot generalization without gradient updates. Catalyzed the era of large foundation models across all modalities including biological sequences.",
+    job_impact: "GPT-3-style decoder-only generation directly inspired generative protein design (ProtGPT2, ProGen2) and single-cell generation (scGPT); understanding in-context learning and scaling laws is increasingly relevant for biomedical text mining and lab automation.",
+    pros: [
+      "Few-shot and zero-shot task performance without any fine-tuning — in-context learning is a fundamentally new paradigm",
+      "175B parameter scale revealed emergent capabilities not present in smaller models; scaling laws make this predictable",
+      "Decoder architecture enables open-ended sequence generation — proteins, DNA regulatory elements, lab protocols"
+    ],
+    cons: [
+      "Enormous compute and API costs; 175B parameter inference is impractical for most academic groups without API access",
+      "Prone to hallucination — generates fluent but factually incorrect sequences or annotations with high confidence",
+      "Autoregressive generation is slower than encoder-only inference; not optimal for classification or embedding tasks"
+    ],
+    details: "Architecture: 96-layer decoder-only transformer, 175B params, trained on 300B tokens (Common Crawl, WebText, books, Wikipedia). In-context learning: task specification via prompt examples with no weight update at inference. Scaling laws (Kaplan et al. 2020): loss follows a power law of compute, data, and parameters — larger scale is predictably beneficial. Biological equivalents: ProtGPT2 and ProGen2 (protein sequence generation), BioGPT (biomedical literature), scGPT (single-cell generative modeling). Instructed variants (InstructGPT → ChatGPT) now underpin most AI-assisted scientific writing and bioinformatics coding tools.",
+    url: "https://arxiv.org/abs/2005.14165"
+  },
 ];
 
 

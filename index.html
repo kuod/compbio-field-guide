@@ -798,6 +798,10 @@ const DATA = [
     details: "DOGMA-seq: RNA + ATAC + ADT from 10x Multiome + feature barcoding. Integration tools: MOFA+, WNN, MultiVI. Lower per-modality sensitivity vs. dedicated assays.",
     url: "https://www.nature.com/articles/s41587-021-00927-2",
     pmid: "34083792",
+    papers: [
+      { url: "https://www.nature.com/articles/s41587-021-00927-2", pmid: "34083792", label: "Mimitou 2021 (DOGMA-seq)" },
+      { url: "https://elifesciences.org/articles/63632", pmid: "33835024", label: "Swanson 2021 (TEA-seq)" },
+    ],
   },
 
   // ── EPIGENOMICS ──────────────────────────────────────────────────────────────
@@ -852,6 +856,10 @@ const DATA = [
     details: "CUT&RUN: pA-MNase, 100K–1M cells. CUT&TAG: pA-Tn5, 1K–100K cells, sequencing-ready in 1 day. scCUT&TAG: 10x Chromium compatible. Key: spike-in for quantitative comparisons.",
     url: "https://www.nature.com/articles/s41467-019-09982-5",
     pmid: "31036827",
+    papers: [
+      { url: "https://elifesciences.org/articles/21856", pmid: "28079019", label: "Skene 2017 (CUT&RUN)" },
+      { url: "https://www.nature.com/articles/s41467-019-09982-5", pmid: "31036827", label: "Kaya-Okur 2019 (CUT&TAG)" },
+    ],
   },
 
   // ── DRUG DISCOVERY ───────────────────────────────────────────────────────────
@@ -1000,6 +1008,10 @@ const DATA = [
     details: "Nextflow: DAG-based, Docker/Singularity, nf-core library. Snakemake: rule-based, conda integration, cloud support. Key: containerization for reproducibility, cpus/mem resource directives.",
     url: "https://www.nature.com/articles/nbt.3820",
     pmid: "28398311",
+    papers: [
+      { url: "https://academic.oup.com/bioinformatics/article/28/19/2520/290322", pmid: "22908215", label: "Köster 2012 (Snakemake)" },
+      { url: "https://www.nature.com/articles/nbt.3820", pmid: "28398311", label: "Di Tommaso 2017 (Nextflow)" },
+    ],
   },
   {
     id: 45, year: 2018, cats: ["tools"], impact: 4,
@@ -1026,6 +1038,10 @@ const DATA = [
     details: "Best practices: BWA-MEM2 → MarkDuplicates → BQSR → HaplotypeCaller → VQSR. Mutect2: tumor-only or matched normal, FilterMutectCalls. DRAGEN: hardware-accelerated GATK-equivalent.",
     url: "https://www.nature.com/articles/nbt.4235",
     pmid: "30247488",
+    papers: [
+      { url: "https://genome.cshlp.org/content/20/9/1297", pmid: "20644199", label: "McKenna 2010 (GATK)" },
+      { url: "https://www.nature.com/articles/nbt.4235", pmid: "30247488", label: "Poplin 2018 (DeepVariant)" },
+    ],
   },
   {
     id: 47, year: 2021, cats: ["tools"], impact: 4,
@@ -1106,6 +1122,10 @@ const DATA = [
     details: "GeCKO: 6 guides/gene, 123K guides. Brunello: 4 guides/gene, optimized on-target rules. MAGeCK: RRA algorithm for hit calling. BAGEL2: Bayesian essential gene scoring. DepMap: 1,000+ cell lines.",
     url: "https://www.nature.com/articles/nbt.3437",
     pmid: "26780180",
+    papers: [
+      { url: "https://www.science.org/doi/10.1126/science.1247005", pmid: "24336571", label: "Shalem 2014 (GeCKO)" },
+      { url: "https://www.nature.com/articles/nbt.3437", pmid: "26780180", label: "Doench 2016 (Brunello)" },
+    ],
   },
   {
     id: 53, year: 2014, cats: ["epigenomics", "sequencing"], impact: 5,
@@ -1195,6 +1215,10 @@ const DATA = [
     details: "Salmon: selective alignment against decoy-augmented index. kallisto: pseudoalignment via k-mer hashing. Both output transcript-level counts. tximeta for provenance-tracking import. alevin-fry extends to scRNA-seq.",
     url: "https://www.nature.com/articles/nmeth.4197",
     pmid: "28263959",
+    papers: [
+      { url: "https://www.nature.com/articles/nmeth.4197", pmid: "28263959", label: "Patro 2017 (Salmon)" },
+      { url: "https://www.nature.com/articles/nbt.3519", pmid: "27043002", label: "Bray 2016 (kallisto)" },
+    ],
   },
   {
     id: 60, year: 2018, cats: ["immunology", "tools"], impact: 4,
@@ -1208,6 +1232,10 @@ const DATA = [
     details: "CIBERSORT: nu-SVR on LM22 (22 immune cell types). CIBERSORTx: RNA mixture model with sc reference. Alternatives: xCell (ssGSEA), TIMER2, EPIC, Immunedeconv R package wrapping all methods.",
     url: "https://www.nature.com/articles/s41587-019-0114-2",
     pmid: "31061481",
+    papers: [
+      { url: "https://www.nature.com/articles/nmeth.3337", pmid: "25822800", label: "Newman 2015 (CIBERSORT)" },
+      { url: "https://www.nature.com/articles/s41587-019-0114-2", pmid: "31061481", label: "Newman 2019 (CIBERSORTx)" },
+    ],
   },
   {
     id: 61, year: 2019, cats: ["ml_ai", "foundation_models"], impact: 4,
@@ -1233,6 +1261,10 @@ const DATA = [
     details: "CVAE: joint continuous SMILES → property space for property-constrained generation. JTVAE: tree decomposition ensures valid ring systems. Successors: REINVENT (RL), diffusion (DiffMol, GEOM). Benchmark: MOSES.",
     url: "https://pubs.acs.org/doi/10.1021/acscentsci.7b00572",
     pmid: "29532027",
+    papers: [
+      { url: "https://pubs.acs.org/doi/10.1021/acscentsci.7b00572", pmid: "29532027", label: "Gómez-Bombarelli 2018 (CVAE)" },
+      { url: "https://arxiv.org/abs/1802.04364", label: "Jin 2018 (JTVAE)" },
+    ],
   },
   {
     id: 63, year: 2020, cats: ["single_cell", "visualization"], impact: 4,
@@ -2048,6 +2080,10 @@ const DATA = [
     details: "Norman et al. 2019: combinatorial CRISPRa screen, identifies synergistic TF pairs. Replogle 2022: 10,000 genes × 2.5M cells. GEARS: graph neural network for combinatorial perturbation prediction. scGPT perturbation prediction. CINEMA-OT (Choi 2023): causal inference from Perturb-seq via optimal transport, separates intrinsic cell state from treatment response. NOTEARS-inspired DAG learning on Perturb-seq: emerging approach for causal graph inference at gene-network scale.",
     url: "https://doi.org/10.1016/j.cell.2022.05.013",
     pmid: "35688146",
+    papers: [
+      { url: "https://www.cell.com/cell/fulltext/S0092-8674(22)00597-9", pmid: "35688146", label: "Replogle 2022 (genome-wide)" },
+      { url: "https://www.science.org/doi/10.1126/science.aax4438", pmid: "31395745", label: "Norman 2019 (combinatorial)" },
+    ],
   },
   {
     id: 125, year: 2022, cats: ["causal_inference", "pop_genomics", "proteomics"], impact: 5,
@@ -2625,6 +2661,12 @@ const DATA = [
     details: "GUIDE-seq (Tsai 2015, Nat Biotech): dsODN integration at DSBs → translocation sequencing; ~1000x more sensitive than ChIP-seq; cell-based; standard for IND. GUIDE-seq2 (Listgarten 2018): improved dsODN design with UMIs for quantitative off-target frequency; reduces background. rhAmpSeq (IDT/Giannoukos): amplicon-based, uses RNase H-dependent primers for selective amplification at predicted off-target loci; high specificity, targeted. CIRCLE-seq (Kleinstiver 2016, Nat Methods): circularized naked genomic DNA + recombinant Cas9 in vitro; hypersensitive biochemical screen; no cellular context. CHANGE-seq (Lazzarotto 2020, Nat Biotech): tagmentation-based genome-wide in vitro cleavage; ~10x more sensitive than CIRCLE-seq; rapid library prep; discovers rare sites. ONE-seq (Hana et al. 2021): oligonucleotide-based enrichment of cleavage products; orthogonal biochemical screen. Digenome-seq (Kim 2015, Nat Methods): Cas9 digestion of naked genomic DNA + whole-genome sequencing for uniform cut ends; simple but lower throughput. DISCOVER-seq (Wienert 2019, Nat Methods): Cas9 recruits MRE11 (DSB sensor) → ChIP of MRE11 marks DSBs; cell-based, no exogenous tag. HTGTS (High-Throughput Genome-wide Translocation Sequencing, Frock 2015): prey-bait ligation capture of translocations; quantifies chromosomal rearrangements from all DSBs. CAST-seq (Turchiano 2021, Nat Protocols): targeted sequencing of chromosomal rearrangements around on-target site; clinically relevant structural variant detection. Recommended IND package: CHANGE-seq or CIRCLE-seq (biochemical screen) + GUIDE-seq or DISCOVER-seq (cell-based) + rhAmpSeq (deep targeted validation of top sites) + CAST-seq (translocation/rearrangement quantification). FDA guidance: 2024 draft guidance for genome editing recommends risk-stratified off-target assessment.",
     url: "https://www.nature.com/articles/nbt.3117",
     pmid: "25513782",
+    papers: [
+      { url: "https://www.nature.com/articles/nbt.3117", pmid: "25513782", label: "Tsai 2015 (GUIDE-seq)" },
+      { url: "https://www.nature.com/articles/nmeth.4278", pmid: "28459458", label: "Tsai 2017 (CIRCLE-seq)" },
+      { url: "https://www.nature.com/articles/nmeth.3284", pmid: "25664545", label: "Kim 2015 (Digenome-seq)" },
+      { url: "https://www.nature.com/articles/s41587-020-0555-7", pmid: "32541958", label: "Lazzarotto 2020 (CHANGE-seq)" },
+    ],
   },
 
   // ── TRANSFORMER FOUNDATIONS ──────────────────────────────────────────────────

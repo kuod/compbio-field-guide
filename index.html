@@ -2295,14 +2295,18 @@ const DATA = [
     id: 141, year: 2023, cats: ["validated_targets"], impact: 4,
     citations: 656,
     title: "SHP2 / RAS pathway allosteric nodes and combination strategies",
-    authors: "Chen et al. (RMC-4630 SHP2i 2016); Hallin et al. (combination data 2022)",
-    journal: "Nature Medicine 2016; Cancer Discovery 2022",
+    authors: "Chen et al. (SHP099, Nature 2016); Hallin et al. (MRTX849+SHP2i, Cancer Discovery 2020)",
+    journal: "Nature 2016; Cancer Discovery 2020",
     summary: "SHP2 (PTPN11) is an allosteric phosphatase acting upstream of RAS, required for RTK-mediated RAS activation. SHP2 inhibitors (TNO155, RMC-4630) block the adaptive RTK feedback reactivation that causes resistance to KRAS G12C inhibitors — validating SHP2 as a combination target across RAS-driven tumors.",
     pros: ["Allosteric SHP2 inhibition blocks multiple upstream RTKs simultaneously — more comprehensive than targeting any single RTK (EGFR, MET, HER2)", "Combination with KRAS G12C inhibitors addresses the primary resistance mechanism (RTK-mediated RAS reactivation) upfront", "Pan-RAS inhibitors (RMC-6236) emerging as SHP2 combination partner — may enable targeting of KRAS G12D, G12V, G13D mutations beyond G12C"],
     cons: ["On-target toxicity: SHP2 has essential roles in hematopoiesis and immune cell signaling — neutropenia, rash, and fatigue are dose-limiting", "Resistance to SHP2i+KRAS G12Ci combinations still emerges via MAPK pathway reactivation downstream of MEK/ERK", "SHP2 gain-of-function mutations (PTPN11, Noonan syndrome/JMML) are distinct from SHP2 as an adaptor in KRAS-mutant tumors — different biology"],
     details: "SHP2 (PTPN11): non-receptor tyrosine phosphatase, PTP domain activated by N-SH2 domain release upon phosphotyrosine binding → activates GRB2-SOS1-RAS axis. Allosteric SHP2i: bind SH2:PTP interface to stabilize closed/inactive conformation (TNO155, RMC-4630, JAB-3312). KRAS G12Ci resistance: RTK amplification (EGFR, MET, FGFR) → SHP2 reactivation → RAS-GTP loading of remaining KRAS (non-G12C). Combination: RMC-4630 + sotorasib (CodeBreaK 101): ORR 29% in NSCLC G12C. RMC-6236 (pan-KRAS RAS-ON inhibitor): Phase 1, PDAC + NSCLC.",
-    url: "https://www.nature.com/articles/nm.4386",
-    pmid: "28825715",
+    url: "https://www.nature.com/articles/nature18621",
+    pmid: "27362227",
+    papers: [
+      { url: "https://www.nature.com/articles/nature18621", pmid: "27362227", label: "Chen 2016 (SHP099 allosteric inhibitor)" },
+      { url: "https://doi.org/10.1158/2159-8290.CD-19-1167", pmid: "31658955", label: "Hallin 2020 (MRTX849 + SHP2i combo)" },
+    ],
   },
 
   // ── FOUNDATION MODELS ────────────────────────────────────────────────────────

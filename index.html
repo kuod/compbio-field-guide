@@ -490,6 +490,10 @@ const DATA = [
     details: "CBEs: APOBEC1-nCas9, edits C→T in ~5 nt window. ABEs: evolved tRNA adenosine deaminase, edits A→G. BE4max and ABE8e are optimized variants. RNP delivery reduces RNA off-targets.",
     url: "https://www.nature.com/articles/nature17946",
     pmid: "27096365",
+    papers: [
+      { url: "https://www.nature.com/articles/nature17946", pmid: "27096365", label: "Komor 2016 (C→T)" },
+      { url: "https://www.nature.com/articles/nature24644", pmid: "28953375", label: "Gaudelli 2017 (A→G)" },
+    ],
   },
   {
     id: 8, year: 2019, cats: ["crispr"], impact: 5,
@@ -516,6 +520,10 @@ const DATA = [
     details: "MOI optimization (Poisson <0.3). MAGeCK/BAGEL2 for hit calling. Perturb-seq: 10x Chromium + CRISPRi, maps gene function at single-cell resolution. Genome-wide Perturb-seq (Replogle 2022).",
     url: "https://www.nature.com/articles/nmeth.2869",
     pmid: "24584193",
+    papers: [
+      { url: "https://www.nature.com/articles/nmeth.2869", pmid: "24584193", label: "Gilbert 2014 (CRISPRi)" },
+      { url: "https://www.nature.com/articles/nature14136", pmid: "25494202", label: "Konermann 2015 (CRISPRa)" },
+    ],
   },
   {
     id: 10, year: 2022, cats: ["crispr"], impact: 4,
@@ -622,6 +630,10 @@ const DATA = [
     details: "RFdiffusion: denoising diffusion on SE(3)-equivariant frames, conditioned on target hotspots. ProteinMPNN: GNN for inverse folding. Validated for binders, enzymes, symmetric assemblies.",
     url: "https://www.nature.com/articles/s41586-023-06415-8",
     pmid: "37433327",
+    papers: [
+      { url: "https://www.nature.com/articles/s41586-023-06415-8", pmid: "37433327", label: "Watson 2023 (RFdiffusion)" },
+      { url: "https://www.science.org/doi/10.1126/science.add2187", pmid: "36108050", label: "Dauparas 2022 (ProteinMPNN)" },
+    ],
   },
   {
     id: 18, year: 2024, cats: ["ml_ai", "foundation_models"], impact: 5,
@@ -768,6 +780,10 @@ const DATA = [
     details: "4-1BB (tisa-cel) vs. CD28 (axi-cel) co-stimulatory domains: persistence vs. potency tradeoff. CRS: IL-6-mediated, tocilizumab treatment. ICANS: neurotoxicity, steroid-responsive. scRNA-seq of product correlates with outcome.",
     url: "https://www.nejm.org/doi/full/10.1056/nejmoa1706450",
     pmid: "28578601",
+    papers: [
+      { url: "https://www.nejm.org/doi/full/10.1056/NEJMoa1706447", pmid: "28605781", label: "Neelapu 2017 (axi-cel)" },
+      { url: "https://www.nejm.org/doi/full/10.1056/NEJMoa1709866", pmid: "29385370", label: "Maude 2018 (tisa-cel)" },
+    ],
   },
   {
     id: 29, year: 2023, cats: ["immunology", "single_cell"], impact: 4,
@@ -1072,6 +1088,10 @@ const DATA = [
     details: "edgeR: tagwise dispersion, exact test for simple designs, quasi-likelihood F-test for complex. DESeq2: median-of-ratios normalization, Wald test, LFC shrinkage. Limma-voom also widely used for large datasets.",
     url: "https://genomebiology.biomedcentral.com/articles/10.1186/s13059-014-0550-8",
     pmid: "25516281",
+    papers: [
+      { url: "https://academic.oup.com/bioinformatics/article/26/1/139/182458", pmid: "19910308", label: "Robinson 2010 (edgeR)" },
+      { url: "https://genomebiology.biomedcentral.com/articles/10.1186/s13059-014-0550-8", pmid: "25516281", label: "Love 2014 (DESeq2)" },
+    ],
   },
   {
     id: 52, year: 2014, cats: ["crispr"], impact: 4,
@@ -2881,9 +2901,11 @@ function renderCard(d) {
       <div class="card-details open" id="details-${d.id}">${addTooltips(d.details)}</div>
       <div class="card-footer">
         <span class="card-journal">${d.journal}</span>
-        <div style="display:flex;gap:8px;align-items:center;">
-          <a class="card-link" href="${d.url}" target="_blank">source</a>
-          ${d.pmid ? `<a class="card-link" href="https://pubmed.ncbi.nlm.nih.gov/${d.pmid}/" target="_blank" style="color:var(--muted);font-size:11px;">PMID:${d.pmid}</a>` : ''}
+        <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+          ${d.papers
+            ? d.papers.map(p => `<span style="display:flex;gap:4px;align-items:center;"><a class="card-link" href="${p.url}" target="_blank">${p.label}</a>${p.pmid ? `<a class="card-link" href="https://pubmed.ncbi.nlm.nih.gov/${p.pmid}/" target="_blank" style="color:var(--muted);font-size:11px;">PMID:${p.pmid}</a>` : ''}</span>`).join('')
+            : `<a class="card-link" href="${d.url}" target="_blank">source</a>${d.pmid ? `<a class="card-link" href="https://pubmed.ncbi.nlm.nih.gov/${d.pmid}/" target="_blank" style="color:var(--muted);font-size:11px;">PMID:${d.pmid}</a>` : ''}`
+          }
           <button class="read-btn" data-read-id="${d.id}" title="Mark as read">📖 mark read</button>
         </div>
       </div>

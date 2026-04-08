@@ -409,7 +409,8 @@ const DATA = [
     pros: ["Ultra-long reads resolve repeats, SVs, centromeres", "HiFi/CCS achieves short-read-level accuracy", "Native base mod detection (5mC, 6mA) without bisulfite"],
     cons: ["High cost per Gb vs. short reads", "Lower throughput for population-scale studies", "Requires high-MW DNA input; FFPE/degraded samples problematic"],
     details: "SMRT uses a zero-mode waveguide to observe single polymerase molecules in real time. Consensus accuracy (HiFi/CCS reads) now rivals short-read accuracy at >15x coverage. Key apps: genome assembly, T2T, SV detection, methylation calling.",
-    url: "https://www.science.org/doi/10.1126/science.1162986"
+    url: "https://www.science.org/doi/10.1126/science.1162986",
+    pmid: "19023044",
   },
   {
     id: 2, year: 2012, cats: ["sequencing"], impact: 5,
@@ -421,7 +422,8 @@ const DATA = [
     pros: ["Megabase-length reads for complex structural variants", "Real-time streaming output enables adaptive sampling", "Direct RNA-seq without reverse transcription bias"],
     cons: ["Raw read error rate historically high (~5–10%), improving with R10.4.1+Dorado", "Requires fresh high-MW DNA; pore lifetime limits per-run yield", "Kit and flow cell costs add up for high-throughput production"],
     details: "Key papers: Jain et al. 2018 (nanopore human genome), Garalde et al. 2018 (direct RNA). Basecallers: Guppy → Dorado. ReadUntil API for adaptive sampling. R10.4.1 pores achieve ~99.9% simplex accuracy.",
-    url: "https://www.nature.com/articles/nbt.3423"
+    url: "https://www.nature.com/articles/nbt.3423",
+    pmid: "27153285",
   },
   {
     id: 3, year: 2019, cats: ["sequencing"], impact: 4,
@@ -445,7 +447,8 @@ const DATA = [
     pros: ["Resolves all ~200 Mb of novel sequence absent from GRCh38", "Enables accurate SV and CNV calling in previously unmappable regions", "Foundation for the Human Pangenome Reference (HPRC)"],
     cons: ["CHM13 is a haploid hydatidiform mole, not representative of diploid diversity", "Realignment of legacy datasets to T2T is resource-intensive", "Annotation (gene models, regulatory elements) still catching up to GRCh38"],
     details: "Added ~200 Mb of novel sequence vs. GRCh38, including 115 Mb of centromeric satellite DNA. Tools: Verkko, hifiasm. Human Pangenome Reference Consortium 2023 follows.",
-    url: "https://www.science.org/doi/10.1126/science.abj6987"
+    url: "https://www.science.org/doi/10.1126/science.abj6987",
+    pmid: "35357919",
   },
 
   // ── CRISPR ───────────────────────────────────────────────────────────────────
@@ -459,7 +462,8 @@ const DATA = [
     pros: ["Simple 20-nt sgRNA design enables rapid targeting of any NGG-adjacent locus", "Multiplexable with multiple sgRNAs simultaneously", "Extensive characterization across cell types and organisms"],
     cons: ["DSB creates risk of large deletions, translocations, chromothripsis", "SpCas9 requires NGG PAM, limiting targetable sites", "Immunogenicity of bacterial-derived Cas9 a concern for in vivo delivery"],
     details: "Cas9 uses two nuclease domains (RuvC, HNH). DSB repair: NHEJ (indels) or HDR (precise edits). sgRNA = crRNA + tracrRNA fusion. Key parameters: GC content, off-target homology, secondary structure.",
-    url: "https://www.science.org/doi/10.1126/science.1225829"
+    url: "https://www.science.org/doi/10.1126/science.1225829",
+    pmid: "22745249",
   },
   {
     id: 6, year: 2016, cats: ["crispr"], impact: 5,
@@ -471,7 +475,8 @@ const DATA = [
     pros: ["Unbiased genome-wide detection without prior site nomination", "High sensitivity (~0.01% editing frequency detectable)", "Directly measures cellular DSBs, not predicted from sequence alone"],
     cons: ["Requires efficient dsODN integration (limited in hard-to-transfect primary cells)", "Background signal from endogenous DSBs can confound low-frequency sites", "Detects nuclease activity under specific delivery conditions, not necessarily in vivo"],
     details: "dsODN tag inserts bidirectionally at Cas9 cuts. Amplicon sequencing maps all DSBs. Improvements: DISCOVER-Seq (MRE11 ChIP), CIRCLE-seq (in vitro), SITE-seq (nucleosome-depleted chromatin).",
-    url: "https://www.nature.com/articles/nbt.3117"
+    url: "https://www.nature.com/articles/nbt.3117",
+    pmid: "25513782",
   },
   {
     id: 7, year: 2018, cats: ["crispr"], impact: 5,
@@ -483,7 +488,8 @@ const DATA = [
     pros: ["No DSB dramatically reduces large deletions and translocations", "High efficiency for cognate base in window, especially ABE8e", "Clinical-stage validation in multiple indications"],
     cons: ["Bystander edits at non-target cytosines/adenines within editing window", "Limited to specific base transitions (C→T or A→G), not all 12 possible changes", "RNA off-target editing (deamination of transcriptome) a safety concern"],
     details: "CBEs: APOBEC1-nCas9, edits C→T in ~5 nt window. ABEs: evolved tRNA adenosine deaminase, edits A→G. BE4max and ABE8e are optimized variants. RNP delivery reduces RNA off-targets.",
-    url: "https://www.nature.com/articles/nature17946"
+    url: "https://www.nature.com/articles/nature17946",
+    pmid: "27096365",
   },
   {
     id: 8, year: 2019, cats: ["crispr"], impact: 5,
@@ -495,7 +501,8 @@ const DATA = [
     pros: ["All 12 possible base substitutions plus small indels in one system", "No DSB, no exogenous donor template required", "Highly programmable; pegRNA encodes both targeting and edit"],
     cons: ["Lower efficiency than base editors for simple transitions in most cell types", "Large cargo size (PE + pegRNA) complicates AAV delivery", "pegRNA instability requires 3' structural motif (epegRNA) engineering"],
     details: "pegRNA: spacer + primer binding site + RT template. PE2/PE3/PE3b/PEmax improve efficiency. In vivo prime editing in liver/retina demonstrated. Key challenge: delivery for non-liver tissues.",
-    url: "https://www.nature.com/articles/s41586-019-1711-4"
+    url: "https://www.nature.com/articles/s41586-019-1711-4",
+    pmid: "31634902",
   },
   {
     id: 9, year: 2020, cats: ["crispr"], impact: 4,
@@ -507,7 +514,8 @@ const DATA = [
     pros: ["No DNA cleavage, fully reversible transcriptional perturbation", "Compatible with scRNA-seq (Perturb-seq) for rich phenotypic readout", "CRISPRa enables testing of gain-of-function hypotheses without overexpression artifacts"],
     cons: ["Requires stable dCas9-effector expression, complicates primary cell delivery", "Incomplete repression (knockdown, not knockout) can obscure phenotypes", "Large effector constructs reduce library encoding capacity per lentiviral vector"],
     details: "MOI optimization (Poisson <0.3). MAGeCK/BAGEL2 for hit calling. Perturb-seq: 10x Chromium + CRISPRi, maps gene function at single-cell resolution. Genome-wide Perturb-seq (Replogle 2022).",
-    url: "https://www.nature.com/articles/nmeth.2869"
+    url: "https://www.nature.com/articles/nmeth.2869",
+    pmid: "24584193",
   },
   {
     id: 10, year: 2022, cats: ["crispr"], impact: 4,
@@ -519,7 +527,8 @@ const DATA = [
     pros: ["Proof-of-concept that in vivo CRISPR is safe and efficacious in humans", "Single-dose durable effect vs. lifetime siRNA injections (patisiran)", "LNP delivery to liver hepatocytes is now a validated clinical path"],
     cons: ["Efficacy limited to LNP-accessible liver; CNS/muscle tissues unaddressed by this approach", "NHEJ-mediated disruption cannot perform precise corrections", "Long-term durability and hepatic LNP safety data still accumulating"],
     details: "LNPs encapsulate Cas9 mRNA + sgRNA targeting TTR exon 2. Hepatocyte transduction, NHEJ-mediated disruption. GUIDE-seq safety at predicted off-target sites. Followed by NTLA-2002 (HAE).",
-    url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2107454"
+    url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2107454",
+    pmid: "34215024",
   },
 
   // ── ML / AI ──────────────────────────────────────────────────────────────────
@@ -533,7 +542,8 @@ const DATA = [
     pros: ["Learns de novo sequence features without manual motif curation", "Predicts hundreds of chromatin features simultaneously (DeepSEA: 919 tracks)", "Enables in silico saturation mutagenesis for variant interpretation"],
     cons: ["Short receptive field (~150–200 bp) misses long-range enhancer–promoter interactions", "Requires large labeled ChIP-seq datasets; limited for rare cell types", "Black-box predictions; later transformers (Enformer) largely superseded for long-range tasks"],
     details: "DeepSEA predicts 919 chromatin features. DeepBind uses position-specific convolutions as motif detectors. Evolved into Basset, Basenji, Enformer. Key limitation: short receptive field.",
-    url: "https://www.nature.com/articles/nbt.3300"
+    url: "https://www.nature.com/articles/nbt.3300",
+    pmid: "26213851",
   },
   {
     id: 12, year: 2018, cats: ["ml_ai", "single_cell"], impact: 5,
@@ -545,7 +555,8 @@ const DATA = [
     pros: ["Principled probabilistic model handles overdispersion and dropout explicitly", "Latent space enables dataset integration, imputation, and DE in one framework", "Active development: scANVI, totalVI, PEAKVI, scArches all built on same foundation"],
     cons: ["Training time and GPU requirements increase with dataset size", "Hyperparameter sensitivity (n_latent, n_layers) requires tuning per dataset", "Less interpretable than linear methods (PCA) for identifying specific batch effects"],
     details: "Generative model: p(x|z) = ZINB(f(z)), q(z|x) = Normal. Key advantage: handles technical noise explicitly. scANVI (semi-supervised), totalVI (CITE-seq), scArches (transfer learning).",
-    url: "https://www.nature.com/articles/s41592-018-0229-2"
+    url: "https://www.nature.com/articles/s41592-018-0229-2",
+    pmid: "30504886",
   },
   {
     id: 13, year: 2021, cats: ["ml_ai", "foundation_models"], impact: 5,
@@ -557,7 +568,8 @@ const DATA = [
     pros: ["Near-crystallography accuracy for single domains (~90th percentile GDT_TS)", "Freely available; AF2 database covers UniProt proteome (~200M structures)", "MSA co-evolutionary signal provides implicit family-wide structural knowledge"],
     cons: ["Static single-state prediction misses conformational flexibility and allostery", "Low confidence (pLDDT<70) in intrinsically disordered regions — common in drug targets", "Not trained for ligand binding pose prediction (AF3 partially addresses this)"],
     details: "Architecture: Evoformer (MSA + pairwise reasoning) + Structure Module (invariant point attention). pLDDT: per-residue confidence. PAE: domain interface accuracy. ColabFold for rapid community access.",
-    url: "https://www.nature.com/articles/s41586-021-03819-2"
+    url: "https://www.nature.com/articles/s41586-021-03819-2",
+    pmid: "34265844",
   },
   {
     id: 14, year: 2021, cats: ["ml_ai", "foundation_models"], impact: 5,
@@ -569,7 +581,8 @@ const DATA = [
     pros: ["1000x faster than AF2 (no MSA), enabling proteome-scale structure inference", "Zero-shot variant effect prediction via log-likelihood ratio", "Pre-trained embeddings transfer to diverse downstream tasks"],
     cons: ["Slightly lower accuracy than AF2 on challenging CASP targets requiring deep MSAs", "No explicit co-evolutionary signal; struggles with remote homologs", "ESMFold less accurate for multimers vs. AF2-Multimer"],
     details: "ESM-2 (650M–15B params): masked LM on UniRef90. ESMFold: LM trunk + folding head. Uses: zero-shot variant scoring, mutational scanning, protein retrieval. Evo2 extends to DNA.",
-    url: "https://www.science.org/doi/10.1126/science.ade2574"
+    url: "https://www.science.org/doi/10.1126/science.ade2574",
+    pmid: "36927031",
   },
   {
     id: 15, year: 2021, cats: ["ml_ai", "foundation_models"], impact: 5,
@@ -581,7 +594,8 @@ const DATA = [
     pros: ["196 kb receptive field captures most known enhancer–promoter interactions", "Simultaneous prediction of 5,313 genomic tracks across cell types", "ISM enables causal variant interpretation at regulatory loci"],
     cons: ["Input window still misses TAD-scale and compartment-level regulatory logic (>200 kb)", "Training on bulk ChIP-seq; cannot resolve cell-type heterogeneity in complex tissues", "Computationally expensive; fine-tuning requires significant GPU resources"],
     details: "Input: 196,608 bp one-hot. Output: 5,313 tracks. Architecture: conv stem + transformer + pointwise MLP + heads. Key application: ISM for variant interpretation, enhancer design.",
-    url: "https://www.nature.com/articles/s41592-021-01270-1"
+    url: "https://www.nature.com/articles/s41592-021-01270-1",
+    pmid: "34608324",
   },
   {
     id: 16, year: 2023, cats: ["ml_ai", "foundation_models"], impact: 5,
@@ -593,7 +607,8 @@ const DATA = [
     pros: ["Single-nucleotide resolution across full prokaryotic genomes (~100 kb context)", "Zero-shot predicts CRISPR-Cas fitness, essential genes, protein function without fine-tuning", "Generative capability demonstrated for novel CRISPR systems and regulatory sequences"],
     cons: ["Trained primarily on prokaryotes; Evo2 extends to eukaryotes but still maturing", "Hyena operator less studied than Transformer attention; interpretability limited", "Enormous compute requirements for pretraining; most users restricted to fine-tuning"],
     details: "Hyena: implicit long convolutions replace attention. Trained on OpenGenome (2.7M prokaryotic + phage genomes). Evo2 (2025): eukaryotes, 7B params. Zero-shot predicts essential genes and CRISPR-Cas fitness.",
-    url: "https://www.science.org/doi/10.1126/science.ado9336"
+    url: "https://www.science.org/doi/10.1126/science.ado9336",
+    pmid: "39541441",
   },
   {
     id: 17, year: 2023, cats: ["ml_ai", "gene_editing"], impact: 4,
@@ -605,7 +620,8 @@ const DATA = [
     pros: ["Designs diverse high-affinity binders without natural template scaffolds", "ProteinMPNN dramatically improves sequence-to-structure compatibility over Rosetta", "Wet-lab validation rate much higher than traditional computational design"],
     cons: ["Binder designs require experimental screening; success rates vary by target class", "Large compute footprint; RFdiffusion inference takes minutes per design", "Conditioned generation requires defined hotspot residues — hard for novel allosteric targets"],
     details: "RFdiffusion: denoising diffusion on SE(3)-equivariant frames, conditioned on target hotspots. ProteinMPNN: GNN for inverse folding. Validated for binders, enzymes, symmetric assemblies.",
-    url: "https://www.nature.com/articles/s41586-023-06415-8"
+    url: "https://www.nature.com/articles/s41586-023-06415-8",
+    pmid: "37433327",
   },
   {
     id: 18, year: 2024, cats: ["ml_ai", "foundation_models"], impact: 5,
@@ -617,7 +633,8 @@ const DATA = [
     pros: ["First unified model for protein + DNA + RNA + ligand in one architecture", "Ligand binding pose prediction significantly better than AF2 + docking post-processing", "Confidence scores (pLDDT, ipTM) extend meaningfully to small molecules"],
     cons: ["Server-only access (non-commercial); code released but weights restricted for commercial use", "Diffusion head produces stochastic outputs; requires multiple inference runs and ranking", "Still struggles with highly flexible loops and covalent modifications"],
     details: "Pairformer + diffusion head for 3D coordinate generation. Trained on PDB + CCD. AlphaFold-Multimer superseded. Server available for non-commercial use.",
-    url: "https://www.nature.com/articles/s41586-024-07487-w"
+    url: "https://www.nature.com/articles/s41586-024-07487-w",
+    pmid: "38718835",
   },
 
   // ── SINGLE CELL ──────────────────────────────────────────────────────────────
@@ -631,7 +648,8 @@ const DATA = [
     pros: ["Scales to tens of thousands of cells per experiment at low per-cell cost", "UMI deduplication removes PCR amplification bias", "Open-source design enabled widespread academic adoption before 10x"],
     cons: ["~10% doublet rate requires computational scrubbing (Scrublet, DoubletFinder)", "Ambient RNA contamination (~10% of transcripts) needs correction (SoupX, CellBender)", "3' capture bias means 5' UTR and long 3' UTR regions over-represented"],
     details: "STAMPs: single-cell transcriptomes attached to microparticles. STARsolo, Cell Ranger for alignment + demux. QC: knee plot for cell calling, sequencing saturation. Commercialized as 10x Chromium.",
-    url: "https://doi.org/10.1016/j.cell.2015.05.002"
+    url: "https://doi.org/10.1016/j.cell.2015.05.002",
+    pmid: "26000488",
   },
   {
     id: 20, year: 2018, cats: ["single_cell"], impact: 5,
@@ -643,7 +661,8 @@ const DATA = [
     pros: ["Surface protein + RNA in same cell resolves ambiguity of transcriptional vs. protein-level markers", "ADT panel extensible to 200+ markers (TotalSeq B/C reagents)", "Hashtagging (HTO) enables sample multiplexing to reduce batch effects"],
     cons: ["ADT background correction is non-trivial; DSB normalization required", "Adds library prep complexity and cost vs. RNA-only 10x", "Panel design requires extensive titration to avoid high background or cross-reactivity"],
     details: "ADTs use poly-A tails for bead capture. HTOs for cell hashing (Seurat HTODemux). totalVI for integrated analysis. WNN: weighted nearest neighbor for multimodal cell embedding.",
-    url: "https://www.nature.com/articles/nmeth.4380"
+    url: "https://www.nature.com/articles/nmeth.4380",
+    pmid: "28759029",
   },
   {
     id: 21, year: 2022, cats: ["single_cell", "crispr"], impact: 5,
@@ -655,7 +674,8 @@ const DATA = [
     pros: ["Transcriptome-wide phenotype per perturbation reveals mechanism, not just fitness effects", "Genome-wide scale in single experiment enables unbiased discovery", "Compatible with CRISPRi (reversible) and any Cas9-compatible guide library"],
     cons: ["Extremely expensive at genome-wide scale ($500K–$1M per experiment)", "Guide capture efficiency limits per-cell perturbation identity certainty", "Phenotypes dominated by strong transcriptional responders; subtle effects easily missed"],
     details: "Guide capture via feature barcoding. mixscape identifies perturbation responders vs. non-responders. MAST/edgeR for DE. SCENIC for network inference. Genome-wide: 10,000 genes × 2.5M cells.",
-    url: "https://doi.org/10.1016/j.cell.2022.05.013"
+    url: "https://doi.org/10.1016/j.cell.2022.05.013",
+    pmid: "35688146",
   },
   {
     id: 22, year: 2019, cats: ["single_cell", "epigenomics"], impact: 5,
@@ -667,7 +687,8 @@ const DATA = [
     pros: ["Directly measures regulatory element accessibility rather than transcriptional output", "Enables TF footprinting (TOBIAS) to infer binding occupancy at single-cell resolution", "Multiome (10x) simultaneous RNA + ATAC enables direct cis-regulatory link inference"],
     cons: ["Extreme sparsity (~1% features accessible per cell) requires deep sequencing", "Peak calling relies on pseudobulked aggregates; rare cell types lack power", "Harder to align with protein-level immunophenotypes vs. RNA-based methods"],
     details: "Tn5 tagmentation at open chromatin. ArchR/Signac for analysis using LSI (TF-IDF + SVD). TOBIAS for footprinting. MACS2 for peak calling. scMultiome: RNA + ATAC from same nucleus.",
-    url: "https://www.nature.com/articles/s41587-019-0206-z"
+    url: "https://www.nature.com/articles/s41587-019-0206-z",
+    pmid: "31375813",
   },
   {
     id: 23, year: 2020, cats: ["single_cell"], impact: 4,
@@ -679,7 +700,8 @@ const DATA = [
     pros: ["Provides directionality to trajectories without requiring pre-defined start/end states", "scVelo dynamical model recovers gene-specific kinetics from data", "CellRank integrates velocity with fate probabilities for quantitative lineage analysis"],
     cons: ["Velocity estimates are noisy for slowly cycling or homeostatic cell populations", "Relies on splicing dynamics assumption that breaks down for nuclear RNA or mature neurons", "Pseudotime and velocity can disagree; interpretation requires domain knowledge"],
     details: "velocyto: spliced/unspliced counts from intron/exon reads. scVelo: EM-based dynamical model. CellRank: combines velocity with terminal state similarity. MOSCOT: optimal transport extension.",
-    url: "https://www.nature.com/articles/s41587-020-0591-3"
+    url: "https://www.nature.com/articles/s41587-020-0591-3",
+    pmid: "32747759",
   },
   {
     id: 24, year: 2023, cats: ["single_cell", "foundation_models"], impact: 4,
@@ -691,7 +713,8 @@ const DATA = [
     pros: ["Transfer learning across tissues, species, and perturbations without retraining", "Zero-shot annotation and batch correction across diverse datasets", "Geneformer predicts dosage sensitivity and chromatin dynamics from cell state"],
     cons: ["Training data biases (mostly well-characterized cell types) limit utility for rare or disease cells", "Gene tokenization strategies vary across models, hindering direct comparison", "Benchmark evaluations still maturing; unclear which model best for which task"],
     details: "Geneformer: trained on 30M human cells, rank-value encoded, transfers to network biology. scGPT: generative, perturbation prediction. UCE: ESM2-inspired, zero-shot across 36M cells.",
-    url: "https://www.nature.com/articles/s41586-023-06139-9"
+    url: "https://www.nature.com/articles/s41586-023-06139-9",
+    pmid: "37258680",
   },
 
   // ── IMMUNOLOGY ───────────────────────────────────────────────────────────────
@@ -717,7 +740,8 @@ const DATA = [
     pros: ["NetMHCpan4.1 trained on MS eluted ligands; pan-allele coverage including rare HLAs", "Integrated in pVACseq with somatic calling for clinical neoantigen ranking", "MHCflurry is open-source and fast; enables proteome-wide scanning"],
     cons: ["False positive rate for actionable neoantigens remains high (~1–5% T cell response rate)", "CD4+ epitope (MHC class II) prediction substantially less accurate than class I", "Immunogenicity depends on TCR repertoire and self-tolerance; binding is necessary but not sufficient"],
     details: "NetMHCpan4.1: trained on MS eluted ligands + binding affinity data. %Rank, EL score metrics. pVACseq integrates somatic calling + neoantigen ranking. TMB-high tumors (NSCLC, melanoma) primary application.",
-    url: "https://www.nature.com/articles/s41586-018-0418-2"
+    url: "https://www.nature.com/articles/s41586-018-0418-2",
+    pmid: "30135528",
   },
   {
     id: 27, year: 2020, cats: ["immunology"], impact: 5,
@@ -729,7 +753,8 @@ const DATA = [
     pros: ["Fastest vaccine development in history (~11 months from sequence to Phase 3 efficacy)", "mRNA-LNP platform now validated for speed, scalability, and safety in billions of doses", "Established nAb titer as regulatory surrogate, accelerating future mRNA vaccine approval"],
     cons: ["Cold chain requirements (ultra-cold for BNT162b2) complicate global logistics", "Waning immunity and variant escape require booster strategy — intrinsic to mRNA's transient expression", "Myocarditis signal (rare, especially young males) required post-market surveillance"],
     details: "BNT162b2: modRNA with N1-methylpseudouridine, 2P-stabilized spike. mRNA-1273: similar. Neutralizing Ab titer correlates with protection. Memory B + T cells persist. Platform now used for RSV, flu, oncology.",
-    url: "https://www.nejm.org/doi/full/10.1056/nejmoa2034577"
+    url: "https://www.nejm.org/doi/full/10.1056/nejmoa2034577",
+    pmid: "33301246",
   },
   {
     id: 28, year: 2021, cats: ["immunology"], impact: 4,
@@ -741,7 +766,8 @@ const DATA = [
     pros: ["Durable complete responses in patients with no other curative options", "Single infusion product; manufacturing and QC now well-characterized industrially", "scRNA-seq of infusion products (Good et al. 2021) enables predictive biomarker development"],
     cons: ["Manufacturing is autologous, patient-specific, expensive (~$400K/patient), and fails ~5–10% patients", "CRS and ICANS toxicities require ICU-level management infrastructure", "CD19 antigen loss is the primary resistance mechanism, driving next-gen bispecific designs"],
     details: "4-1BB (tisa-cel) vs. CD28 (axi-cel) co-stimulatory domains: persistence vs. potency tradeoff. CRS: IL-6-mediated, tocilizumab treatment. ICANS: neurotoxicity, steroid-responsive. scRNA-seq of product correlates with outcome.",
-    url: "https://www.nejm.org/doi/full/10.1056/nejmoa1706450"
+    url: "https://www.nejm.org/doi/full/10.1056/nejmoa1706450",
+    pmid: "28578601",
   },
   {
     id: 29, year: 2023, cats: ["immunology", "single_cell"], impact: 4,
@@ -753,7 +779,8 @@ const DATA = [
     pros: ["Captures epigenetic, proteomic, and transcriptional cell state in the same cell simultaneously", "Enables direct inference of regulatory element–gene–protein linkages per cell type", "Detects chromatin remodeling that precedes transcriptional change (e.g., during activation)"],
     cons: ["Each modality measured at lower sensitivity vs. dedicated single-modality assay", "Data integration across three modalities is computationally complex and model-choice-sensitive", "Cell viability requirements (intact nuclei for ATAC) add processing constraints"],
     details: "DOGMA-seq: RNA + ATAC + ADT from 10x Multiome + feature barcoding. Integration tools: MOFA+, WNN, MultiVI. Lower per-modality sensitivity vs. dedicated assays.",
-    url: "https://www.nature.com/articles/s41587-021-00927-2"
+    url: "https://www.nature.com/articles/s41587-021-00927-2",
+    pmid: "34083792",
   },
 
   // ── EPIGENOMICS ──────────────────────────────────────────────────────────────
@@ -767,7 +794,8 @@ const DATA = [
     pros: ["Comprehensive public resource spanning >1,000 experiments across hundreds of cell types", "cCREs (candidate cis-regulatory elements) provide standardized regulatory element annotation", "ENCODE quality metrics and antibody validation standards are the field reference"],
     cons: ["80% 'biochemical function' claim was controversial; not all activity is regulatory", "Cell line heavy; primary cell type and in vivo tissue coverage remains limited", "Bulk assays cannot resolve regulatory heterogeneity within cell populations"],
     details: "Key assays: ChIP-seq (H3K4me3, H3K27ac, H3K27me3, CTCF), DNase-seq, RRBS, RNA-seq. Phase 3 (2020): 1,286 experiments, 576 TFs. SCREEN: searchable cCRE database.",
-    url: "https://www.nature.com/articles/nature11247"
+    url: "https://www.nature.com/articles/nature11247",
+    pmid: "22955616",
   },
   {
     id: 31, year: 2015, cats: ["epigenomics"], impact: 5,
@@ -779,7 +807,8 @@ const DATA = [
     pros: ["Single-base resolution across all cytosine contexts (CpG, CHG, CHH)", "Horvath clock (353 CpGs) and GrimAge provide robust biological aging biomarkers", "Methylation classifiers now FDA-recognized for CNS tumor diagnosis (Capper et al.)"],
     cons: ["Bisulfite conversion destroys ~99% of DNA and creates C→T noise that confounds SNP calling", "~30x coverage required for reliable DMR detection: expensive at $500–2,000/sample", "Cannot distinguish 5mC from 5hmC; oxidative bisulfite-seq (oxBS) needed for distinction"],
     details: "WGBS: genome-wide, ~30x. RRBS: reduced representation, cost-effective for CpG-rich regions. Bismark for alignment. DSS, methylKit for DMR calling. Aging clocks: Horvath 2013, GrimAge, DunedinPACE.",
-    url: "https://www.nature.com/articles/nature07829"
+    url: "https://www.nature.com/articles/nature07829",
+    pmid: "19295514",
   },
   {
     id: 32, year: 2017, cats: ["epigenomics"], impact: 5,
@@ -791,7 +820,8 @@ const DATA = [
     pros: ["Maps all pairwise chromatin contacts genome-wide in one experiment", "TAD and loop annotation enables causal assignment of regulatory variants to genes", "Hi-ChIP (H3K27ac) identifies active enhancer loops in cell-type-specific manner"],
     cons: ["~3 billion read pairs required for sub-5 kb resolution; prohibitively expensive for many labs", "Contact maps are ensemble averages; single-cell Hi-C (scHi-C) is nascent and very sparse", "Loop and TAD calling algorithms (HiCCUPS, Arrowhead) are sensitive to parameters"],
     details: "In situ Hi-C: ~5 kb resolution at 3B read pairs. Loop extrusion model (CTCF+cohesin). Micro-C: nucleosome resolution. Hi-ChIP: protein-centric 3D. Analysis: Juicebox, cooltools, mustache.",
-    url: "https://doi.org/10.1016/j.cell.2014.11.021"
+    url: "https://doi.org/10.1016/j.cell.2014.11.021",
+    pmid: "25497547",
   },
   {
     id: 33, year: 2019, cats: ["epigenomics"], impact: 4,
@@ -803,7 +833,8 @@ const DATA = [
     pros: ["100–1000x fewer cells than ChIP-seq: enables rare primary cell types", "1-day protocol (CUT&TAG) vs. multi-day ChIP-seq workflow", "Lower background (native chromatin cleavage vs. sonication) improves peak resolution"],
     cons: ["Antibody quality is critical and same issues as ChIP apply (batch variation, cross-reactivity)", "CUT&TAG less effective for non-histone proteins vs. CUT&RUN", "Spike-in normalization required for quantitative comparisons across conditions"],
     details: "CUT&RUN: pA-MNase, 100K–1M cells. CUT&TAG: pA-Tn5, 1K–100K cells, sequencing-ready in 1 day. scCUT&TAG: 10x Chromium compatible. Key: spike-in for quantitative comparisons.",
-    url: "https://www.nature.com/articles/s41467-019-09982-5"
+    url: "https://www.nature.com/articles/s41467-019-09982-5",
+    pmid: "31036827",
   },
 
   // ── DRUG DISCOVERY ───────────────────────────────────────────────────────────
@@ -817,7 +848,8 @@ const DATA = [
     pros: ["End-to-end learning from molecular structure without hand-crafted fingerprints", "Scales to billion-compound virtual screens unachievable with physics-based docking", "Transfer learning from large unlabeled chemical datasets improves sparse-data tasks"],
     cons: ["Performance degrades sharply on scaffold-hopping tasks (activity cliff problem)", "Requires large labeled activity datasets; orphan targets with <100 data points are unreliable", "3D CNN models (AtomNet) sensitive to protein conformation input — GIGO from homology models"],
     details: "AtomNet: voxelized molecular grids. DeepDTA: 1D CNNs on SMILES + protein sequences. Superseded by Chemprop (D-MPNN), SchNet, DimeNet, PaiNN. DUD-E, MUV, PDBbind benchmarks.",
-    url: "https://academic.oup.com/bioinformatics/article/34/17/i821/5093245"
+    url: "https://academic.oup.com/bioinformatics/article/34/17/i821/5093245",
+    pmid: "30423097",
   },
   {
     id: 35, year: 2019, cats: ["drug_discovery"], impact: 5,
@@ -829,7 +861,8 @@ const DATA = [
     pros: ["No hand-crafted features: learns directly from molecular graph topology", "Strong out-of-the-box performance across diverse ADMET tasks", "Uncertainty quantification via ensembles or conformal prediction readily available"],
     cons: ["Still struggles with activity cliffs where near-identical molecules have very different activities", "Performance on 3D conformation-dependent properties (e.g., selectivity, binding mode) is limited", "Interpretability via atom-level attribution is post-hoc and not mechanistically rigorous"],
     details: "Message passing: atom initial features + iterative bond-message aggregation. Multi-task ADMET. Uncertainty: MC dropout, ensembles. Integrated with RDKit, Polaris benchmark, and MPO frameworks.",
-    url: "https://pubs.acs.org/doi/10.1021/acs.jcim.9b00237"
+    url: "https://pubs.acs.org/doi/10.1021/acs.jcim.9b00237",
+    pmid: "31361484",
   },
   {
     id: 36, year: 2020, cats: ["pop_genomics", "drug_discovery"], impact: 5,
@@ -841,7 +874,8 @@ const DATA = [
     pros: ["Human genetic validation reduces clinical attrition: validated targets 2x success rate", "Mendelian randomization provides causal inference without expensive interventional studies", "OpenTargets integrates multi-omic genetic evidence scores across >60,000 targets"],
     cons: ["GWAS identifies associations, not mechanisms; most signals are in non-coding regulatory regions", "Common variant effects are small; polygenic targets resist single-gene drug strategies", "Target druggability and tissue expression may not align with genetic signal tissue"],
     details: "PLINK2 (GWAS), REGENIE (biobank-scale), coloc (GWAS + eQTL colocalization), SuSiE (fine-mapping), PoPS (polygenic priority score). OpenTargets. PheWAS in UK Biobank.",
-    url: "https://www.science.org/doi/10.1126/science.aaa1348"
+    url: "https://www.science.org/doi/10.1126/science.aaa1348",
+    pmid: "25765070",
   },
   {
     id: 37, year: 2022, cats: ["drug_discovery", "foundation_models"], impact: 5,
@@ -853,7 +887,8 @@ const DATA = [
     pros: ["Automated hypothesis generation from millions of PubMed abstracts at scale", "Med-PaLM2 achieves expert-level on clinical MedQA benchmark", "Drug repurposing from literature embeddings is cost-effective alternative to experimental screens"],
     cons: ["Hallucination rate in biomedical domain is clinically unacceptable without retrieval augmentation", "Trained on text: cannot reason about molecular structure or 3D biology without multimodal extensions", "Training data cutoffs mean emerging targets (e.g., post-2023 biology) are underrepresented"],
     details: "BioGPT: 347M params on 15M PubMed abstracts. Med-PaLM2 (540B) achieves expert-level MedQA. Key uses: hypothesis generation, drug repurposing, adverse event extraction. RAG improves factuality.",
-    url: "https://academic.oup.com/bib/article/23/6/bbac409/6713511"
+    url: "https://academic.oup.com/bib/article/23/6/bbac409/6713511",
+    pmid: "36156661",
   },
   {
     id: 38, year: 2023, cats: ["ml_ai", "drug_discovery"], impact: 5,
@@ -879,7 +914,8 @@ const DATA = [
     pros: ["Subcellular resolution captures spatial organization within individual cells", "No transcript capture bias: direct hybridization of endogenous RNA in situ", "Commercial Xenium platform makes MERFISH accessible to biotech (no custom probe synthesis)"],
     cons: ["Gene panel limited (hundreds to ~5,000 genes) vs. whole transcriptome approaches", "Imaging throughput constrains tissue area; large-scale tissue sections require tiling", "Probe design and validation is labor-intensive; updated panels require resynthesis"],
     details: "MERFISH: combinatorial smFISH with error-correcting codes. seqFISH: sequential hybridization barcoding. Commercial: 10x Xenium, Vizgen MERSCOPE. Subcellular to whole-transcriptome with seqFISH+.",
-    url: "https://www.science.org/doi/10.1126/science.aaa6090"
+    url: "https://www.science.org/doi/10.1126/science.aaa6090",
+    pmid: "25858977",
   },
   {
     id: 40, year: 2019, cats: ["spatial"], impact: 5,
@@ -891,7 +927,8 @@ const DATA = [
     pros: ["Unbiased whole-transcriptome capture across entire tissue section", "Compatible with FFPE tissue: opens access to archival clinical biobank samples", "Visium HD (2024) achieves subcellular ~2 µm bin resolution"],
     cons: ["55 µm spots contain multiple cells; deconvolution is required but introduces uncertainty", "Lower sensitivity per spot vs. single-cell methods; rare cell types easily missed", "Z-section depth (~10 µm) loses 3D tissue architecture information"],
     details: "~5,000 spots per capture area. Spatially variable genes: SpatialDE, NNSVG. Deconvolution: RCTD, cell2location, BayesSpace. Niche identification. Visium HD: 2 µm bins, whole tissue.",
-    url: "https://www.science.org/doi/10.1126/science.aaf2403"
+    url: "https://www.science.org/doi/10.1126/science.aaf2403",
+    pmid: "27365449",
   },
   {
     id: 41, year: 2021, cats: ["spatial"], impact: 4,
@@ -903,7 +940,8 @@ const DATA = [
     pros: ["Bead resolution (~9 µm for Slide-seqV2) approaches single-cell scale in most tissues", "Stereo-seq 0.5 µm DNBs enable nanoscale RNA localization within cell boundaries", "Compatible with standard library preparation and Illumina sequencing"],
     cons: ["RNA capture per bead still substantially lower than 10x Chromium per-cell sensitivity", "Bead registration and tissue alignment require careful quality control", "TANGRAM/gimVI imputation needed to recover gene expression from sparse beads"],
     details: "Slide-seqV2: ~9 µm beads, RNA capture improved 10x over V1. Stereo-seq: 0.5 µm DNB array, whole-embryo profiling. Imputation: gimVI, TANGRAM with scRNA-seq reference.",
-    url: "https://www.nature.com/articles/s41587-020-0739-1"
+    url: "https://www.nature.com/articles/s41587-020-0739-1",
+    pmid: "33288904",
   },
 
   // ── TOOLS / INFRA ────────────────────────────────────────────────────────────
@@ -917,7 +955,8 @@ const DATA = [
     pros: ["50x faster than TopHat with better sensitivity for novel splicing events", "Two-pass mode discovers and incorporates novel junctions to improve alignment", "STARsolo provides built-in barcode/UMI handling replacing Cell Ranger for many use cases"],
     cons: ["High RAM requirement (~30 GB for human genome index) limits use on small HPC nodes", "Two-pass mode doubles runtime; less critical with updated single-pass + junction annotation", "Default parameters not optimal for all organisms; non-model species require tuning"],
     details: "Maximal Mappable Prefix (MMP) via suffix array. STAR-Fusion for chimeric read detection. STARsolo handles scRNA-seq barcodes + UMIs natively. Two-pass: discover junctions → re-align.",
-    url: "https://academic.oup.com/bioinformatics/article/29/1/15/272537"
+    url: "https://academic.oup.com/bioinformatics/article/29/1/15/272537",
+    pmid: "23104886",
   },
   {
     id: 43, year: 2015, cats: ["tools"], impact: 5,
@@ -929,7 +968,8 @@ const DATA = [
     pros: ["Comprehensive end-to-end single-cell workflow in one package with active development", "WNN enables seamless multimodal (RNA + CITE-seq + ATAC) data integration", "Large community, extensive documentation, and Vignettes lower onboarding barrier"],
     cons: ["R memory management struggles with >500K cell datasets without BPCells", "UMAP is stochastic; reproducibility requires seed-setting and is not globally faithful to distances", "Some Seurat defaults (e.g., log-normalization vs. SCTransform) can give different results; choice matters"],
     details: "V3: SCTransform. V4: WNN for multimodal. V5: BPCells for million-cell scale. Python ecosystem: Scanpy/AnnData is the alternative. Key: SCTransform vs. log-norm for downstream DE.",
-    url: "https://www.nature.com/articles/nbt.3154"
+    url: "https://www.nature.com/articles/nbt.3154",
+    pmid: "25664528",
   },
   {
     id: 44, year: 2017, cats: ["tools"], impact: 5,
@@ -941,7 +981,8 @@ const DATA = [
     pros: ["nf-core library provides peer-reviewed, production-ready pipelines for common assays (RNA-seq, sarek, scRNA-seq)", "Native Docker/Singularity support enables containerized reproducibility", "Cloud-native execution (AWS Batch, GCP Life Sciences) with built-in retry logic for spot instances"],
     cons: ["Nextflow DSL2 learning curve is steep; Groovy-based syntax is non-intuitive for Python-native bioinformaticians", "Debugging failed runs in cloud environments requires CloudWatch/log aggregation expertise", "Pipeline version pinning discipline required; nf-core updates can break reproducibility if not pinned"],
     details: "Nextflow: DAG-based, Docker/Singularity, nf-core library. Snakemake: rule-based, conda integration, cloud support. Key: containerization for reproducibility, cpus/mem resource directives.",
-    url: "https://www.nature.com/articles/nbt.3820"
+    url: "https://www.nature.com/articles/nbt.3820",
+    pmid: "28398311",
   },
   {
     id: 45, year: 2018, cats: ["tools"], impact: 4,
@@ -953,7 +994,8 @@ const DATA = [
     pros: ["Python-native: integrates seamlessly with PyTorch, JAX, and the broader ML ecosystem", "AnnData Zarr backend enables cloud-native lazy loading for million+ cell datasets", "scverse ecosystem (scVI, squidpy, scArches, muon) provides best-in-class modular tools"],
     cons: ["Documentation is less polished than Seurat; API changes between versions break workflows", "Plotting (scanpy.pl) is less feature-rich than Seurat's ggplot2-based visualizations", "Community smaller than R/Bioconductor; fewer vignettes for complex edge cases"],
     details: "AnnData: X + obs + var + obsm + varm + uns. Zarr backend for cloud storage. muon for multimodal. Key: anndata-tensorstore for petabyte-scale. scverse: unified ecosystem around AnnData.",
-    url: "https://genomebiology.biomedcentral.com/articles/10.1186/s13059-017-1382-0"
+    url: "https://genomebiology.biomedcentral.com/articles/10.1186/s13059-017-1382-0",
+    pmid: "29409532",
   },
   {
     id: 46, year: 2020, cats: ["tools"], impact: 4,
@@ -965,7 +1007,8 @@ const DATA = [
     pros: ["FDA-recognized; required for clinical-grade variant calling in regulatory submissions", "Mutect2 tumor-normal mode provides best-practice somatic calling with contamination estimation", "DeepVariant achieves state-of-the-art accuracy on PacBio/ONT with platform-specific training"],
     cons: ["Best practices pipeline is complex (8+ steps) and slow without DRAGEN acceleration", "GATK4 is Java-based; Spark parallelization adds infrastructure complexity", "VQSR requires large training cohort; smaller studies must use hard-filter fallback"],
     details: "Best practices: BWA-MEM2 → MarkDuplicates → BQSR → HaplotypeCaller → VQSR. Mutect2: tumor-only or matched normal, FilterMutectCalls. DRAGEN: hardware-accelerated GATK-equivalent.",
-    url: "https://www.nature.com/articles/nbt.4235"
+    url: "https://www.nature.com/articles/nbt.4235",
+    pmid: "30247488",
   },
   {
     id: 47, year: 2021, cats: ["tools"], impact: 4,
@@ -988,7 +1031,8 @@ const DATA = [
     pros: ["Official 10x pipeline: consistent, well-tested, and familiar to reviewers and collaborators", "cellranger multi combines GEX + VDJ + ATAC + ADT in a single run", "Cell calling algorithm (EmptyDrops) is more accurate than fixed barcode thresholds"],
     cons: ["Proprietary; limited visibility into implementation details for troubleshooting", "Slow compared to STARsolo for simple GEX-only use cases; resource-intensive", "Version updates occasionally change cell calling parameters, affecting reproducibility across batches"],
     details: "cell ranger count → filtered_feature_bc_matrix (MEX). cellranger multi for combined libraries. QC: knee plot, Q30, sequencing saturation (>60%). CellBender/SoupX for ambient RNA post-processing.",
-    url: "https://www.nature.com/articles/nmeth.4277"
+    url: "https://www.nature.com/articles/nmeth.4277",
+    pmid: "28448067",
   },
   {
     id: 49, year: 2023, cats: ["tools"], impact: 4,
@@ -1013,7 +1057,8 @@ const DATA = [
     pros: ["Highest throughput and lowest cost per Gb of any sequencing platform", "Mature library prep ecosystem; hundreds of validated kits for every application", "Clinical regulatory familiarity: most FDA-approved NGS assays validated on Illumina"],
     cons: ["150–300 bp reads cannot span repetitive elements, segmental duplications, or complex SVs", "GC and AT-rich regions suffer from coverage bias from bridge amplification", "Systematic errors at homopolymers and palindromic sequences require careful filtering"],
     details: "HiSeq X: $1,000 genome. NovaSeq 6000: 6 Tb/run, S4 flow cell. NovaSeq X Plus (2023): 16 Tb/run. Patterned flow cells reduce phasing errors. Key: cycle chemistry differences affect base quality at read ends.",
-    url: "https://www.nature.com/articles/nature07517"
+    url: "https://www.nature.com/articles/nature07517",
+    pmid: "18987734",
   },
   {
     id: 51, year: 2013, cats: ["sequencing"], impact: 4,
@@ -1025,7 +1070,8 @@ const DATA = [
     pros: ["Proper count-based statistical model (NB GLM) with empirical Bayes dispersion estimation", "DESeq2 LFC shrinkage (apeglm) improves effect size estimates for low-count genes", "Handles complex experimental designs (multi-factor, interaction terms) via model matrix"],
     cons: ["Assumes most genes are not differentially expressed for normalization — fails for strong global shifts", "Low-count gene filtering threshold choice affects results; no universal rule", "Batch effects not modeled by default; ComBat/limma-removeBatchEffect pre-processing required"],
     details: "edgeR: tagwise dispersion, exact test for simple designs, quasi-likelihood F-test for complex. DESeq2: median-of-ratios normalization, Wald test, LFC shrinkage. Limma-voom also widely used for large datasets.",
-    url: "https://genomebiology.biomedcentral.com/articles/10.1186/s13059-014-0550-8"
+    url: "https://genomebiology.biomedcentral.com/articles/10.1186/s13059-014-0550-8",
+    pmid: "25516281",
   },
   {
     id: 52, year: 2014, cats: ["crispr"], impact: 4,
@@ -1037,7 +1083,8 @@ const DATA = [
     pros: ["Genome-wide unbiased coverage enables discovery without prior hypothesis", "Multiplexed in single experiment; dramatically cheaper than arrayed RNAi screens", "DepMap project (Broad) provides pre-computed dependency scores across 1,000+ cancer cell lines"],
     cons: ["Dropout of essential gene guides dominates positive selection screens and inflates FDR", "MOI optimization critical; high MOI causes multiple guides per cell confounding hit calls", "Cell fitness readout misses mechanistic biology; Perturb-seq (scRNA-seq) needed for mechanism"],
     details: "GeCKO: 6 guides/gene, 123K guides. Brunello: 4 guides/gene, optimized on-target rules. MAGeCK: RRA algorithm for hit calling. BAGEL2: Bayesian essential gene scoring. DepMap: 1,000+ cell lines.",
-    url: "https://www.nature.com/articles/nbt.3437"
+    url: "https://www.nature.com/articles/nbt.3437",
+    pmid: "26780180",
   },
   {
     id: 53, year: 2014, cats: ["epigenomics", "sequencing"], impact: 5,
@@ -1049,7 +1096,8 @@ const DATA = [
     pros: ["Works in 500–50,000 cells; compatible with rare primary cell types and patient biopsies", "3-hour protocol from cells to sequencing-ready library", "Nucleosome-resolution accessibility + TF footprinting from same data"],
     cons: ["Mitochondrial DNA over-captured (~50–90% of reads); requires careful filtering", "Fragment size distribution sensitive to Tn5 concentration; requires optimization per cell type", "Fresh or cryopreserved cells required; FFPE and fixed tissues are challenging"],
     details: "Tn5 transposase simultaneously fragments and tags DNA. Nucleosome-free regions (NFR) at <200 bp are regulatory sites. MACS2 for peak calling. TOBIAS for footprinting. Bulk ATAC → scATAC-seq on 10x.",
-    url: "https://www.nature.com/articles/nmeth.2688"
+    url: "https://www.nature.com/articles/nmeth.2688",
+    pmid: "24097267",
   },
   {
     id: 54, year: 2015, cats: ["tools"], impact: 5,
@@ -1061,7 +1109,8 @@ const DATA = [
     pros: ["BWA-MEM2 is 3x faster than BWA-MEM with identical output on modern hardware", "Well-characterized MAPQ scores enable consistent downstream filtering", "Handles chimeric reads and split alignments for SV detection"],
     cons: ["MAPQ is tool-specific: MAPQ20 in BWA ≠ MAPQ20 in Bowtie2 — requires calibration per pipeline", "Repetitive elements produce ambiguous multi-mapping reads that must be discarded", "Not splice-aware: cannot align RNA-seq across exon-exon junctions (use STAR instead)"],
     details: "BWA-MEM: seed-and-extend, Smith-Waterman for alignment scoring. BWA-MEM2: vectorized SSE4.2/AVX2 acceleration. Bowtie2: FM-index, better for short (<50 bp) reads. MAPQ: mapping quality = –10 log10(P(wrong mapping)).",
-    url: "https://academic.oup.com/bioinformatics/article/25/14/1754/225615"
+    url: "https://academic.oup.com/bioinformatics/article/25/14/1754/225615",
+    pmid: "19451168",
   },
   {
     id: 55, year: 2015, cats: ["ml_ai"], impact: 4,
@@ -1085,7 +1134,8 @@ const DATA = [
     pros: ["Learns combinatorial histone mark patterns without prior state definition", "Interpretable biological state labels map to known chromatin functional categories", "Widely applied across ENCODE/Roadmap cell types; annotations freely available for 127 cell types"],
     cons: ["Fixed number of states requires manual selection and biological interpretation", "HMM independence assumption between positions misses long-range dependencies", "States are per-cell-type averages; cannot resolve epigenetic heterogeneity within cell populations"],
     details: "chromHMM: multivariate HMM on binarized ChIP-seq marks. 15/18/25-state models standard. Roadmap Epigenomics: 127 reference epigenomes with chromatin states. Input: H3K4me3, H3K27ac, H3K27me3, H3K36me3, H3K9me3.",
-    url: "https://www.nature.com/articles/nmeth.1906"
+    url: "https://www.nature.com/articles/nmeth.1906",
+    pmid: "22373907",
   },
   {
     id: 57, year: 2017, cats: ["single_cell"], impact: 4,
@@ -1097,7 +1147,8 @@ const DATA = [
     pros: ["Extremely fast: integrates 500K cells in minutes on CPU", "Operates on PCA embedding, not raw counts — compatible with any upstream normalization", "Preserves within-batch biological variation by correcting only in embedding space"],
     cons: ["Over-integration risk: merges biologically distinct populations if batch and cell type are confounded", "Integrates in PCA space only; downstream trajectory inference must also use corrected embeddings", "Less effective when batches differ in captured cell type composition (cell type imbalance)"],
     details: "Algorithm: soft k-means clustering + iterative centroid-based correction in PCA space. Alternatives: scVI (probabilistic), RPCA (Seurat v3), BBKNN (kNN-based), scANVI (semi-supervised). Benchmark: Luecken et al. 2022.",
-    url: "https://www.nature.com/articles/s41592-019-0619-0"
+    url: "https://www.nature.com/articles/s41592-019-0619-0",
+    pmid: "31740819",
   },
   {
     id: 58, year: 2017, cats: ["drug_discovery"], impact: 4,
@@ -1121,7 +1172,8 @@ const DATA = [
     pros: ["100x faster than alignment-based quantification (STAR + featureCounts)", "Bootstrapping provides transcript-level uncertainty estimates for downstream uncertainty-aware DE", "Tximeta/tximport: metadata-aware import preserving provenance for DESeq2/edgeR"],
     cons: ["Quasi-mapping is not a true alignment; cannot produce BAM files for visualization or IGV", "Less accurate for novel transcripts or low-complexity repetitive regions vs. alignment to genome", "Transcript index must match reference annotation version exactly; version mismatch causes silent errors"],
     details: "Salmon: selective alignment against decoy-augmented index. kallisto: pseudoalignment via k-mer hashing. Both output transcript-level counts. tximeta for provenance-tracking import. alevin-fry extends to scRNA-seq.",
-    url: "https://www.nature.com/articles/nmeth.4197"
+    url: "https://www.nature.com/articles/nmeth.4197",
+    pmid: "28263959",
   },
   {
     id: 60, year: 2018, cats: ["immunology", "tools"], impact: 4,
@@ -1133,7 +1185,8 @@ const DATA = [
     pros: ["Extracts immune composition from bulk RNA-seq without requiring flow cytometry data", "CIBERSORTx uses scRNA-seq reference signatures; captures cell states not in bulk databases", "Widely validated across TCGA and clinical cohorts with clear survival associations"],
     cons: ["Accuracy depends heavily on reference signature quality; wrong reference = misleading results", "Cannot distinguish T cell activation states or exhaustion from phenotype markers alone", "Single-cell spatial heterogeneity not captured; tumor vs. stromal compartment contamination affects estimates"],
     details: "CIBERSORT: nu-SVR on LM22 (22 immune cell types). CIBERSORTx: RNA mixture model with sc reference. Alternatives: xCell (ssGSEA), TIMER2, EPIC, Immunedeconv R package wrapping all methods.",
-    url: "https://www.nature.com/articles/s41587-019-0114-2"
+    url: "https://www.nature.com/articles/s41587-019-0114-2",
+    pmid: "31061481",
   },
   {
     id: 61, year: 2019, cats: ["ml_ai", "foundation_models"], impact: 4,
@@ -1157,7 +1210,8 @@ const DATA = [
     pros: ["Continuous latent space enables gradient-guided optimization toward desired properties", "JTVAE generates valid molecules by constructing junction trees before SMILES", "Bayesian optimization in latent space can efficiently navigate chemical space"],
     cons: ["Generated molecules often valid but not synthesizable without additional SA scoring", "Mode collapse: tends to generate similar molecules near training data distribution", "Largely superseded by flow-based models and diffusion for higher sample diversity"],
     details: "CVAE: joint continuous SMILES → property space for property-constrained generation. JTVAE: tree decomposition ensures valid ring systems. Successors: REINVENT (RL), diffusion (DiffMol, GEOM). Benchmark: MOSES.",
-    url: "https://pubs.acs.org/doi/10.1021/acscentsci.7b00572"
+    url: "https://pubs.acs.org/doi/10.1021/acscentsci.7b00572",
+    pmid: "29532027",
   },
   {
     id: 63, year: 2020, cats: ["single_cell", "visualization"], impact: 4,
@@ -1211,7 +1265,8 @@ const DATA = [
     pros: ["40–100+ protein markers in same tissue section preserving spatial architecture", "Cell-cell interaction analysis (spatial ligand-receptor, proximity scoring) not possible with dissociated sc methods", "Compatible with FFPE clinical tissue; enables retrospective biomarker studies in clinical cohorts"],
     cons: ["Spectral unmixing required; panel design limited by antibody quality and cross-reactivity", "High computational and manual annotation burden for cell segmentation (nuclear, membrane)", "Protein panel (~100 markers) much smaller than transcriptomic profiling (~20,000 genes)"],
     details: "CODEX: DNA-tagged antibodies imaged sequentially with complementary fluorescent oligos. PhenoCycler (commercialized CODEX). MIBI-TOF: mass spectrometry-based, isotope-tagged antibodies. Analysis: HALO, QuPath, Squidpy, Napari.",
-    url: "https://doi.org/10.1016/j.cell.2018.07.010"
+    url: "https://doi.org/10.1016/j.cell.2018.07.010",
+    pmid: "30078711",
   },
   {
     id: 66, year: 2021, cats: ["ml_ai"], impact: 4,
@@ -1235,7 +1290,8 @@ const DATA = [
     pros: ["127 reference epigenomes from primary tissues (not just cell lines) enable in vivo variant interpretation", "Paired RNA-seq + histone marks enables enhancer–gene linking in disease-relevant tissues", "Integrated chromatin state maps enable cross-tissue comparison of regulatory element conservation"],
     cons: ["Bulk profiling: cannot resolve cellular heterogeneity within tissues (macrophage vs. T cell within PBMC)", "Tissue collection era (2008–2012): some epigenomes from aged or sub-optimal samples", "Histone modification panel (5 marks) misses broader regulatory landscape (H3K4me1, H2AK119ub, etc.)"],
     details: "127 epigenomes × 5 marks (H3K4me3, H3K4me1, H3K36me3, H3K27me3, H3K9me3) + DNase + RRBS + RNA. ChromHMM 15-state annotation. LDSC-SEG: cell-type heritability from GWAS using Roadmap annotations.",
-    url: "https://www.nature.com/articles/nature14248"
+    url: "https://www.nature.com/articles/nature14248",
+    pmid: "25693563",
   },
   {
     id: 68, year: 2022, cats: ["sequencing"], impact: 4,
@@ -1246,7 +1302,8 @@ const DATA = [
     pros: ["Unambiguous full-length isoform sequencing without RT-PCR artifacts", "Direct RNA-seq (ONT) detects N6-methyladenosine (m6A) and other modifications natively", "IsoSeq + scRNA-seq provides long-read isoform assignment to individual cells (MAS-seq)"],
     cons: ["Direct RNA-seq throughput is ~1–5M reads (vs. billions for short-read RNA-seq)", "Splice-junction accuracy lower than short-read RNA-seq at low coverage", "Long-read isoform calling tools (SQANTI3, FLAMES) still maturing; inconsistent between platforms"],
     details: "ONT direct RNA: preserves RNA modifications, native poly-A tail, full-length isoform. IsoSeq (PacBio HiFi): cDNA full-length, high accuracy. MAS-seq: single-cell long-read isoforms. SpliceAI: deep learning for disease splice variant prediction.",
-    url: "https://www.nature.com/articles/nmeth.4577"
+    url: "https://www.nature.com/articles/nmeth.4577",
+    pmid: "29334379",
   },
   {
     id: 69, year: 2022, cats: ["immunology"], impact: 5,
@@ -1258,7 +1315,8 @@ const DATA = [
     pros: ["IgFold: 1-second antibody structure prediction; enables batch screening of thousands of sequences", "AF2-Multimer: Ab-Ag complex modeling replaces expensive co-crystallization for initial epitope mapping", "IGAW (inverse folding for antibody design): optimize CDR sequences for improved affinity"],
     cons: ["CDR H3 loop accuracy still lower than other loops; critical for affinity and selectivity", "AF2 complex predictions often use incorrect paratope-epitope orientations vs. crystal structures", "Cannot predict conformational epitopes or avidity effects from bivalent IgG geometry"],
     details: "IgFold: specialized transformer for VH/VL chains, CDR loops. ABodyBuilder2: improved CDR grafting. SAbDab: structural antibody database. Rosetta Ab Design (RAbD), AIAB: CDR optimization. Esp-Fold for nanobodies.",
-    url: "https://www.nature.com/articles/s41592-022-01488-1"
+    url: "https://www.nature.com/articles/s41592-022-01488-1",
+    pmid: "35637307",
   },
   {
     id: 70, year: 2022, cats: ["drug_discovery"], impact: 4,
@@ -1270,7 +1328,8 @@ const DATA = [
     pros: ["Maintains tumor genetic heterogeneity better than 2D cell lines", "Enables patient-specific drug sensitivity testing with turnaround of days to weeks", "Biobanks (HUB, ORCA) provide libraries of PDOs for systematic pharmacogenomic studies"],
     cons: ["Lack of immune cells and vasculature; cannot model tumor-immune interactions without co-culture", "Derivation success rate varies by tumor type (CRC ~80%, PDAC ~50%, brain ~30%)", "Genomic drift during culture; long-term passages accumulate artifacts that diverge from primary tumor"],
     details: "Intestinal organoid: Lgr5+ stem cells in Matrigel with Wnt3a, EGF, Noggin. CancerCore (Sanger): PDOs + WGS + drug sensitivity. Organoid biobanks: HUB (Utrecht), ORCA (Dana-Farber). GSVA/fgsea for pathway analysis of organoid transcriptomes.",
-    url: "https://www.nature.com/articles/s41568-018-0167-2"
+    url: "https://www.nature.com/articles/s41568-018-0167-2",
+    pmid: "29692415",
   },
   {
     id: 71, year: 2023, cats: ["ml_ai", "gene_editing"], impact: 5,
@@ -1330,7 +1389,8 @@ const DATA = [
     pros: ["Works in post-mitotic, non-dividing cells where HDR is essentially absent", "Enables insertion of full-length cDNAs (>4 kb) demonstrated in vivo", "Orientation-dependent design reduces random integration via re-cutting"],
     cons: ["NHEJ junction sequence is variable — small indels at donor-genome junctions can disrupt reading frames", "Integration efficiency (~1–5% in vivo) is lower than HDR in dividing cells", "Cannot control exact integration site unless combined with site-specific landing pad"],
     details: "Cas9 cuts both donor plasmid and genomic locus; NHEJ ligates donor in sense orientation (antisense re-cutting prevents reverse integration). Demonstrated in rd1 mouse retina for RPE65. Key: donor orientation design, delivery via AAV9.",
-    url: "https://www.nature.com/articles/nature20565"
+    url: "https://www.nature.com/articles/nature20565",
+    pmid: "27851729",
   },
   {
     id: 76, year: 2020, cats: ["gene_editing"], impact: 5,
@@ -1342,7 +1402,8 @@ const DATA = [
     pros: ["Site-specific insertion of large transgenes (demonstrated up to 36 kb) without DSBs", "Single-step landing pad + integration via nickase, RT, and integrase triple-fusion", "Integrase-mediated recombination is highly efficient and scar-free at attB×attP sites"],
     cons: ["Requires two-step delivery or very large cargo encoding all three functional domains", "attB landing pad must be pre-introduced; adds a prior editing step in ex vivo contexts", "Serine integrases have directional specificity; reversibility requires additional recombinase (excisionase)"],
     details: "Prime editing introduces attB site (~50 nt). Bxb1 serine integrase in trans catalyzes attB×attP recombination for donor insertion. Demonstrated in HEK293 (5–36 kb). Cargo: full-length LDLR, CEP290. Related: RERI (recombinase-mediated excision and reintegration).",
-    url: "https://www.nature.com/articles/s41587-022-01527-4"
+    url: "https://www.nature.com/articles/s41587-022-01527-4",
+    pmid: "36424489",
   },
   {
     id: 77, year: 2021, cats: ["gene_editing"], impact: 5,
@@ -1354,7 +1415,8 @@ const DATA = [
     pros: ["Donor DNA produced intracellularly from RNA template — eliminates exogenous ssDNA toxicity", "Highly scalable for pooled screens (barcode-to-edit mapping)", "Demonstrated for large-scale variant functional characterization"],
     cons: ["Lower editing efficiency than Cas9 + HDR template in most mammalian cell contexts tested", "Retron RT and donor components add significant payload size", "Mechanism and key parameters not fully optimized for therapeutic primary cell use"],
     details: "Retron: reverse transcriptase produces RT-DNA (ssDNA) covalently linked to msr/msd RNA template. Combined with Cas9 nickase or DSB for editing. Sharon et al.: yeast barcode screens. Schubert et al.: mammalian precision editing. CRISPEY: retron + CRISPR for combinatorial variant screens.",
-    url: "https://doi.org/10.1016/j.cell.2021.05.020"
+    url: "https://doi.org/10.1016/j.cell.2021.05.020",
+    pmid: "34166614",
   },
   {
     id: 78, year: 2022, cats: ["gene_editing"], impact: 5,
@@ -1366,7 +1428,8 @@ const DATA = [
     pros: ["No DSB: transposition via excision-integration mechanism avoids genotoxicity", "Compact payload: TnpB is ~400 aa vs. SpCas9 (~1,368 aa), enabling single AAV delivery", "IS110 bridgeRNA enables fully programmable recombination of any two DNA sequences"],
     cons: ["Efficiency in mammalian cells still substantially lower than viral integration or HDR-based methods", "Cargo size limitations vary by transposon system; not all handle full therapeutic gene payloads", "Off-target transposition hotspots not fully characterized in primary human cells"],
     details: "TnpB: IscB evolutionary ancestor of Cas9, guides via ωRNA (~ crRNA). IS110 bridgeRNA: single RNA programs both targeting and recombination simultaneously. CHARM: CRISPR-Cas-guided transposition. CAST: Tn7-based, site-specific. Cargo: up to 10 kb demonstrated.",
-    url: "https://www.nature.com/articles/s41586-022-05343-3"
+    url: "https://www.nature.com/articles/s41586-022-05343-3",
+    pmid: "36289326",
   },
   {
     id: 79, year: 2022, cats: ["gene_editing"], impact: 4,
@@ -1378,7 +1441,8 @@ const DATA = [
     pros: ["Sequence-neutral: no DNA mutation risk, fully reversible in principle", "CRISPRoff silencing is heritable across >450 cell divisions without ongoing guide expression", "Opens repeat expansion disorders and dosage-sensitive genes to therapeutic intervention"],
     cons: ["Heritability varies by genomic context; some loci reset methylation after guide withdrawal", "Delivery of large dCas9-effector fusion still requires LNP or viral vectors", "Long-term safety of sustained epigenetic silencing in therapeutic contexts unknown"],
     details: "dCas9-DNMT3A-DNMT3L: de novo CpG methylation at promoters. TET1 fusion: oxidative demethylation for targeted activation. CRISPRoff (Nunez 2021, Cell): combined methylation of CpG island + H3K9me3 gives >90% heritable silencing. Tune Tx, Chroma Med are building clinical programs.",
-    url: "https://doi.org/10.1016/j.cell.2021.01.004"
+    url: "https://doi.org/10.1016/j.cell.2021.01.004",
+    pmid: "33503446",
   },
   {
     id: 80, year: 2023, cats: ["gene_editing"], impact: 5,
@@ -1390,7 +1454,8 @@ const DATA = [
     pros: ["T-rich PAM expands targetable sites in AT-rich regions where SpCas9 NGG is sparse", "5' staggered overhang improves HDR efficiency vs. blunt-end Cas9 cut", "Self-processing crRNA arrays enable simultaneous multi-gene knockout in a single delivery"],
     cons: ["Larger RNP complex than Cas12a mini-variants; packaging constraints for AAV delivery", "Lower base editing efficiency with Cas12a vs. SpCas9 in most published CBE/ABE comparisons", "Some off-target activity on ssDNA targets (collateral cleavage) at high concentrations"],
     details: "Cas12a: RuvC domain only (no HNH). Staggered 5-nt 5' overhang. Pre-crRNA processing by Cas12a RNase. AsCas12a, LbCas12a most used. Enhanced variants: enAsCas12a (broader PAM). DETECTR diagnostics: collateral ssDNA cleavage for signal amplification.",
-    url: "https://doi.org/10.1016/j.cell.2015.09.038"
+    url: "https://doi.org/10.1016/j.cell.2015.09.038",
+    pmid: "26422227",
   },
   {
     id: 81, year: 2023, cats: ["gene_editing"], impact: 5,
@@ -1402,7 +1467,8 @@ const DATA = [
     pros: ["Explores vast sequence space inaccessible to rational design: millions of variants per experiment", "Selects for complex multi-parameter traits (efficiency + specificity simultaneously) in continuous culture", "Produced clinically relevant editors: ABE8e (100x more efficient than ABE7.10), SpRY (near-PAMless)"],
     cons: ["PACE infrastructure is specialized and not widely accessible outside Broad/Liu Lab ecosystem", "Evolution can optimize for selection criteria that don't fully translate to primary cell contexts", "Evolved variants may accumulate off-target mutations not immediately apparent by selection"],
     details: "PACE: phage gene III (pIII) fitness linked to desired activity via Accessory Plasmid circuit. Evolved: evoAPOBEC1, ABE8e (TadA-8e), SpRY (near-PAMless, NRNH PAM), SaKKH. PANCE: non-continuous version for relaxed evolution. Key: >100 evolutions since 2011.",
-    url: "https://www.nature.com/articles/nature09811"
+    url: "https://www.nature.com/articles/nature09811",
+    pmid: "21455178",
   },
   {
     id: 82, year: 2023, cats: ["gene_editing"], impact: 5,
@@ -1436,7 +1502,8 @@ const DATA = [
     pros: ["Up to ~800 bp replacement and ~5 kb insertion demonstrated without DSB", "Two independent pegRNAs provide redundancy and can be optimized independently", "Compatible with PEmax (engineered PE2 with MLV RT and optimized NLS) for improved efficiency"],
     cons: ["Requires co-delivery of two pegRNAs + PEmax protein — increased payload complexity", "Efficiency drops steeply with increasing insert size beyond 1–2 kb", "Competing recombination between twin flaps can generate unintended deletion products"],
     details: "twinPE: nCas9 + two opposing pegRNAs → two 3' flaps → strand displacement → ligation. Combined with site-specific recombinase (Bxb1) for larger integrations. PEmax: PE2 + Rad51 DBD + optimized MLV-RT + bipartite NLS. GRAND: twin pegRNA for recombinase-based large insertion.",
-    url: "https://www.nature.com/articles/s41587-021-01133-w"
+    url: "https://www.nature.com/articles/s41587-021-01133-w",
+    pmid: "34887556",
   },
   {
     id: 85, year: 2024, cats: ["gene_editing"], impact: 4,
@@ -1448,7 +1515,8 @@ const DATA = [
     pros: ["Nick-based approach significantly reduces large-deletion and translocation frequency vs. DSB methods", "Demonstrated in vivo in post-mitotic liver cells with AAV-delivered ssDNA donor", "Applicable to exon replacement, exon skipping bypass, and gene addition at safe harbors"],
     cons: ["ssDNA donors >4 kb are difficult to produce at scale with quality for GMP manufacturing", "AAV packaging limits for ssDNA donor constrain cargo size in vivo", "Efficiency lower than DSB-stimulated HDR in dividing cells where both strategies apply"],
     details: "Cas9 D10A nickase + long ssDNA donor in AAV. Demonstrated in Hutchinson-Gilford Progeria mouse model (exon 11 replacement). Also relevant: eSPRY-editors (nicking + HITI), MATER (nicking + retron donor).",
-    url: "https://www.nature.com/articles/s41467-021-27010-3"
+    url: "https://www.nature.com/articles/s41467-021-27010-3",
+    pmid: "34795270",
   },
   {
     id: 86, year: 2024, cats: ["gene_editing"], impact: 5,
@@ -1460,7 +1528,8 @@ const DATA = [
     pros: ["Transient protein delivery: no DNA integration risk, reduced immunogenicity vs. AAV capsid", "Higher efficiency than LNPs for some cell types (neurons, HSCs) that are hard to transfect", "Modular pseudotyping enables cell-type targeting via envelope protein swapping"],
     cons: ["Production and QC of VLP preparations is complex; scaling to GMP is not yet established", "Packaging capacity limits: large base editors (>200 kDa) may exceed loading efficiency", "Immunogenicity from viral structural proteins (Gag, VSV-G) not fully characterized for clinical use"],
     details: "Gag-Pol fusion packages RNP cargo. VSV-G pseudotype for broad cell tropism; can be swapped for LY6E (lung), ASGR (hepatocyte), CD4 (T cell). Demonstrated: >60% in vivo base editing in mouse liver, brain. Related: GeRPs, LNP-eVLP hybrids.",
-    url: "https://doi.org/10.1016/j.cell.2022.08.003"
+    url: "https://doi.org/10.1016/j.cell.2022.08.003",
+    pmid: "36070752",
   },
   {
     id: 87, year: 2025, cats: ["crispr", "gene_editing"], impact: 4,
@@ -1472,7 +1541,8 @@ const DATA = [
     pros: ["Motivated the shift from Cas9 DSBs to nickases, base editors, and prime editors for precise editing", "CAST-seq (Turchiano et al.) and PRISM provide high-sensitivity translocation detection methods", "Regulatory field now has clearer guidance on what genotoxicity assays are expected pre-IND"],
     cons: ["Risk is context-dependent: HSCs and T cells show higher rates of large deletions than cell lines", "Standard GUIDE-seq and amplicon sequencing miss chromosomal rearrangements — dedicated SV assays needed", "Clinical significance of low-frequency p53-mutant clones in CAR-T products is still debated"],
     details: "Kosicki: large deletions up to 1 Mb at Cas9 cut sites. Enache: TP53 pathway activation selects p53-mutant clones after editing. Leibowitz: chromothripsis at Cas9 DSBs. Assays: CAST-seq (inverse PCR for translocations), PRISM, rhAmpSeq SV. FDA guidance: IND-enabling genotoxicity battery.",
-    url: "https://www.nature.com/articles/nbt.4192"
+    url: "https://www.nature.com/articles/nbt.4192",
+    pmid: "30010673",
   },
   {
     id: 88, year: 2025, cats: ["gene_editing"], impact: 5,
@@ -1484,7 +1554,8 @@ const DATA = [
     pros: ["Eukaryotic origin: smaller size (~700 aa), potentially lower immunogenicity than bacterial Cas9", "Guide RNA (ωRNA) structure distinct from CRISPR guide — enables orthogonal multiplexing with CRISPR", "Mining of eukaryotic transposomes will likely reveal many additional RGEN families"],
     cons: ["Current editing efficiency lower than SpCas9 in human cells; substantial engineering needed", "ωRNA-protein interface and PAM requirements only partially characterized", "Therapeutic development timelines long; likely 5–10 years from discovery to clinical application"],
     details: "Fanzor: PolB-like domain, ωRNA-guided, type II transposon-associated. SpFanzor1 and SpFanzor2 from Spizellomyces punctatus. Demonstrated programmable human cell editing. Broad patent application filed. Related: ISDra2 TnpB, IS200/IS605 family evolution into CRISPR-Cas.",
-    url: "https://www.nature.com/articles/s41586-023-06356-2"
+    url: "https://www.nature.com/articles/s41586-023-06356-2",
+    pmid: "37380027",
   },
   {
     id: 89, year: 2025, cats: ["gene_editing"], impact: 5,
@@ -1507,7 +1578,8 @@ const DATA = [
     pros: ["Attomolar sensitivity (~1 aM) without PCR thermocycler via SHERPA (SHERLOCK + LAMP pre-amplification)", "Single-base mismatch discrimination: ideal for SNP genotyping, variant-specific detection", "Isothermal reaction enables POC deployment without laboratory infrastructure"],
     cons: ["Collateral cleavage is non-specific — multiplexing limited by reporter cross-reactivity", "Pre-amplification (RPA/LAMP) step adds hands-on time and contamination risk", "Regulatory clearance pathway for CRISPR-based IVDs is still being established (FDA EUA precedent from COVID)"],
     details: "SHERLOCK: Cas13a (ssRNA collateral cleavage) + RPA pre-amplification. DETECTR: Cas12a (ssDNA collateral cleavage). One-pot SHERLOCK: simultaneous amplification + detection. Lateral flow readout for POC. EUA granted for SARS-CoV-2 (2020). Abbott, Sherlock Biosciences commercializing.",
-    url: "https://www.science.org/doi/10.1126/science.aam9321"
+    url: "https://www.science.org/doi/10.1126/science.aam9321",
+    pmid: "28408723",
   },
 
   // ── N-OF-1 / PERSONALIZED GENE EDITING ────────────────────────────────────
@@ -1521,7 +1593,8 @@ const DATA = [
     pros: ["Proof that personalized base editing therapy can be designed, safety-tested, and IND-approved in 6 months", "LNP delivery enables repeated dosing and avoids immunogenicity issues of viral vectors", "First use of patient + parent WGS as reference for guide RNA design and off-target analysis (ONE-seq, CHANGE-seq, GUIDE-seq)"],
     cons: ["Metabolic correction is partial — no liver biopsy to confirm editing efficiency; clinical benefit inferred indirectly", "N-of-1 manufacturing pipeline requires specialized infrastructure (Danaher/IDT/Acuitas partnerships) not broadly accessible", "Scalability and cost remain the central challenge; per-patient economics currently unsustainable without platform reuse"],
     details: "CPS1 deficiency: autosomal recessive urea cycle disorder, toxic ammonia buildup, ~50% infant mortality. k-abe: adenine base editor (ABE8e variant) + LNP formulation (Acuitas lipids). Safety package: mouse KI model, NHP PK/tox, ONE-seq + CHANGE-seq + GUIDE-seq off-target analysis. FDA EUA approved in ~1 week. Three doses (0.1, 0.3, 0.5 mg/kg). Protein tolerance improved, nitrogen-scavenger meds reduced ~50%. CHOP/Penn/IGI/IDT/Aldevron/Jackson Lab consortium. Related editorial: Peter Marks (NEJM 2025, NEJMe2505704) on N-of-1 platform regulatory framework.",
-    url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2504747"
+    url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2504747",
+    pmid: "40373211",
   },
   {
     id: 92, year: 2019, cats: ["rna_biology", "clinical_genomics"], impact: 5,
@@ -1533,7 +1606,8 @@ const DATA = [
     pros: ["Pioneered the WGS → splice junction analysis → ASO design → N-of-1 IND pipeline in under 12 months", "Splice-modulating ASO approach is highly adaptable: same chemical backbone (2'-MOE PS) as approved Spinraza", "Demonstrated measurable reduction in seizure frequency with a bespoke molecule never tested before in humans"],
     cons: ["Mila passed away in 2021 — ASO slowed but could not reverse the neurodegenerative course of CLN7 Batten disease", "ASO CNS delivery requires intrathecal injection; less scalable than LNP-mediated hepatic delivery", "Approach dependent on finding an amenable splice-switching mutation; only a minority of patients qualify"],
     details: "SVA retrotransposon insertion in MFSD8 intron 6 → cryptic splice site activation → loss-of-function. milasen: 22-nt 2'-MOE phosphorothioate ASO blocking i6.SA cryptic splice acceptor. Same backbone as nusinersen (Spinraza). WGS analysis: Tea algorithm for transposon detection. N-of-1 IND approved by FDA. ~30 seizures/day → near-zero at peak response. n-Lorem Foundation (Ionis/Crooke) now industrializing this approach. Timothy Yu's lab has since treated ~30 children via expanded access.",
-    url: "https://www.nejm.org/doi/full/10.1056/NEJMoa1813279"
+    url: "https://www.nejm.org/doi/full/10.1056/NEJMoa1813279",
+    pmid: "31597037",
   },
   {
     id: 93, year: 2025, cats: ["gene_editing"], impact: 4,
@@ -1545,7 +1619,8 @@ const DATA = [
     pros: ["~50% LDL reduction at highest dose with a single infusion — durable effect consistent with permanent hepatic editing", "Validates LNP-ABE delivery at mg/kg doses in humans; de-risks the platform for Baby KJ and future programs", "PCSK9 genetic knockout well-validated by human genetics (PCSK9 LOF carriers have lifelong low LDL)"],
     cons: ["Serious adverse event (cardiac event) in one patient at highest dose prompted FDA clinical hold (later lifted)", "On-target editing efficiency in human liver estimated at 40–60% — high but leaves residual disease burden", "LNP immunogenicity after repeat dosing: elevated liver enzymes in some patients; durability of immunosuppression needed"],
     details: "PCSK9 A>G base edit: ABE8e + sgRNA targeting PCSK9 codon 34 (Y34Stop equivalent). LNP: Lipid nanoparticle formulation (Acuitas/Verve proprietary). HEART-1: FH patients, Phase 1b, dose escalation. ~50% LDL-C reduction at 0.45 mg/kg dose. Nexus trial (ANGPTL3 editing): parallel program for elevated triglycerides. Musunuru (Verve co-founder) used same platform insights for k-abe design. Key: platform reuse across programs reduces regulatory burden.",
-    url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2310151"
+    url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2310151",
+    pmid: "38294974",
   },
   {
     id: 94, year: 2025, cats: ["gene_editing"], impact: 4,
@@ -1557,7 +1632,8 @@ const DATA = [
     pros: ["Articulates FDA's intent to enable rapid N-of-1 approval via platform IND framework (shared mRNA backbone + LNP)", "Provides regulatory clarity that standardized safety packages (off-target, NHP tox) can be reused across patient-specific guides", "Signals FDA openness to WGS-based off-target nomination as a sufficient safety package for single-patient programs"],
     cons: ["Marks departed FDA in early 2025; implementation depends on successor and administration policy", "Framework still aspirational — no formal FDA guidance document yet codifying the N-of-1 platform IND pathway", "Commercial viability for ultra-rare N-of-1 therapies remains unsolved even with regulatory clarity"],
     details: "Key regulatory concepts: platform IND (shared manufacturing + delivery components filed once, patient-specific guide RNA filed as amendment); risk-based off-target analysis (guide RNA-specific ONE-seq/CHANGE-seq, not full de novo safety battery per patient); compassionate use / expanded access for terminal pediatric patients. Related: FDA Somatic Cell Genome Editing program (SCGE) funding of CHOP/Penn/IGI consortium that produced Baby KJ.",
-    url: "https://www.nejm.org/doi/full/10.1056/NEJMe2505704"
+    url: "https://www.nejm.org/doi/full/10.1056/NEJMe2505704",
+    pmid: "40373035",
   }
 ,
 
@@ -1572,7 +1648,8 @@ const DATA = [
     pros: ["Simultaneous capture of all clinically actionable variant classes (SNV, CNV, SV, TMB, MSI) in one assay", "FDA PMA approval as CDx enables direct reimbursement and regulatory use in clinical trials", "TMB (tumor mutational burden) from panel correlates with ICI response; MSI-H enables pembrolizumab use"],
     cons: ["Panel-based: misses variants outside gene list; whole-exome/genome needed for research-grade completeness", "Tissue biopsy required; spatial and temporal heterogeneity not captured in a single sample", "Variant interpretation (VUS classification) requires expert curation and is not standardized across labs"],
     details: "FoundationOne CDx: 324 genes, 2.1 Mb, hybrid capture, paired PBMC germline subtraction. SNV >99% sensitivity, CNV >95%, SV >95% for covered fusions. Approved CDx for 14+ drug-indication pairs (osimertinib/EGFR, olaparib/BRCA, etc.). ACMG/AMP 5-tier variant classification. MSI by indel instability. TMB: mut/Mb cutoff 10 for pembro. Competitors: Tempus xT, Caris MI, Guardant360 CDx.",
-    url: "https://www.nature.com/articles/nm.3823"
+    url: "https://www.nature.com/articles/nm.3823",
+    pmid: "25742452",
   },
   {
     id: 96, year: 2019, cats: ["clinical_genomics", "sequencing"], impact: 5,
@@ -1584,7 +1661,8 @@ const DATA = [
     pros: ["Non-invasive; captures tumor heterogeneity better than single-site biopsy via shed DNA from multiple lesions", "Serial sampling enables real-time therapy monitoring, resistance detection, and MRD surveillance", "Grail/Galleri multi-cancer early detection extends liquid biopsy to screening context"],
     cons: ["Low ctDNA shedding in early-stage or CNS tumors severely limits sensitivity (<0.01% VAF)", "Error suppression (duplex sequencing, UMI barcoding) adds cost and complexity vs. standard NGS", "Regulatory path for MRD endpoints as drug approval surrogates still being established by FDA"],
     details: "CAPP-seq: hybrid capture + unique molecular identifiers (UMIs), ~0.001% VAF sensitivity. Duplex sequencing: both strands barcoded, ~1 error per 10^7 bases. cfDNA fragment size (~167 bp, nucleosome-protected) distinguishes from germline. Fragmentomics: end-motif and fragment size profiles inform tissue-of-origin. Guardant360, Foundation ACT: clinical-grade ctDNA panels. Grail Galleri: methylation-based multi-cancer early detection.",
-    url: "https://www.nature.com/articles/s41586-020-2444-0"
+    url: "https://www.nature.com/articles/s41586-020-2444-0",
+    pmid: "32612235",
   },
   {
     id: 97, year: 2020, cats: ["clinical_genomics"], impact: 4,
@@ -1596,7 +1674,8 @@ const DATA = [
     pros: ["Tumor-agnostic pembrolizumab approvals (MSI-H 2017, TMB-H 2020) enable treatment of any solid tumor with the biomarker", "MSI-H is measurable from panel sequencing (indel signature) without requiring IHC", "Established regulatory precedent for biomarker-driven pan-tumor approvals that other biomarkers now follow"],
     cons: ["TMB cutoff of 10 mut/Mb is imprecise — optimal thresholds vary by tumor type and panel size", "TMB-H alone has ~30% response rate; many TMB-H tumors still don't respond to ICI", "Panel TMB estimates differ from WES TMB; harmonization across platforms (ESMO TMB working group) ongoing"],
     details: "MSI-H: >30% unstable loci by PCR or indel-shift signature by NGS. dMMR: IHC loss of MLH1/MSH2/MSH6/PMS2. TMB: nonsynonymous somatic mutations per Mb after filtering germline and clonal hematopoiesis. KEYNOTE-158: 10 tumor types, TMB-H ORR ~29% vs. ~6% TMB-low. Tumor types with highest TMB: melanoma, NSCLC, bladder, MSI-H CRC.",
-    url: "https://ascopubs.org/doi/10.1200/JCO.19.02105"
+    url: "https://ascopubs.org/doi/10.1200/JCO.19.02105",
+    pmid: "31682550",
   },
   {
     id: 98, year: 2019, cats: ["clinical_genomics", "rna_biology", "ml_ai"], impact: 4,
@@ -1608,7 +1687,8 @@ const DATA = [
     pros: ["Detects cryptic splice variants up to ±50 nt from exon boundaries missed by conventional annotation", "Pre-computed scores for all SNVs in hg19/hg38 available; fast to integrate into annotation pipelines", "Delta score >0.2 is a clinically validated threshold for likely pathogenic classification"],
     cons: ["Performance degrades for rare transcripts, tissue-specific isoforms, and very deep intronic variants (>50 nt)", "Does not model context-dependent splicing regulation (RNA-binding protein binding, secondary structure)", "False positives require wet-lab validation (RT-PCR, minigene assay) for clinical reporting"],
     details: "Architecture: 32-layer residual CNN on 10 kb genomic context. Trained on Gencode v24 splice sites. 4 output scores: donor gain/loss, acceptor gain/loss. Delta score threshold: 0.5 (high confidence), 0.2 (suggested). Pre-scored at spliceailookup.broadinstitute.org. Succeeds MaxEntScan, NNSPLICE. MFSD8/CLN7 splicing in Milasen also discoverable via SpliceAI.",
-    url: "https://doi.org/10.1016/j.cell.2018.12.015"
+    url: "https://doi.org/10.1016/j.cell.2018.12.015",
+    pmid: "30661751",
   },
   {
     id: 99, year: 2015, cats: ["clinical_genomics"], impact: 4,
@@ -1619,7 +1699,8 @@ const DATA = [
     pros: ["Standardized framework enables consistent cross-lab interpretation and ClinVar database aggregation", "Evidence criteria cover computational (PP3/BP4), functional (PS3/BS3), population (PM2/BS1), and segregation data", "ClinVar aggregates >2M variant-condition submissions; increasingly machine-curated with ClinGen expert panels"],
     cons: ["VUS rate remains 40–60% for many genes; management of VUS in clinical reports is resource-intensive", "Framework is gene-agnostic; gene-specific guidelines (TP53, BRCA1 ENIGMA, RASopathy) often override defaults", "Conflicting interpretations between labs (same variant, different tier) are common and undermine clinical utility"],
     details: "5 tiers: P, LP, VUS, LB, B. 28 criteria: PVS1 (null variant in LoF gene), PS1 (same AA as known P), PP2 (missense in gene with low benign missense rate), PM2 (absent/rare in gnomAD), BS1 (allele freq > disease prevalence), etc. ClinGen haploinsufficiency/triplosensitivity scores. SCV (submitter record) vs. RCV (aggregated). ACMG SF v3.0 secondary findings list: 81 genes.",
-    url: "https://www.nature.com/articles/gim201530"
+    url: "https://www.nature.com/articles/gim201530",
+    pmid: "25741868",
   },
   // ── CELL & GENE THERAPY DELIVERY ────────────────────────────────────────────
   {
@@ -1632,7 +1713,8 @@ const DATA = [
     pros: ["Clinically validated across patisiran, COVID vaccines, NTLA-2001, HEART-1, Baby KJ — broadest clinical track record of any non-viral delivery system", "Organ tropism programmable by lipid composition: liver default (ApoE/LDLR), spleen/lung with SORT lipids", "GMP manufacturing scalable via microfluidic mixing; no biosafety level requirements of viral vectors"],
     cons: ["Hepatic tropism limits delivery to extrahepatic tissues (CNS, muscle require specialized formulations)", "Inflammatory responses (TLR activation) require nucleoside modification (m1Ψ) and lipid optimization", "Repeat dosing triggers anti-PEG antibodies and accelerated blood clearance (ABC phenomenon)"],
     details: "Ionizable lipid pKa 6.2–6.8: neutral at pH 7.4 (blood), cationic at pH <6 (endosome) for endosomal escape. ALC-0315 (BNT162b2). SM-102 (mRNA-1273). DLin-MC3-DMA (patisiran/Onpattro). Helper lipids: DSPC (structural), cholesterol (membrane fluidity), PEG-lipid (~1.5 mol%). Endosomal escape: proton sponge + membrane fusion. SORT lipids (Cheng et al.): 5th lipid shifts tropism to spleen/lung.",
-    url: "https://www.nature.com/articles/nbt.1602"
+    url: "https://www.nature.com/articles/nbt.1602",
+    pmid: "20081866",
   },
   {
     id: 101, year: 2016, cats: ["delivery"], impact: 5,
@@ -1656,7 +1738,8 @@ const DATA = [
     pros: ["Autologous product eliminates graft-versus-host disease; single manufacturing run per patient", "Casgevy and Lyfgenia both FDA approved for sickle cell disease in 2023 — validates the platform", "Lentiviral integration profile well-characterized after >1,500 patient-years of follow-up"],
     cons: ["Manufacturing is patient-specific, complex, and expensive (~$2–3M per patient for Casgevy)", "HSC editing efficiency with Cas9 RNP requires electroporation with cell stress and viability tradeoffs", "Myeloablative conditioning (busulfan) carries significant toxicity; non-genotoxic conditioning (anti-CD117 ADC) being developed"],
     details: "HSC mobilization: G-CSF + plerixafor (CXCR4 antagonist). CD34+ selection: CliniMACS. Lentiviral transduction: RetroNectin-coated bags, MOI ~3–10. Electroporation: Lonza Nucleofector or MaxCyte GTx. CRISPR editing: Cas9 RNP + ssODN or AAV6 donor. Busulfan conditioning: AUC-targeted dosing. Release criteria: VCN, residual RNP, viability, sterility. Casgevy: BCL11A enhancer edit to reactivate fetal hemoglobin.",
-    url: "https://www.nejm.org/doi/full/10.1056/NEJMoa1705342"
+    url: "https://www.nejm.org/doi/full/10.1056/NEJMoa1705342",
+    pmid: "29669226",
   },
   {
     id: 103, year: 2020, cats: ["delivery"], impact: 4,
@@ -1668,7 +1751,8 @@ const DATA = [
     pros: ["Organ tropism is chemically programmable without antibody conjugation or complex surface engineering", "Lung-targeted SORT LNPs enable pulmonary mRNA delivery relevant to CFTR, surfactant protein, and COVID mucosal vaccines", "Spleen-targeted SORT LNPs deliver mRNA to APCs, enabling mRNA cancer vaccine approaches"],
     cons: ["SORT lipid addition increases formulation complexity and can reduce encapsulation efficiency", "Tropism is not absolute — off-target organ delivery remains even with optimized SORT compositions", "Mechanism of non-liver tropism not fully characterized; protein corona effects complicate cross-context translation"],
     details: "Standard 4-component LNP: ionizable + DSPC + cholesterol + PEG-lipid. SORT 5th lipid: DOTAP (cationic) → lung; 18PA (anionic) → spleen; DOPE (zwitterionic) → muscle. 20 mol% SORT lipid. DOTAP lung LNPs: ~10x enrichment in lung vs. liver. Spleen LNPs: B cell and dendritic cell mRNA delivery for vaccine applications. Extended by multiple groups to CNS, muscle, bone marrow.",
-    url: "https://www.nature.com/articles/s41565-020-0669-6"
+    url: "https://www.nature.com/articles/s41565-020-0669-6",
+    pmid: "32251383",
   },
   {
     id: 104, year: 2022, cats: ["delivery"], impact: 4,
@@ -1692,7 +1776,8 @@ const DATA = [
     pros: ["125K+ diverse exomes provides high confidence allele frequencies even for rare variants; v4 expands to 730K exomes", "Gene-level constraint metrics (pLI, LOEUF, oe_lof_upper) provide quantitative haploinsufficiency evidence", "Population-stratified AFs reduce false-positive rates in non-EUR populations; SV callset (gnomAD-SV) included"],
     cons: ["Dataset still predominantly European-ancestry; non-EUR constraint estimates have wider CIs", "gnomAD includes individuals with disease in recruiting cohorts; true population AF may be inflated for some disease genes", "WGS component (~15K in v3) still underpowered for non-coding variant frequency estimates in regulatory regions"],
     details: "gnomAD v4 (2023): 730,947 exomes + 76,215 genomes. pLI: probability LoF intolerant (>0.9 = haploinsufficient). LOEUF: LoF observed/expected upper CI (lower = more constrained). Missense z-score. Ancestry: AFR, AMR, ASJ, EAS, FIN, NFE, OTH, MID, SAS. gnomAD-SV: 14,891 genomes. Browser: gnomad.broadinstitute.org. Used in ACMG PM2 (AF <0.1% dominant, <1% recessive), BS1 (AF > disease prevalence).",
-    url: "https://www.nature.com/articles/s41586-020-2308-7"
+    url: "https://www.nature.com/articles/s41586-020-2308-7",
+    pmid: "32461654",
   },
   {
     id: 106, year: 2018, cats: ["pop_genomics"], impact: 5,
@@ -1704,7 +1789,8 @@ const DATA = [
     pros: ["500K participants with dense phenotyping enables well-powered GWAS even for rare traits (n>1,000 cases)", "Linked EHR enables PheWAS: one variant → 4,000+ traits simultaneously for pleiotropy and safety assessment", "WGS of full cohort (500K) now available; enables rare variant burden testing at population scale"],
     cons: ["Predominantly White British ancestry (~94%); limits generalizability and GWAS power for non-European populations", "Self-reported phenotypes and ICD-10-based disease definitions have variable accuracy; misclassification dilutes associations", "Healthy volunteer bias: participants tend to be healthier than general UK population; affects disease prevalence"],
     details: "Genotyping: UK BiLEVE + UK Biobank Axiom arrays, ~800K variants. Imputation: HRC + UK10K, ~90M variants. WES: 200K (2021), 500K (2022). REGENIE: whole-genome regression for biobank-scale GWAS. PheWAS: IEU OpenGWAS, PhenoScanner. Proteomics: Olink 2,923 proteins (UK Biobank PPP, 54K participants). Metabolomics: Nightingale NMR. Brain MRI (40K+), cardiac MRI, DXA.",
-    url: "https://www.nature.com/articles/s41586-018-0579-z"
+    url: "https://www.nature.com/articles/s41586-018-0579-z",
+    pmid: "30305743",
   },
   {
     id: 107, year: 2020, cats: ["pop_genomics"], impact: 5,
@@ -1716,7 +1802,8 @@ const DATA = [
     pros: ["Integrates signals from millions of common variants; captures more heritability than top GWAS hits alone", "GPS identifies top 8% of CAD risk with 3x relative risk — clinically actionable threshold comparable to monogenic risk", "LDpred2 and PRS-CS enable genome-wide PRS without arbitrary p-value thresholds; improved calibration"],
     cons: ["PRS trained in European cohorts perform 2–4x worse in African ancestry populations — equity problem", "Captured heritability still 20–30% of total for most complex traits; clinical ceiling is unclear", "Interaction with environment, rare variants, and epistasis not captured; PRS is a probability, not a diagnosis"],
     details: "Methods: C+T (clump and threshold), LDpred (Bayesian shrinkage), PRS-CS (continuous shrinkage), SBayesR. Multi-ancestry PRS: PRS-CSx, CT-SLEB. GPS (Khera 2018): 6.6M variants, CAD, trained in UK Biobank. Clinical use: Genomics England, Geisinger MyCode, Myriad riskScore. Polygenic hazard score for prostate cancer. PRSice-2 software widely used. AUC, C-statistic, odds ratio per SD for evaluation.",
-    url: "https://www.nature.com/articles/s41596-020-0353-1"
+    url: "https://www.nature.com/articles/s41596-020-0353-1",
+    pmid: "32709988",
   },
   {
     id: 108, year: 2020, cats: ["pop_genomics", "tools"], impact: 4,
@@ -1728,7 +1815,8 @@ const DATA = [
     pros: ["SuSiE credible sets typically contain 1–3 variants for strong signals; dramatically narrows search space vs. all LD-linked variants", "coloc H4 posterior probability >0.8 provides strong evidence for shared causal variant between GWAS and eQTL", "Integrating coloc with CRE annotation (H3K27ac, ATAC) enables mechanistic regulatory variant identification"],
     cons: ["Fine-mapping assumes single causal variant per LD block; multiple independent signals require conditioning or SuSiE L>1", "coloc requires overlapping LD structure; cross-ancestry colocalization is more complex and requires extended methods", "eQTL colocalization biased toward GTEx tissues; disease-relevant cell types often not represented"],
     details: "SuSiE: sum of single effects regression, variational Bayes, outputs L credible sets. FINEMAP: stochastic search, Bayes factors. coloc: 5 hypotheses (H0–H4), H4 = shared causal variant. GTEx v8: 54 tissues, 49 cell lines, 838 donors. OpenTargets Genetics: coloc across 87 tissues. PoPS: polygenic priority score integrates gene-level scores from coloc, MAGMA, tissue expression for gene prioritization.",
-    url: "https://doi.org/10.1111/rssb.12388"
+    url: "https://doi.org/10.1111/rssb.12388",
+    pmid: "37220626",
   },
   {
     id: 109, year: 2023, cats: ["pop_genomics"], impact: 4,
@@ -1740,7 +1828,8 @@ const DATA = [
     pros: ["Captures ancestry-specific structural variants and gene copies invisible in single linear reference genome", "Graph-based alignment reduces reference bias, especially for non-European populations", "Enables population-level SV genotyping and copy number variation at unprecedented resolution"],
     cons: ["Graph genome tools (vg, Minigraph-Cactus, Giraffe) still maturing; pipelines less standardized than BWA+GATK", "Compute requirements for graph alignment substantially higher than linear reference alignment", "Clinical interpretation frameworks (ACMG/AMP) not yet adapted for graph-based variant representation"],
     details: "47 diploid genomes: 94 haplotypes, 5 superpopulations. Assembly: HiFi + Hi-C + ONT ultra-long. Graph: Minigraph-Cactus. Tools: vg Giraffe (short reads), Minigraph (long reads). 119 Mb novel sequence vs. T2T-CHM13. 1,115 duplicated genes. Pangenome browser: pangenome.gi.ucsc.edu. T2T + pangenome together define the emerging reference standard superseding GRCh38.",
-    url: "https://www.nature.com/articles/s41586-023-05896-x"
+    url: "https://www.nature.com/articles/s41586-023-05896-x",
+    pmid: "37165242",
   },
   // ── PROTEOMICS / MULTI-OMICS ─────────────────────────────────────────────────
   {
@@ -1753,7 +1842,8 @@ const DATA = [
     pros: ["Directly measures protein abundance rather than mRNA; captures post-translational regulation invisible to RNA-seq", "SCoPE2 detects >3,000 proteins per cell with improved sensitivity and throughput", "Nanodroplet approach compatible with phosphoproteomics: captures signaling states undetectable by other single-cell methods"],
     cons: ["~1,000–3,000 proteins per cell vs. ~10,000+ in bulk proteomics; deep proteome coverage still limited", "Requires specialized instrumentation (Orbitrap Eclipse, ion mobility) and bioinformatics (SCoPE2 pipeline)", "Throughput much lower than scRNA-seq; 100–1,000 cells per experiment vs. tens of thousands for droplet methods"],
     details: "SCoPE-MS: carrier proteome (200-cell boost) + TMT barcoding in 10 µl droplets. SCoPE2: improved sample prep, reduces missing values. Nanodroplet: 200 nl droplets on chip, ZipChip CE-MS interface. DIA-based approaches (plexDIA) improve coverage. PEA (proximity extension assay, Olink): targeted ~1,500 protein plasma proteomics. SWATH-MS: DIA for reproducible quantitative proteome.",
-    url: "https://genomebiology.biomedcentral.com/articles/10.1186/s13059-018-1547-5"
+    url: "https://genomebiology.biomedcentral.com/articles/10.1186/s13059-018-1547-5",
+    pmid: "30343672",
   },
   {
     id: 111, year: 2019, cats: ["proteomics"], impact: 5,
@@ -1765,7 +1855,8 @@ const DATA = [
     pros: ["Detects 8,000–12,000 proteins per sample with <10% CV reproducibility; enables large clinical cohort studies", "DIA-NN: neural network deconvolution dramatically improves sensitivity and reduces missing values vs. OpenSWATH", "Label-free quantification without TMT; enables retrospective re-analysis as software improves"],
     cons: ["Chimeric MS2 spectra from co-isolated precursors complicate identification; requires sophisticated deconvolution", "Spectral library generation (from DDA runs or in silico prediction via Prosit) adds workflow complexity", "Phosphoproteomics by DIA-MS still less mature than TMT-based approaches for large cohorts"],
     details: "SWATH: 25 Da isolation windows, iterative across full m/z range. DIA-NN: transformer-based MS2 prediction, single-pass DIA analysis. Prosit: deep learning MS2 spectrum prediction enabling library-free DIA. TMT-DIA: combines isobaric labeling with DIA for multiplexed quantification. Spectronaut (Biognosys): commercial DIA analysis. timsTOF Pro (Bruker): ion mobility 4D-proteomics. AlphaPeptStats: downstream statistics.",
-    url: "https://www.nature.com/articles/s41592-019-0638-x"
+    url: "https://www.nature.com/articles/s41592-019-0638-x",
+    pmid: "31768060",
   },
   {
     id: 112, year: 2018, cats: ["proteomics"], impact: 4,
@@ -1777,7 +1868,8 @@ const DATA = [
     pros: ["Maps weak and transient interactions missed by co-IP; works in situ under physiological conditions", "TurboID: 1,000x faster labeling than BioID (10 min vs. 18h), compatible with temporal pulse-chase experiments", "Compartment-specific labeling (mitochondria, ER, nucleus) enables organelle proteome mapping"],
     cons: ["Background biotinylation requires careful controls; abundant cytoplasmic proteins contaminate compartment-targeted baits", "Proximity radius (~10 nm) larger than direct protein contact; proximity ≠ direct interaction", "Requires stable cell line generation for bait fusion; transient expression can alter interaction stoichiometry"],
     details: "BioID (BirA*): R118G mutation, requires 18h biotin pulse. TurboID: directed evolution, 10 min labeling. APEX2: ascorbate peroxidase + H2O2 pulse (1 min), EM-compatible. MiniTurbo: 28 kDa, less background. Analysis: MaxQuant, Perseus, SAINTexpress for hit filtering. Paired with AlphaFold2 Multimer to validate predicted interactions.",
-    url: "https://www.nature.com/articles/nbt.4201"
+    url: "https://www.nature.com/articles/nbt.4201",
+    pmid: "30125270",
   },
   {
     id: 113, year: 2021, cats: ["proteomics", "pop_genomics"], impact: 5,
@@ -1789,7 +1881,8 @@ const DATA = [
     pros: ["UK Biobank PPP: 2,923 proteins × 54,219 participants — largest protein GWAS to date, free to access", "SomaScan 11K widest proteome coverage; used in ARIC, MESA cohorts for longitudinal cardiovascular studies", "pQTLs provide causal evidence for protein levels as drug targets (MR with protein as exposure → disease outcome)"],
     cons: ["Antibody/aptamer specificity varies; cross-reactivity can produce artifactual associations for some targets", "Relative quantification only; absolute protein concentrations require orthogonal validation (MS, ELISA)", "SomaScan aptamer sequences proprietary; limits open-science reproducibility and cross-lab comparison"],
     details: "Olink PEA: two antibodies + DNA oligo probes; proximity ligation + qPCR/NGS; NPX units (log2-normalized). SomaScan: modified DNA aptamers (SOMAmer); 11,000 reagents. UK Biobank PPP (Sun et al. 2023): 14,287 pQTLs for 1,859 proteins. 88% have ≥1 cis-pQTL. Integrate with: OpenTargets, coloc, TwoSampleMR. Drug targets with pQTL support have 2.6x higher success rate in clinical trials (Doudney et al.).",
-    url: "https://www.nature.com/articles/s41586-023-06592-6"
+    url: "https://www.nature.com/articles/s41586-023-06592-6",
+    pmid: "37794186",
   },
   {
     id: 114, year: 2021, cats: ["proteomics", "single_cell"], impact: 4,
@@ -1801,7 +1894,8 @@ const DATA = [
     pros: ["MOFA+ factors are interpretable: top weights per modality reveal regulatory drivers of cell state variation", "WNN automatically weights each modality per cell; outperforms single-modality integration for rare cell types", "Scalable to population-level multi-omics (MOFA+ across samples) for disease-associated regulatory programs"],
     cons: ["MOFA+ assumes linear modality relationships; misses non-linear regulatory interactions captured by VAE methods", "Integration quality critically depends on data quality per modality; one poor-quality modality can dominate factors", "No universal benchmark: best integration method depends strongly on biological question and dataset composition"],
     details: "MOFA+: group factor analysis, handles missing modalities, Bayesian ARD sparsity. WNN: kNN graph per modality + cross-modality similarity weighting. totalVI: VAE-based RNA + protein. MultiVI: MOFA VAE for ATAC + RNA. Muon: flexible AnnData multi-omics container. Benchmark: Luecken et al. 2022 NeurIPS competition. Tasks: batch correction, cell type annotation, trajectory inference.",
-    url: "https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02015-1"
+    url: "https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02015-1",
+    pmid: "32393329",
   },
   // ── RNA BIOLOGY / TRANSCRIPTOMICS ────────────────────────────────────────────
   {
@@ -1814,7 +1908,8 @@ const DATA = [
     pros: ["Codon-resolution readout distinguishes actively translating ribosomes from stalled or queued ribosomes", "Genome-wide discovery of upstream ORFs (uORFs), downstream ORFs, and non-canonical translation initiation sites", "Translation efficiency (TE = Ribo-seq RPKM / RNA-seq RPKM) separates transcriptional from post-transcriptional regulation"],
     cons: ["CHX pretreatment biases ribosome density toward initiation sites; harringtonine/lactimidomycin needed for initiation mapping", "Protocol is technically demanding; RNase concentration and digestion time require careful optimization per cell type", "Low-expression genes have poor TE estimates; large read counts required for reliable codon-level analysis"],
     details: "Protocol: flash-freeze cells, RNase I digestion, monosome isolation, RPF extraction, ligation, RT-PCR, sequencing. Alignment: STAR to genome + transcriptome. ORF calling: RiboTaper, ORFquant, Ribotricer. TE: DESeq2 interaction term (condition × assay). smORFs: <100 aa peptides discovered by Ribo-seq in 5' UTRs and lncRNAs. mRNA therapeutic: validates that modified nucleoside mRNA is efficiently translated with expected reading frame.",
-    url: "https://www.nature.com/articles/nmeth.2247"
+    url: "https://www.nature.com/articles/nmeth.2247",
+    pmid: "23281573",
   },
   {
     id: 116, year: 2012, cats: ["rna_biology"], impact: 5,
@@ -1826,7 +1921,8 @@ const DATA = [
     pros: ["m6A is druggable: METTL3 inhibitors (STM2457) in AML Phase 1; FTO inhibitors in metabolic disease", "m6A in synthetic mRNA affects TLR activation — directly informs mRNA therapeutic design (m1Ψ substitution reduces sensing)", "DART-seq: single-cell m6A profiling enables cell-type-specific epitranscriptomic analysis"],
     cons: ["MeRIP-seq has ~100 nt resolution; single-nucleotide mapping (MICLIP) requires PAR-CLIP which is technically demanding", "m6A antibodies show cross-reactivity with m6Am (cap-adjacent) and other modifications; controls are critical", "Functional redundancy among YTHDF paralogs; individual KOs show weaker phenotypes than triple KO"],
     details: "m6A consensus: DRACH motif. Writers: METTL3/METTL14/WTAP complex. Erasers: FTO, ALKBH5. Readers: YTHDF1 (translation), YTHDF2 (decay), YTHDC1 (nuclear). MeRIP-seq: m6A IP + RNA-seq. MICLIP: single-nucleotide resolution. m1Ψ in COVID vaccines reduces innate immune sensing vs. unmodified m6A. STM2457 (METTL3i): Phase 1 AML data published. IME: internal m6A in circRNA enhances stability.",
-    url: "https://www.nature.com/articles/nature11112"
+    url: "https://www.nature.com/articles/nature11112",
+    pmid: "22575960",
   },
   {
     id: 117, year: 2017, cats: ["rna_biology", "pop_genomics"], impact: 5,
@@ -1838,7 +1934,8 @@ const DATA = [
     pros: ["GTEx v8 sQTLs: 32,977 genes with at least one sQTL across 49 tissues; comprehensive map of splicing regulation", "sQTL colocalization with GWAS identifies splice-altering causal variants missed by eQTL-only approaches", "Pangolin extends SpliceAI to multi-tissue predictions; enables tissue-specific splicing effect prioritization"],
     cons: ["sQTL discovery power lower than eQTL in most tissues due to higher read depth requirements for junction counting", "sQTL effects are often tissue-specific; GTEx tissue representation may miss the disease-relevant cell type", "Splicing effect prediction (SpliceAI) needs wet-lab validation for moderate delta scores (0.2–0.5)"],
     details: "sQTL detection: LeafCutter (intron clustering), rMATS (exon skipping), STAR junction counts. sQTL coloc: same coloc framework as eQTL. GTEx v8: 17,382 donors, 54 tissues. Pangolin: SpliceAI extended to 5 tissues. Therapeutic relevance: splice-switching ASOs (nusinersen, milasen) target sQTL-identified cryptic splice sites. ~50% of causal GWAS variants for some traits appear to act through splicing (Ferraro et al. 2021).",
-    url: "https://www.nature.com/articles/s41588-017-0004-9"
+    url: "https://www.nature.com/articles/s41588-017-0004-9",
+    pmid: "29229983",
   },
   {
     id: 118, year: 2023, cats: ["rna_biology"], impact: 4,
@@ -1849,7 +1946,8 @@ const DATA = [
     pros: ["XIST-based X-reactivation is a potential strategy for X-linked diseases (Rett syndrome, CDKL5) — therapeutic pipeline emerging", "eRNAs (enhancer RNAs) directly report active enhancer transcription; used as functional readout in CRISPR enhancer screens", "lncRNA-based therapies have distinct IP space vs. protein-targeting approaches; novel asset class for rare disease"],
     cons: ["Most lncRNA functional studies rely on loss-of-function; phenotypes often subtle or cell-type-specific", "lncRNA annotation is incomplete; many detected transcripts are artifacts of enhancer transcription rather than functional molecules", "Delivery of ASOs to nuclear-retained lncRNAs (XIST, NEAT1) requires specialized intracellular delivery for nuclear access"],
     details: "HOTAIR: PRC2 recruitment via H3K27me3 spreading. XIST: X-chromosome inactivation via Polycomb spreading + A-repeat RNA-protein interactions. NEAT1: paraspeckle scaffold via phase separation. MALAT1: splicing speckle component, regulates alternative splicing. eRNAs: bidirectional transcription from H3K27ac+ enhancers. FANTOM5: CAGE for lncRNA TSS mapping. GENCODE v44: 19,370 lncRNA genes.",
-    url: "https://www.nature.com/articles/s41576-022-00566-8"
+    url: "https://www.nature.com/articles/s41576-022-00566-8",
+    pmid: "36596869",
   },
   {
     id: 119, year: 2017, cats: ["rna_biology"], impact: 4,
@@ -1861,7 +1959,8 @@ const DATA = [
     pros: ["In-cell SHAPE/DMS-MaPseq captures functionally relevant RNA structures under physiological conditions; superior to in vitro folding", "Transcriptome-wide: simultaneously probes structure of thousands of transcripts in one experiment", "LinearDesign (Zhang et al. 2023) applies structure optimization to mRNA therapeutics; used by BioNTech for improved stability"],
     cons: ["Chemical probing is semi-quantitative; SHAPE reactivity reflects single-stranded accessibility, not complete 3D structure", "Ribosome-protected regions confound structure calls in translated mRNAs; must decouple from Ribo-seq signal", "Bioinformatic structure prediction from DMS data (RNAframework, DRACO) still requires experimental validation for clinical use"],
     details: "SHAPE reagents: 1M7, NMIA, NAI. DMS: methylates unpaired A and C; mutations detected by mutational profiling (SHAPE-MaP, DMS-MaPseq). PARIS: psoralen crosslinking for RNA-RNA interactions. SPLASH: scalable PARIS. LinearDesign (Zhang et al. 2023 Nature): codon optimization + structure MFE minimization for mRNA stability; 3–4x higher protein expression. RNAfold/RNAstructure for structure prediction with SHAPE constraints.",
-    url: "https://www.nature.com/articles/nmeth.4170"
+    url: "https://www.nature.com/articles/nmeth.4170",
+    pmid: "28139674",
   },
 
   // ── CAUSAL INFERENCE / BIOLOGICAL TARGETS ───────────────────────────────────
@@ -1875,7 +1974,8 @@ const DATA = [
     pros: ["Genetic instruments are not confounded by lifestyle or environment — avoids reverse causation and confounding that plagues observational studies", "Two-sample MR: uses summary statistics only, no individual-level data needed; massively scalable across GWAS/pQTL databases", "Cis-pQTL instruments for protein targets directly mimic the mechanism of a drug targeting that protein"],
     cons: ["Instrument validity requires: relevance (strong F-stat >10), independence (no confounders of variant-outcome), exclusion restriction (only acts through exposure) — all three are assumptions, not guarantees", "Weak instrument bias (F-stat <10) inflates type I error; gene pleiotropy violates exclusion restriction for many SNPs", "MR estimates population-average lifetime effects; doesn't capture tissue-specificity, dose-response, or drug timing"],
     details: "TwoSampleMR R package: harmonize, mr(), sensitivity analyses. Methods: IVW (inverse variance weighted), MR-Egger (intercept tests pleiotropy), weighted median (robust to 50% invalid instruments), MR-PRESSO (outlier removal), CAUSE (accounts for correlated pleiotropy). F-statistic: R²(n-2)/(1-R²), >10 rule. Cis-pQTL MR: single-instrument, use Wald ratio. OpenGWAS: 34,000+ GWAS traits. Drug target MR: pQTL as instrument → disease outcome. Doudney et al. 2023: 2.6x success rate for genetically validated targets.",
-    url: "https://academic.oup.com/ije/article/32/1/1/665780"
+    url: "https://academic.oup.com/ije/article/32/1/1/665780",
+    pmid: "12689998",
   },
   {
     id: 121, year: 2018, cats: ["causal_inference", "pop_genomics"], impact: 5,
@@ -1887,7 +1987,8 @@ const DATA = [
     pros: ["Converts GWAS loci to gene-level associations; dramatically narrows target search space from hundreds of LD-linked variants to specific genes", "S-PrediXcan enables cross-tissue analysis using GTEx expression models; identifies tissue-specific mediators", "PWAS (protein-level TWAS using pQTL weights) provides more direct drug target evidence than expression-based TWAS"],
     cons: ["TWAS associations can be false positives due to LD contamination; coloc (H4 >0.8) required to confirm shared causal variant", "Expression model R² is typically low (<0.1 for many genes); imputation quality varies widely by tissue and gene", "TWAS tests one gene at a time; doesn't model gene-gene interactions or pathway-level mediation"],
     details: "FUSION: LASSO/elastic net/BSLMM models trained on reference panels. S-PrediXcan: GTEx-based, 49 tissues, summary-stat version (no individual genotypes needed). MASHR: improves effect size estimation across tissues. PWAS: pQTL models (Olink/SomaScan) replace eQTL weights. Key: always follow TWAS with coloc to distinguish TWAS signal from LD hitchhiking. CTWAS: jointly fine-maps expression and genetic variants. PrediXcan → UTMOST → CTWAS is the evolution of the method.",
-    url: "https://www.nature.com/articles/ng.3506"
+    url: "https://www.nature.com/articles/ng.3506",
+    pmid: "26854917",
   },
   {
     id: 122, year: 2019, cats: ["causal_inference"], impact: 5,
@@ -1911,7 +2012,8 @@ const DATA = [
     pros: ["Explicitly models correlated pleiotropy (shared pathway confounding) that MR-Egger and weighted median cannot detect", "Bayesian framework provides interpretable posterior probabilities for causal vs. sharing model", "Works with summary statistics only; scalable to proteome-wide or transcriptome-wide MR screens"],
     cons: ["Computationally expensive vs. IVW/MR-Egger; genome-wide CAUSE analyses take hours per exposure-outcome pair", "Requires a large number of uncorrelated genome-wide significant SNPs; underpowered for exposures with few instruments", "CAUSE may be conservative — can fail to detect true causal effects when sharing model fits equally well"],
     details: "CAUSE model: mixture of causal effect γ and shared factor η per SNP. ELPD (expected log predictive density) compares causal vs. sharing model. Key distinction: correlated pleiotropy (SNP → confounder → outcome, not through exposure) vs. uncorrelated pleiotropy (MR-Egger handles this). Application: protein target validation where cis-pQTL SNPs also regulate nearby genes. CAUSE vs. MR-Egger: CAUSE more powerful under correlated pleiotropy, similar power otherwise.",
-    url: "https://www.nature.com/articles/s41588-020-0631-4"
+    url: "https://www.nature.com/articles/s41588-020-0631-4",
+    pmid: "32451458",
   },
   {
     id: 124, year: 2021, cats: ["causal_inference", "single_cell"], impact: 4,
@@ -1923,7 +2025,8 @@ const DATA = [
     pros: ["CRISPR perturbations are near-ideal causal interventions: direct gene knockdown without the confounding of drug mechanisms", "Systematic combinatorial screens (Norman et al.) reveal epistasis and synergistic gene-gene relationships impossible to detect by eQTL or coexpression", "CINEMA-OT and other causal optimal transport methods extract treatment-specific causal response distributions from Perturb-seq"],
     cons: ["Genome-scale Perturb-seq ($500K–1M per experiment) limits systematic causal mapping to well-funded labs and large pharma", "CRISPRi perturbations are incomplete knockdowns; residual expression can obscure downstream effects", "Causal network inference from Perturb-seq requires careful handling of guide efficiency variation and off-target effects across thousands of perturbations"],
     details: "Norman et al. 2019: combinatorial CRISPRa screen, identifies synergistic TF pairs. Replogle 2022: 10,000 genes × 2.5M cells. GEARS: graph neural network for combinatorial perturbation prediction. scGPT perturbation prediction. CINEMA-OT (Choi 2023): causal inference from Perturb-seq via optimal transport, separates intrinsic cell state from treatment response. NOTEARS-inspired DAG learning on Perturb-seq: emerging approach for causal graph inference at gene-network scale.",
-    url: "https://doi.org/10.1016/j.cell.2022.05.013"
+    url: "https://doi.org/10.1016/j.cell.2022.05.013",
+    pmid: "35688146",
   },
   {
     id: 125, year: 2022, cats: ["causal_inference", "pop_genomics", "proteomics"], impact: 5,
@@ -1935,7 +2038,8 @@ const DATA = [
     pros: ["Scales genetic target validation from dozens to thousands of protein-disease pairs in a single analysis", "Cis-pQTL instruments are strong (F-stat typically >30) and mechanistically interpretable as proxy for drug targeting the protein", "UK Biobank PPP data is freely available; enables any lab to run proteome-wide MR without bespoke proteomics data"],
     cons: ["Many cis-pQTLs tag epitope-binding artifacts rather than true protein abundance (aptamer-based platforms especially prone)", "cis-pQTL instruments often have very limited SNPs (sometimes just 1); single-SNP MR cannot test instrument validity assumptions", "Population stratification in pQTL GWAS can inflate or deflate MR estimates; ancestry matching between pQTL and outcome GWAS required"],
     details: "UK Biobank PPP (Sun et al. 2023): 2,923 Olink proteins × 54,219 participants, 14,287 pQTLs for 1,859 proteins. PW-MR pipeline: extract cis-pQTL instruments (±1 Mb of gene, p<5×10⁻⁸, LD clumped r²<0.001), harmonize with outcome GWAS, IVW MR, colocalization (H4>0.8). Zheng et al. 2020: 154 proteins, 11 disease outcomes. Folkersen: INTERVAL study pQTLs. OpenTargets Genetics integrates pQTL-based MR. DrugBank cross-reference to identify existing drugs targeting MR-prioritized proteins.",
-    url: "https://www.nature.com/articles/s41586-023-06592-6"
+    url: "https://www.nature.com/articles/s41586-023-06592-6",
+    pmid: "37794186",
   },
   {
     id: 126, year: 2023, cats: ["causal_inference"], impact: 4,
@@ -1973,7 +2077,8 @@ const DATA = [
     pros: ["Bystander effect of membrane-permeable payloads (T-DXd) kills antigen-negative neighboring tumor cells, addressing heterogeneity", "High DAR (~8 for T-DXd vs. ~3.5 for T-DM1) delivers more drug per antibody without aggregation due to novel linker chemistry", "Decouples antibody targeting from payload potency: same Ab scaffold can be combined with different payloads for different indications"],
     cons: ["Interstitial lung disease (ILD) is a class-wide ADC toxicity driven by off-target payload release in lung macrophages", "Linker stability in circulation vs. rapid cleavage in tumor lysosome is a narrow therapeutic window — payload release kinetics matter enormously", "Antigen heterogeneity and downregulation remain primary resistance mechanisms; combination strategies actively being explored"],
     details: "T-DM1 (ado-trastuzumab emtansine): DM1 maytansine payload, non-cleavable MCC linker, DAR ~3.5, no bystander. T-DXd: DXd (topoisomerase I inhibitor), cleavable tetrapeptide linker, DAR ~8, potent bystander. DESTINY-Breast03: T-DXd vs. T-DM1, ORR 79% vs. 35%. HER2-low definition: IHC 1+ or 2+/ISH-. ADC pipeline: ~100 ADCs in clinical trials as of 2024. Key: payload classes (MMAE, DM1, DXd, SN-38, PBD dimers), linker types (MCC, MC-GGFG, disulfide), DAR impact on PK/toxicity.",
-    url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2105974"
+    url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2105974",
+    pmid: "35320644",
   },
   {
     id: 129, year: 2018, cats: ["drug_modalities"], impact: 5,
@@ -1985,7 +2090,8 @@ const DATA = [
     pros: ["Catalytic mechanism: one PROTAC molecule can degrade many copies of target protein — sub-stoichiometric activity", "Overcomes resistance to occupancy-based inhibitors (e.g., AR point mutations that reduce enzalutamide binding don't affect PROTAC degradation)", "Targets protein-protein interaction surfaces and intrinsically disordered regions inaccessible to traditional small molecule inhibitors"],
     cons: ["Hook effect: excess PROTAC saturates E3 or target individually, reducing ternary complex formation — inverted U-shaped dose-response", "PROTAC molecular weight (~700–1,000 Da) challenges oral bioavailability and cell permeability beyond Lipinski's rule of five", "E3 ligase tissue distribution (CRBN high in immune cells, VHL in kidney/liver) limits degradation in tissues with low E3 expression"],
     details: "PROTAC structure: target warhead + linker + E3 ligase recruiter. E3 ligases: CRBN (thalidomide derivatives), VHL (VH032/VHL ligands), DCAF16, RNF4. Ternary complex: target:PROTAC:E3, cooperativity α determines degradation efficiency. Hook effect: Bell-shaped activity curve at high concentrations. DC50 (concentration for 50% degradation) better metric than IC50. Molecular glues: monofunctional (no bifunctional linker), stabilize neo-substrate:E3 interaction (IMiDs → CK1α, GSPT1 degraders). ARV-110 (Phase 2 mCRPC), ARV-471 (Phase 3 ER+ breast). CFT8919: KRAS G12C PROTAC, preclinical.",
-    url: "https://www.nature.com/articles/s41573-019-0047-y"
+    url: "https://www.nature.com/articles/s41573-019-0047-y",
+    pmid: "31666732",
   },
   {
     id: 130, year: 2020, cats: ["drug_modalities"], impact: 5,
@@ -1997,7 +2103,8 @@ const DATA = [
     pros: ["T-cell redirection bypasses HLA restriction and tumor immune evasion mechanisms that limit endogenous T-cell killing", "Off-the-shelf: no patient-specific manufacturing unlike CAR-T; immediate availability for aggressive malignancies", "Can be combined with checkpoint inhibitors, IMiDs, or steroids to enhance efficacy and manage CRS"],
     cons: ["Cytokine release syndrome (CRS) and immune effector cell-associated neurotoxicity (ICANS) require step-up dosing and inpatient monitoring", "T-cell exhaustion with continuous antigen exposure limits durability of response, especially in high tumor burden settings", "CD3 engagement can kill bystander cells if target antigen expressed on normal tissue (on-target off-tumor toxicity)"],
     details: "Formats: BiTE (tandem scFv, no Fc, short half-life — needs continuous infusion for blinatumomab), IgG-like (teclistamab, mosunetuzumab — Fc retains half-life, subcutaneous dosing). DART: diabody format. CrossMab: knobs-into-holes for heavy chain heterodimerization. Step-up dosing: first dose 1 mg, escalate to 48 mg over 2 weeks to reduce CRS. Approved TCEs: blinatumomab (CD19×CD3, ALL/DLBCL), teclistamab (BCMA×CD3, myeloma), talquetamab (GPRC5D×CD3), mosunetuzumab (CD20×CD3, follicular lymphoma), epcoritamab. Pipeline: DLL3, EGFR, HER2, PSMA targets.",
-    url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2203478"
+    url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2203478",
+    pmid: "35661166",
   },
   {
     id: 131, year: 2021, cats: ["drug_modalities"], impact: 5,
@@ -2009,7 +2116,8 @@ const DATA = [
     pros: ["GalNAc-siRNA: hepatic delivery without LNP, subcutaneous injection, ~6-month durability per dose (inclisiran Q6M dosing)", "Broad target space: any transcript with sufficient expression in accessible tissue is theoretically druggable, including 'undruggable' proteins", "Splice-switching ASOs (nusinersen, milasen) can rescue partially functional transcripts rather than silencing — adds functionality, not just loss-of-function"],
     cons: ["Delivery beyond liver remains a major challenge: GalNAc targets hepatocytes specifically; CNS (intrathecal), muscle (conjugate strategies) require specialized delivery", "Immunostimulation: unmethylated CpG motifs in ASOs activate TLR9; PS backbone can activate complement — require extensive chemical optimization", "Off-target silencing through seed-region complementarity to unintended transcripts; complete transcriptome-wide off-target profiling needed"],
     details: "siRNA mechanism: RISC loading, Ago2-mediated mRNA cleavage. Chemical modifications: 2'-OMe, 2'-F, PS backbone (nuclease resistance + protein binding). GalNAc conjugate: targets ASGR1 on hepatocytes, endosomal escape limits efficiency (~1–2%). ASO mechanism: RNase H1 cleavage of RNA:DNA hybrid OR steric block of splicing/translation. PS backbone: sequence-independent protein binding → platelet activation (thrombocytopenia concern at high doses). Approved: inclisiran (PCSK9 siRNA, Q6M SC), nusinersen (SMN2 splice ASO, intrathecal), eplontersen (TTR ASO, SC, Q4W), vutrisiran (TTR GalNAc-siRNA). n-Lorem: personalized ASO N-of-1 program.",
-    url: "https://www.nejm.org/doi/full/10.1056/NEJMoa1912722"
+    url: "https://www.nejm.org/doi/full/10.1056/NEJMoa1912722",
+    pmid: "32197277",
   },
   {
     id: 132, year: 2022, cats: ["drug_modalities"], impact: 4,
@@ -2033,7 +2141,8 @@ const DATA = [
     pros: ["5–10x longer intracellular half-life vs. linear mRNA: enables sustained protein expression without repeated dosing", "Lacks free termini: resistant to exonucleases (XRN1, DIS3L2) that rapidly degrade linear mRNA in vivo", "Smaller payload per functional molecule: no 5' cap, poly-A tail, or 5'/3' UTR structures required"],
     cons: ["IRES-driven translation is less efficient than cap-dependent translation; protein yield per molecule lower than optimized linear mRNA", "Back-splicing efficiency and circularization yield are highly sequence-context dependent; optimization is not fully predictable", "Manufacturing GMP-grade circRNA at scale is more complex than linear mRNA; circularization and purification add steps"],
     details: "circRNA biology: formed by back-splicing (downstream 5' splice donor to upstream 3' splice acceptor). Therapeutic circRNA: in vitro transcription + group I intron-mediated autocatalytic splicing (Wesselhoeft) or permuted intron-exon (PIE) ligation. IRES: IRES sequences (EMCV, CVB3, HCV) drive cap-independent translation. eRNA (endless RNA, Laronde): proprietary circularization + IRES. Orna: GalNAc-circRNA for hepatic delivery. Immunogenicity: m6A modification of circRNA reduces innate immune sensing. Half-life: linear mRNA ~8h vs. circRNA ~48–96h in vivo.",
-    url: "https://www.nature.com/articles/s41467-018-05096-6"
+    url: "https://www.nature.com/articles/s41467-018-05096-6",
+    pmid: "29980667",
   },
   {
     id: 134, year: 2023, cats: ["drug_modalities"], impact: 4,
@@ -2045,7 +2154,8 @@ const DATA = [
     pros: ["Targets RNA structures inaccessible to antibodies and traditionally requiring ASO or siRNA delivery constraints", "Small molecule oral bioavailability: branaplam is orally administered, unlike intrathecal nusinersen for the same SMN2 target", "Riboswitches are natural precedents for small molecule RNA binding with exquisite selectivity — validates the approach"],
     cons: ["RNA is highly dynamic and exists in multiple conformations in cells; in vitro structural binding may not translate to cellular activity", "Selectivity across the transcriptome is a key challenge — off-target RNA binding is hard to characterize systematically", "RBDD is nascent: no approved RNA-targeted small molecule yet; branaplam failed SMA Phase 2/3 partly due to off-target effects"],
     details: "Ribocil: binds FMN riboswitch in bacteria with antibiotic activity — proof-of-concept for de novo RNA small molecule discovery. Branaplam (NVS-SM2): SMN2 splice switching, also degrades HTT mRNA (dual mechanism found serendipitously). Risdiplam (Evrysdi): SMN2 splice modulator, first approved RNA-targeted small molecule (2020, SMA). Expansion Therapeutics: CGG repeat (FMR1, FXTAS), CUG repeat (DM1) — repeat expansion-specific binding. Arrakis: RBDD platform, internal ribosome entry sites. RNAFM: AI model for RNA druggability prediction.",
-    url: "https://www.nature.com/articles/nature14870"
+    url: "https://www.nature.com/articles/nature14870",
+    pmid: "26416753",
   },
   // ── VALIDATED CLINICAL TARGETS ───────────────────────────────────────────────
   {
@@ -2058,7 +2168,8 @@ const DATA = [
     pros: ["LoF carriers have 88% reduced CHD risk with 40+ years of human validation — strongest possible clinical genetic evidence", "Multiple modalities validated at same target: evolocumab (mAb, monthly SC), inclisiran (siRNA, Q6M SC), NTLA-2001 (base editing, one-time IV) — illustrates modality competition", "Cis-pQTL for PCSK9 protein levels provides the strongest MR instrument for LDL-C → CAD causal chain"],
     cons: ["Despite clear LDL lowering, FOURIER cardiovascular outcomes trial showed only modest absolute risk reduction (1.5% ARR) at enormous cost (~$14K/year for evolocumab)", "PCSK9 inhibition does not address residual cardiovascular risk from triglycerides, inflammation (hsCRP), or Lp(a)", "Inclisiran patent disputes and biosimilar competition for evolocumab have complicated commercial landscape"],
     details: "PCSK9 biology: serine protease secreted by hepatocytes, binds LDLR and targets it for lysosomal degradation → reduces hepatic LDL clearance. LoF variants: R46L (1% EUR), Y142X, C679X (African ancestry) — carriers have 40% lower LDL, 88% lower CHD risk (Cohen 2006 NEJM). Evolocumab: IgG2 mAb, binds PCSK9 and prevents LDLR interaction, FOURIER: ~60% LDL reduction. Inclisiran: GalNAc-siRNA, 2 SC doses/year, ORION trials. NTLA-2001 NHP: base editing of PCSK9 in liver, HEART-1 trial (Verve Therapeutics).",
-    url: "https://www.nejm.org/doi/full/10.1056/NEJMoa1615664"
+    url: "https://www.nejm.org/doi/full/10.1056/NEJMoa1615664",
+    pmid: "28304224",
   },
   {
     id: 136, year: 2018, cats: ["validated_targets"], impact: 5,
@@ -2082,7 +2193,8 @@ const DATA = [
     pros: ["Four independent Phase 3 successes against the same target provides unambiguous target validation and demonstrates multiple druggable mechanisms", "Tafamidis (small molecule stabilizer) provides oral once-daily option; patisiran/vutrisiran (siRNA) show superiority to tafamidis in some endpoints", "NTLA-2001 base editing provides 87% sustained TTR reduction after single dose — potential one-and-done cure vs. chronic dosing"],
     cons: ["Tafamidis approval was based on surrogate endpoints (6MWT, KCCQ); long-term mortality benefit still accumulating", "Patisiran (LNP-siRNA) requires IV infusion with premedication; vutrisiran (GalNAc-siRNA) enables SC dosing and improved the formulation", "Competitive market between modalities creates payer pushback and access challenges despite all four having clinical evidence"],
     details: "TTR biology: homotetrameric transport protein, liver secreted. Dissociation → monomers → misfolding → amyloid. Hereditary (variant TTR: V30M polyneuropathy, V122I cardiomyopathy) + wild-type TTR-ATTR (sporadic, >60yo). Patisiran (APOLLO): siRNA LNP, Q3W IV, 45% reduction in mNIS+7. Inotersen (NEURO-TTRansform): ASO, SC QW. Eplontersen: GalNAc-ASO, Q4W SC. Tafamidis (ATTR-ACT): stabilizes tetramer, oral QD. Vutrisiran (HELIOS-A): GalNAc-siRNA Q3M SC. NTLA-2001: base editing NHEJ disruption, 87% TTR knockdown. All approved or in late-stage trials.",
-    url: "https://www.nejm.org/doi/full/10.1056/NEJMoa1716153"
+    url: "https://www.nejm.org/doi/full/10.1056/NEJMoa1716153",
+    pmid: "29972753",
   },
   {
     id: 138, year: 2020, cats: ["validated_targets"], impact: 5,
@@ -2094,7 +2206,8 @@ const DATA = [
     pros: ["Human genetic validation: HPFH (hereditary persistence of HbF) naturally validates HbF reactivation as a curative strategy for both SCD and beta-thal", "Erythroid-specific enhancer targeting: editing only the +58 kb enhancer (GATA1/TAL1 binding site) disrupts BCL11A expression only in red cell precursors — preserves other BCL11A functions", "Casgevy (exagamglogene autotemcel) and Lyfgenia both FDA-approved Nov 2023 — first CRISPR medicine"],
     cons: ["Manufacturing complexity: ~6 month vein-to-vein time, autologous HSC mobilization, myeloablative conditioning, and infusion — access limited to specialized centers", "Myeloablative busulfan conditioning causes significant toxicity (infertility, secondary malignancy risk, prolonged cytopenias)", "Long-term durability beyond 3 years post-infusion, germline safety, and very rare off-target editing events require ongoing surveillance"],
     details: "BCL11A: transcriptional repressor, silences γ-globin (HbF) postnatally. +58 kb erythroid enhancer: GATA1+TAL1 binding site, erythroid-specific BCL11A expression. Casgevy (CRISPR Tx/Vertex): Cas9 RNP electroporation of CD34+ HSCs, disrupts +58 kb enhancer, ~80% HbF in RBCs post-engraftment. Lyfgenia (bluebird): lentiviral βA-T87Q-globin gene addition. HbF >20% per cell is the therapeutic threshold. OT-2: second-generation enhancer targeting with improved guide RNA. 45 SCD + 54 beta-thal patients treated with CTX001 globally as of 2024.",
-    url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2031054"
+    url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2031054",
+    pmid: "33283989",
   },
   {
     id: 139, year: 2021, cats: ["validated_targets"], impact: 4,
@@ -2105,7 +2218,8 @@ const DATA = [
     pros: ["LoF carriers identified through UK Biobank and ARIC: 1-in-309 individuals carry a predicted LoF variant, all have dramatically reduced lipids", "ANGPTL3 inhibition works even in patients with no functional LDLR (homozygous FH) via LPL-dependent mechanism — complementary to statins and PCSK9i", "cis-pQTL for ANGPTL3 protein provides clean MR instrument for LDL/TG causal inference; well-colocalized with LDL GWAS"],
     cons: ["Evinacumab IV monthly administration and high cost limit use to severe HoFH patients; SC formulation in development", "Vupanorsen (Pfizer siRNA) failed Phase 2b — ANGPTL3 may not reduce cardiovascular events beyond LDL lowering in average-risk patients", "HDL lowering from ANGPTL3 inhibition raises theoretical concerns about HDL function, though LoF carrier studies suggest safety"],
     details: "ANGPTL3 mechanism: inhibits LPL (lipoprotein lipase) and EL (endothelial lipase) → blocking ANGPTL3 increases TG clearance via LPL, reduces LDL. Evinacumab (Regeneron): IgG4 mAb, ELIPSE HoFH: 49% LDL reduction in HoFH patients where PCSK9i fails. Eplontersen (Ionis/AZ): ANGPTL3 ASO. VERVE Nexus: ANGPTL3 base editing program (cis-ABE target). Musunuru 2010: ANGPTL3 LoF → combined hypolipidemia discovery paper (same Musunuru as Baby KJ — full circle).",
-    url: "https://www.nejm.org/doi/full/10.1056/NEJMoa1907377"
+    url: "https://www.nejm.org/doi/full/10.1056/NEJMoa1907377",
+    pmid: "33196153",
   },
   {
     id: 140, year: 2022, cats: ["validated_targets"], impact: 4,
@@ -2117,7 +2231,8 @@ const DATA = [
     pros: ["HER2-low redefines the HER2 landscape: 55–60% of all breast cancers are HER2-low, expanding the T-DXd addressable market enormously", "TROP2 is broadly expressed across multiple epithelial tumors (TNBC, urothelial, NSCLC, cervical) — enables tumor-agnostic ADC strategy", "Sacituzumab govitecan (SN-38 payload, ~8 DAR) demonstrates that topoisomerase I inhibitor payloads are highly effective in TROP2-expressing tumors"],
     cons: ["TROP2 expression is also high in normal skin and GI mucosa — treatment-related adverse events (diarrhea, mucositis, alopecia) from normal tissue payload release", "HER2-low IHC scoring is subjective and technically challenging; reproducibility between pathology labs is a clinical concern", "Resistance to TROP2 ADC involves TROP2 downregulation, drug efflux pumps (MDR1), and topoisomerase I mutation — poorly understood vs. HER2"],
     details: "TROP2: transmembrane glycoprotein, 80% expression in TNBC, urothelial, NSCLC. Sacituzumab govitecan (Trodelvy): anti-TROP2 mAb + SN-38 (active irinotecan metabolite), cleavable CL2A linker, DAR ~7.6. ASCENT: TNBC, ORR 35%, median PFS 5.6m vs. 1.7m chemo. HER2-low: IHC 1+ (weak/incomplete staining <10% cells) or IHC 2+/ISH-. DESTINY-Breast04: T-DXd in HER2-low, median PFS 9.9m vs. 5.1m. HER2-ultralow (IHC 0+): DESTINY-Breast06 — T-DXd even here. ADC target validation criteria: >50% tumor expression, limited normal tissue, internalization-competent antigen.",
-    url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2203690"
+    url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2203690",
+    pmid: "35665782",
   },
   {
     id: 141, year: 2023, cats: ["validated_targets"], impact: 4,
@@ -2129,7 +2244,8 @@ const DATA = [
     pros: ["Allosteric SHP2 inhibition blocks multiple upstream RTKs simultaneously — more comprehensive than targeting any single RTK (EGFR, MET, HER2)", "Combination with KRAS G12C inhibitors addresses the primary resistance mechanism (RTK-mediated RAS reactivation) upfront", "Pan-RAS inhibitors (RMC-6236) emerging as SHP2 combination partner — may enable targeting of KRAS G12D, G12V, G13D mutations beyond G12C"],
     cons: ["On-target toxicity: SHP2 has essential roles in hematopoiesis and immune cell signaling — neutropenia, rash, and fatigue are dose-limiting", "Resistance to SHP2i+KRAS G12Ci combinations still emerges via MAPK pathway reactivation downstream of MEK/ERK", "SHP2 gain-of-function mutations (PTPN11, Noonan syndrome/JMML) are distinct from SHP2 as an adaptor in KRAS-mutant tumors — different biology"],
     details: "SHP2 (PTPN11): non-receptor tyrosine phosphatase, PTP domain activated by N-SH2 domain release upon phosphotyrosine binding → activates GRB2-SOS1-RAS axis. Allosteric SHP2i: bind SH2:PTP interface to stabilize closed/inactive conformation (TNO155, RMC-4630, JAB-3312). KRAS G12Ci resistance: RTK amplification (EGFR, MET, FGFR) → SHP2 reactivation → RAS-GTP loading of remaining KRAS (non-G12C). Combination: RMC-4630 + sotorasib (CodeBreaK 101): ORR 29% in NSCLC G12C. RMC-6236 (pan-KRAS RAS-ON inhibitor): Phase 1, PDAC + NSCLC.",
-    url: "https://www.nature.com/articles/nm.4386"
+    url: "https://www.nature.com/articles/nm.4386",
+    pmid: "28825715",
   },
 
   // ── FOUNDATION MODELS ────────────────────────────────────────────────────────
@@ -2155,7 +2271,8 @@ const DATA = [
     pros: ["Multi-species pretraining (850 species) dramatically improves transfer to regulatory and evolutionary conservation tasks vs. human-only models", "2.5B parameter model captures long-range dependencies; outperforms supervised models on 18/18 downstream genomic benchmarks in original paper", "Freely available on HuggingFace; easiest genomic FM to fine-tune for custom tasks"],
     cons: ["k-mer tokenization creates vocabulary explosion at k>6 and loses single-nucleotide resolution for point variant analysis", "Pretraining on whole genomes includes repetitive/centromeric sequences that add noise; not filtered to functional elements", "Context window (2,048 tokens at 6-mer = ~12 kb) insufficient for enhancer-promoter loop prediction; Evo/HyenaDNA needed for longer range"],
     details: "Architecture: BERT-style encoder, 6-mer tokenization, MLM pretraining. Model sizes: 500M, 1B, 2.5B. Training data: 3,202 human genomes (1000 Genomes) + 850 non-human species from ENA. Benchmarks: ENCODE regulatory elements, Splice Site, Enhancer, Promoter, splicing efficiency. NT-v2 (2024): updated with improved tokenization. Available: huggingface.co/InstaDeep/nucleotide-transformer. Competed with DNABERT-2 and Enformer on GUE (Genomics Understanding Evaluation) benchmark.",
-    url: "https://www.nature.com/articles/s41592-024-02523-z"
+    url: "https://www.nature.com/articles/s41592-024-02523-z",
+    pmid: "39609566",
   },
   {
     id: 144, year: 2022, cats: ["foundation_models", "ml_ai"], impact: 4,
@@ -2203,7 +2320,8 @@ const DATA = [
     pros: ["50M cell pretraining (vs. 30M for Geneformer) with read-depth-aware masking preserves count statistics critical for biological interpretation", "Outperforms Geneformer and scGPT on 7/9 benchmark tasks including drug response, perturbation, and cell annotation", "Read-depth augmentation during pretraining makes embeddings robust to sequencing depth variation across datasets"],
     cons: ["Human-only pretraining limits cross-species generalization; mouse and non-human primate single-cell tasks require fine-tuning", "100M parameter model requires GPU inference; not suitable for rapid screening of millions of cells on CPU clusters", "Benchmark comparisons vs. Geneformer/scGPT contested; task-specific performance varies with fine-tuning strategy"],
     details: "Architecture: Transformer encoder with read-depth token conditioning. Pretraining: 50M human scRNA-seq cells, masked gene expression prediction with depth-aware masking. Tasks: cell annotation (7 tissue datasets), drug response (GDSC/CTRPv2), gene expression enhancement (imputation), perturbation prediction. Available: huggingface.co/biomap-research/scFoundation. Related: scGPT (Chen 2024, Nature Methods), Geneformer (Theodoris 2023, Nature), CellPLM (2024, ICLR).",
-    url: "https://www.nature.com/articles/s41592-024-02305-7"
+    url: "https://www.nature.com/articles/s41592-024-02305-7",
+    pmid: "38844628",
   },
   {
     id: 148, year: 2023, cats: ["foundation_models", "drug_discovery"], impact: 4,
@@ -2251,7 +2369,8 @@ const DATA = [
     pros: ["Cross-species human+mouse pretraining (126M cells) enables direct mouse-human knowledge transfer without re-pretraining", "Biological prior integration (GRN, promoter sequence) improves few-shot performance on gene knockout phenotype prediction vs. expression-only FMs", "Hierarchical attention: gene-level and pathway-level attention heads capture both local and systems-level regulatory logic"],
     cons: ["Prior knowledge integration increases model complexity and training data requirements; GRN quality is a key bottleneck for performance", "126M cell training corpus requires careful quality control; batch effects from diverse protocols can corrupt learned representations", "Performance advantages over scGPT/Geneformer are modest on standard benchmarks; biological prior benefit clearest on systems-level tasks"],
     details: "Architecture: Transformer encoder with multi-level biological prior encoders (GRN adjacency, promoter k-mer embedding, co-expression graph). Pretraining: 126M human + mouse cells from CELLxGENE, GEO. Biological priors: STRING GRN, Ensembl promoter sequences, HPA co-expression. Tasks: cell annotation, perturbation prediction (Norman combinatorial CRISPRa), drug response, GRN inference. Available: github.com/xCompass-AI/GeneCompass. Related: scGPT (Chen 2024), Geneformer (Theodoris 2023), scFoundation (Hao 2024).",
-    url: "https://www.nature.com/articles/s41467-024-54963-z"
+    url: "https://www.nature.com/articles/s41467-024-54963-z",
+    pmid: "39375485",
   },
 
   {
@@ -2278,7 +2397,8 @@ const DATA = [
     pros: ["Culture-free: captures the full microbial diversity including the 99% of microbes that cannot be grown in the lab", "Simultaneous taxonomy + function: species identification, gene catalog, and metabolic pathway annotation from one experiment", "Enables novel species and gene discovery without prior sequence knowledge"],
     cons: ["Host DNA contamination: human stool samples may be 50–90% host DNA requiring depletion (MolYsis, saponin lysis) before sequencing", "Assembly of complex communities (gut: ~1,000 species) requires enormous compute; strain-level resolution still challenging", "Reference database gaps: >50% of reads from some environments cannot be classified; dark matter problem"],
     details: "Workflow: DNA extraction → library prep → Illumina sequencing → host depletion (Bowtie2 to human genome) → taxonomic classification (Kraken2/Bracken or MetaPhlAn4) → assembly (MEGAHIT, metaSPAdes) → gene prediction (Prodigal) → functional annotation (HUMAnN3, eggNOG-mapper). Key databases: UHGG (unified human gut genome, 286K genomes), GTDB (phylogenomically consistent taxonomy). Long-read metagenomics: PacBio HiFi for strain-resolved MAGs. MAGs (metagenome-assembled genomes): CheckM for completeness/contamination. CAMI benchmarks for method comparison.",
-    url: "https://www.nature.com/articles/nbt.3935"
+    url: "https://www.nature.com/articles/nbt.3935",
+    pmid: "28898207",
   },
   {
     id: 154, year: 2019, cats: ["metagenomics"], impact: 5,
@@ -2290,7 +2410,8 @@ const DATA = [
     pros: ["10–100x cheaper per sample than shotgun metagenomics; practical for large cohorts (n>1,000)", "DADA2 ASVs provide single-nucleotide resolution taxonomic units more reproducible across studies than OTUs", "Enormous reference databases: SILVA (2.2M sequences), RDP, Greengenes2 for taxonomic assignment"],
     cons: ["Primer bias: not all bacterial taxa amplify equally with universal V3-V4 primers; fungi, archaea, viruses missed entirely", "No functional information: taxonomy only, no metabolic pathway annotation without additional assumptions", "Compositional data: absolute abundances not measurable; requires special statistical methods (ALDEx2, ANCOM-BC, Dirichlet regression)"],
     details: "DADA2: error-corrected amplicon sequence variants (ASVs) with single-nucleotide resolution. QIIME2: end-to-end pipeline with provenance tracking and plugin ecosystem. Diversity: alpha (Shannon, Chao1, Faith's PD), beta (Bray-Curtis, UniFrac weighted/unweighted). Ordination: PCoA, UMAP on distance matrices. Statistical: PERMANOVA (vegan adonis2), ANCOM-BC for differential abundance. Earth Microbiome Project: 97,855 samples, defines global microbiome diversity. Human Microbiome Project (HMP): healthy human baseline across 18 body sites.",
-    url: "https://www.nature.com/articles/nmeth.3869"
+    url: "https://www.nature.com/articles/nmeth.3869",
+    pmid: "27214047",
   },
   {
     id: 155, year: 2021, cats: ["metagenomics", "ml_ai"],
@@ -2314,7 +2435,8 @@ const DATA = [
     pros: ["Culture-independent phage discovery from metagenomes expands the phage catalog 10–100x vs. culture-based isolation", "crAssphage (cross-assembly phage): most abundant gut virus, discovered entirely in silico from metagenomic assemblies — proof of concept for computational viromics", "CRISPR-spacer matching enables computational prediction of phage-host pairs without co-culture"],
     cons: ["Phage sequences are highly divergent; standard protein homology tools (BLAST) miss most novel phages — specialized tools (VirSorter2, DeepVirFinder, geNomad) required", "Phage host range prediction from sequence has ~60-70% accuracy; experimental validation still required before therapeutic use", "Regulatory pathway for phage therapy (personalized phage cocktails) is undefined in most jurisdictions outside compassionate use"],
     details: "Viromics workflow: viral particle enrichment (VLP) → sequencing → assembly → identification (VirSorter2, geNomad, VIBRANT) → clustering (vConTACT2) → host prediction (iPHoP, CRISPRHost, BLAST against host CRISPR spacers). IMG/VR: 10M+ viral sequences from metagenomes. GPD (Gut Phage Database): 142,809 phage genomes. crAssphage: cross-assembly phage, 97% of humans carry it. Phage therapy targets: MDR Klebsiella, P. aeruginosa, S. aureus, C. difficile.",
-    url: "https://www.nature.com/articles/s41564-018-0156-8"
+    url: "https://www.nature.com/articles/s41564-018-0156-8",
+    pmid: "30449316",
   },
   {
     id: 157, year: 2023, cats: ["metagenomics", "foundation_models"], impact: 4,
@@ -2326,7 +2448,8 @@ const DATA = [
     pros: ["617M metagenomic protein structures predicted in weeks — would take millennia by experimental methods", "Reveals novel protein fold families absent from PDB; opens entirely new structural biology for uncultured organisms", "Enables functional annotation of unknown proteins via structure-based similarity (Foldseek) even without sequence homology"],
     cons: ["Metagenomic sequences are often fragmentary; ESMFold predictions from short fragments are less reliable than full-length protein predictions", "Novel folds require experimental validation; pLDDT scores less calibrated for evolutionarily distant sequences", "Storage and search at 617M structure scale requires specialized infrastructure (Foldseek, structure-aware vector databases)"],
     details: "ESMFold applied to MGnify protein database (617M sequences, ~225M unique clusters at 30% identity). Atlas available at esmatlas.com. Foldseek for structure-based search at scale. Novel fold discovery: >1M protein clusters with no detectable PDB homolog. Applications: novel enzyme discovery (novel cellulases, oxidoreductases), antibiotic resistance protein identification, CRISPR-Cas system discovery. Related: AlphaFold DB (UniProt proteomes), AFDB-Clusters.",
-    url: "https://www.science.org/doi/10.1126/science.ade2574"
+    url: "https://www.science.org/doi/10.1126/science.ade2574",
+    pmid: "36927031",
   },
   // ── PROTEIN FOLDING ──────────────────────────────────────────────────────────
   {
@@ -2339,7 +2462,8 @@ const DATA = [
     pros: ["Demonstrated that evolutionary covariation in MSAs encodes structural information — a paradigm shift that enabled the AlphaFold revolution", "DCA contact predictions alone enabled de novo folding of small proteins before deep learning", "Provides interpretable structure-function insight: correlated residues often define allosteric communication pathways"],
     cons: ["Requires large, diverse MSAs (>1,000 sequences); fails for orphan proteins with few homologs — AlphaFold2/ESMFold addressed this", "Disentangling direct vs. indirect couplings (epistasis vs. structural contact) requires complex statistical corrections (plmDCA, GREMLIN)", "Contact prediction from DCA plateaued at ~50% precision for top-L contacts before deep learning took over"],
     details: "DCA: Potts model fitted to MSA columns via mean-field approximation or pseudolikelihood. EVfold: DCA + CNS structure determination. MetaPSICOV: neural network on DCA + other features. RaptorX-Contact: deep ResNet, CASP12 breakthrough. trRosetta: distance + orientation prediction, precursor to RoseTTAFold. The key insight: co-evolved residues are in 3D contact. AlphaFold2 Evoformer: attention over MSA rows (sequences) + pair representation — a learned DCA. Conceptual lineage: DCA → deep learning contacts → AlphaFold2.",
-    url: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0028766"
+    url: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0028766",
+    pmid: "22163331",
   },
   {
     id: 159, year: 2021, cats: ["protein_folding", "ml_ai"], impact: 5,
@@ -2351,7 +2475,8 @@ const DATA = [
     pros: ["Fully open-source under MIT license — freely usable for commercial protein design unlike AlphaFold server restrictions", "Three-track architecture integrates 1D/2D/3D representations simultaneously — enables end-to-end differentiable structure prediction", "RoseTTAFold2NA: extended to protein-RNA and protein-DNA complexes; complements AlphaFold3 for nucleic acid interactions"],
     cons: ["Slightly lower single-chain accuracy than AlphaFold2 on CASP14 benchmark for the hardest targets", "Requires MSA computation (JackHMMER/HHBlits against large databases) — similar compute requirements to AlphaFold2", "RoseTTAFold2 (2023) improved but still trails AlphaFold3 for protein-ligand pose prediction"],
     details: "Three-track: sequence track (1D MSA), pairwise track (2D distance matrix), structure track (3D coordinates). Cross-track attention: information passes between all three tracks at each layer. Training: PDB structures + distillation from AlphaFold2 predictions. RoseTTAFold2: improved with updated architecture, better multimer performance. RF2NA: protein-DNA/RNA. RFdiffusion: replaces RF2 structure module with diffusion — the breakthrough for protein design. ColabFold integrates RoseTTAFold for fast access. Applications: used in Baker lab for protein binder design pipelines.",
-    url: "https://www.science.org/doi/10.1126/science.abj8754"
+    url: "https://www.science.org/doi/10.1126/science.abj8754",
+    pmid: "34282049",
   },
   {
     id: 160, year: 2022, cats: ["protein_folding"], impact: 5,
@@ -2363,7 +2488,8 @@ const DATA = [
     pros: ["AFDB covers 200M+ proteins across 48 organism proteomes including all human proteins; democratized structural biology access", "Foldseek enables 3D structure-based similarity search across AFDB in seconds — finds functional analogs with <20% sequence identity", "PDB validation pipeline (MolProbity, RSRZ scores) provides per-structure quality metrics essential for drug discovery use"],
     cons: ["PDB structures are biased toward crystallizable, stable, ordered proteins — membrane proteins, IDRs, dynamic complexes underrepresented", "AFDB pLDDT<70 regions should not be used for SBDD — but are often ignored in automated pipelines", "PDB ligand handling: small molecule coordinates in PDB often have errors; always re-refine with GRADE/eLBOW before use in docking"],
     details: "PDB statistics (2024): 220,000+ structures; 61% X-ray, 31% cryo-EM, 7% NMR, 1% other. Resolution: X-ray median ~2.1 Å, cryo-EM increasingly <3 Å. B-factor: atomic displacement parameter, high B = flexible region. AFDB v4: 214M entries across 48 proteomes. Foldseek: 3Di alphabet for fast structure alignment. SIFTS: maps PDB residues to UniProt sequence. PDB-REDO: re-refined PDB structures with modern tools. wwPDB: worldwide deposition and validation. Key files: mmCIF (modern), PDB format (legacy). RCSB PDB: primary US access portal with advanced search.",
-    url: "https://academic.oup.com/nar/article/50/D1/D439/6430488"
+    url: "https://academic.oup.com/nar/article/50/D1/D439/6430488",
+    pmid: "10592235",
   },
   {
     id: 161, year: 2023, cats: ["protein_folding", "drug_discovery"], impact: 4,
@@ -2375,7 +2501,8 @@ const DATA = [
     pros: ["No crystallization required: works for flexible complexes, membrane proteins, and heterogeneous samples intractable to X-ray crystallography", "Single-particle analysis enables multiple conformational states from one dataset — captures dynamics relevant to drug binding", "Cryo-EM subtomogram averaging enables in situ structural biology inside intact cells"],
     cons: ["Resolution limit: most cryo-EM structures 2.5–4 Å, lower than best X-ray structures (0.8–1.5 Å); may miss details for precise pharmacophore placement", "Preferred orientation problem: some particles adopt preferred orientations on the grid, causing anisotropic resolution and model bias", "Sample preparation is art and science: vitrification quality, particle concentration, and detergent choice for membrane proteins are highly empirical"],
     details: "Key advances: direct electron detectors (Gatan K3, Thermo Falcon4) replace film/CCD. MotionCor2: beam-induced motion correction. RELION, cryoSPARC: single-particle reconstruction packages. Resolution revolution: D2-symmetric aldehyde dehydrogenase at 3.3 Å (Henderson 2013) sparked modern era. Cryo-EM milestones: TRPV1 ion channel (2013, 3.4 Å), β2-adrenergic receptor (2020, 3.2 Å). FSC (Fourier shell correlation) 0.143 criterion for resolution reporting. Top cryo-EM drug targets: PCSK9, KRAS, EGFR complexes, ribosomes for antibiotic development.",
-    url: "https://www.science.org/doi/10.1126/science.1244615"
+    url: "https://www.science.org/doi/10.1126/science.1244615",
+    pmid: "24675944",
   },
   {
     id: 162, year: 2024, cats: ["protein_folding", "gene_editing"], impact: 4,
@@ -2400,7 +2527,8 @@ const DATA = [
     pros: ["Comprehensive multi-omic characterization (WES, RNA-seq, methylation, RPPA, miRNA) with matched clinical data across 33 tumor types", "Pan-cancer analysis (PANCAN) revealed that cell-of-origin transcriptional programs supersede tissue type for some cancer classifications", "Publicly available via GDC portal; dbGaP controlled-access for germline data; cBioPortal for interactive exploration"],
     cons: ["Predominantly primary untreated tumors; limited representation of metastatic, treatment-resistant, or rare tumor types", "Bulk sequencing only; intra-tumor heterogeneity and TME composition require deconvolution (TIMER2, CIBERSORT)", "Targeted panel (WES, not WGS) misses structural variants in non-coding regions and complex rearrangements"],
     details: "TCGA statistics: 11,315 cases, 33 tumor types, 10 molecular platforms. WES: ~150x tumor, ~80x normal. Key papers: PANCAN12 (Nature 2013), PANCAN cell-of-origin (Cell 2018), PANCAN driver genes (Cell 2018, 299 drivers). GDC (Genomic Data Commons): standardized harmonized data. cBioPortal: OncoPrint, mutual exclusivity, survival analysis. Tools: maftools (R), TCGAbiolinks (R), TCGA-Assembler. TCGA splicing landscape, methylation subtypes, immune subtypes (Thorsson 2018) — all canonical references. ICGC/PCAWG: extends TCGA internationally with WGS.",
-    url: "https://doi.org/10.1016/j.cell.2018.03.022"
+    url: "https://doi.org/10.1016/j.cell.2018.03.022",
+    pmid: "29625048",
   },
   {
     id: 164, year: 2019, cats: ["cancer_genomics", "epigenomics"], impact: 5,
@@ -2412,7 +2540,8 @@ const DATA = [
     pros: ["COSMIC v3.4: 79 SBS, 11 DBS, 17 ID signatures with tissue-specific activity; each linked to known mutational process (APOBEC, UV, tobacco, POLE, HRD)", "OncoKB: FDA-level clinical actionability tiers (Level 1–4) for somatic mutations across 677 genes; directly referenced in clinical reporting", "Mutational signatures enable etiological inference from WGS data — BRCA1/2 HRD signature (SBS3) informs PARP inhibitor sensitivity independent of germline status"],
     cons: ["COSMIC variant annotation is cancer-type-specific; same variant may be driver in one cancer and passenger in another", "Mutational signature decomposition is underdetermined for low TMB tumors (<50 mutations) where statistical power is insufficient", "OncoKB annotation lags behind literature; some newly characterized alterations (novel fusions, rare exon skips) lack Level 1 evidence"],
     details: "COSMIC: 1.5M tumors, 47M coding mutations, 7M validated somatic variants. CGC (Cancer Gene Census): 740 cancer driver genes with mechanism annotation. SigProfiler: NMF-based mutational signature decomposition. SBS signatures: SBS2+13 (APOBEC, C>T at TCA/TCT), SBS3 (HRD, flat spectrum), SBS4 (tobacco, C>A), SBS6 (MMR, indels), SBS10a/b (POLE). OncoKB levels: 1 (FDA-approved CDx), 2 (standard of care), 3B (clinical evidence), 4 (biological). Hotspot mutation databases: cancerhotspots.org, Chang et al. 2018.",
-    url: "https://academic.oup.com/nar/article/47/D1/D941/5146192"
+    url: "https://academic.oup.com/nar/article/47/D1/D941/5146192",
+    pmid: "30371878",
   },
   {
     id: 165, year: 2020, cats: ["cancer_genomics", "single_cell"], impact: 5,
@@ -2424,7 +2553,8 @@ const DATA = [
     pros: ["Reveals cell states invisible to bulk sequencing: exhausted T cells (Tex), regulatory T cells (Treg), tumor-associated macrophages (TAM) — all critical immunotherapy biomarkers", "Identifies rare cell populations: cancer stem-like cells, therapy-resistant subclones at single-cell resolution within heterogeneous tumors", "Paired with spatial transcriptomics (Visium, Xenium) enables spatial TME mapping — critical for understanding immune exclusion vs. infiltrated tumor phenotypes"],
     cons: ["Single-cell dissociation disrupts cell-cell interactions and may select for dissociation-resistant cell types (fibroblasts over-represented, neurons lost)", "Tumor heterogeneity means small biopsies may not capture the full cell state landscape of a heterogeneous tumor", "Defining T cell exhaustion states (progenitor Tex vs. terminally exhausted Tex) requires careful marker selection and validated gene signatures"],
     details: "Tirosh 2016: melanoma scRNA-seq, MITF/AXL plasticity axis defines drug tolerance. Lambrechts 2018: NSCLC, 6 myeloid states, alveolar macrophage vs. monocyte-derived TAM. T cell states: Tn (naive), Tscm (stem-like), Tem (effector memory), Tex (exhausted, TOX+PDCD1+ENTPD1+). CAF subtypes: myofibroblastic (myCAF, α-SMA+), inflammatory (iCAF, IL-6+). Myeloid: classical monocyte → TAM (CD163+ M2-like), monocyte-derived DC, plasmacytoid DC. Tools: Seurat, Scanpy + scVI, copyKAT (CNA from scRNA-seq). Human Tumor Atlas Network (HTAN): coordinated scRNA-seq across tumor types.",
-    url: "https://www.nature.com/articles/s41591-018-0096-5"
+    url: "https://www.nature.com/articles/s41591-018-0096-5",
+    pmid: "29988129",
   },
   {
     id: 166, year: 2021, cats: ["cancer_genomics", "clinical_genomics"], impact: 5,
@@ -2436,7 +2566,8 @@ const DATA = [
     pros: ["First systematic characterization of non-coding cancer drivers: TERT promoter mutations in 19% of cancers, promoter mutations in 28 cancer-relevant genes", "Mutational timing reveals early clonal events (truncal mutations) vs. late/subclonal: TP53, CDKN2A, KRAS are predominantly early drivers", "SV landscape: translocation, inversion, deletion, amplification signatures across cancer types; complex SVs (chromothripsis, BFB) in 22-29% of cancers"],
     cons: ["WGS at 60x tumor / 30x normal is expensive ($2,000–5,000 per pair); not yet routine in most clinical settings", "Non-coding driver interpretation is challenging without functional validation — most predicted non-coding drivers are still not experimentally confirmed", "2,658 samples is well-powered for common cancers but underpowered for rare subtypes (pediatric, rare adult histologies)"],
     details: "PCAWG: 2,658 donors, 38 tumor types, 60x WGS tumor + 30x normal. Non-coding drivers: TERT promoter (C228T/C250T) in melanoma (74%), glioblastoma (83%), bladder cancer (59%). Chromothripsis: massive rearrangement of 1+ chromosome in single catastrophic event; detected by ShatterSeek. kataegis: localized hypermutation clusters (APOBEC). Retrotransposon insertions: somatic LINE-1 insertions in 53% of cancers. PCAWG driver analysis: 705 driver point mutations, 92 driver SVs, 71 driver CNVs identified across 38 cancer types. CLOCK: mutational timing via allele-specific copy number.",
-    url: "https://www.nature.com/articles/s41586-020-1969-6"
+    url: "https://www.nature.com/articles/s41586-020-1969-6",
+    pmid: "32025007",
   },
   {
     id: 167, year: 2022, cats: ["cancer_genomics", "drug_discovery"], impact: 5,
@@ -2448,7 +2579,8 @@ const DATA = [
     pros: ["1,000+ cell lines: sufficient power to identify genetic, expression, and lineage correlates of dependency — enables biomarker-stratified target selection", "Chronos algorithm: separates CRISPR cutting toxicity from true gene dependency; more accurate than CERES for low-essentiality genes", "Synthetic lethality discovery: BRCA1/2 mutation × PARP1 dependency, RB1 loss × CDK6 dependency — actionable combinations"],
     cons: ["Cell line models: fail to capture stromal/immune interactions, in vivo pharmacology, and tumor heterogeneity relevant in patients", "CRISPR essentiality ≠ drug target: essential genes in cancer cell lines may also be essential in normal tissues — selectivity not captured", "Chronos scores still confounded by copy number (high copy number genes show attenuated dependency due to incomplete editing)"],
     details: "DepMap portal: cancerdependencymap.org. 23Q4 release: 1,095 cell lines, 17,634 genes. CERES (v1): copy-number corrected CRISPR effect. Chronos: probabilistic cell growth model, current standard. Dependency score: <-1 = strong dependency (pan-essential); >0 = no dependency. Lineage-specific: MITF in melanoma, AR in prostate, PAX8 in ovarian. Mutation-correlated: KRAS G12C line → SOS1 dependency. Differential dependencies: TP53 mutant vs. WT, CDKN2A null. RNAi companion: DEMETER2 (shRNA-based, noisier). Combination: DepMap dependency + TCGA mutation → patient-relevant synthetic lethality.",
-    url: "https://doi.org/10.1016/j.cell.2017.06.010"
+    url: "https://doi.org/10.1016/j.cell.2017.06.010",
+    pmid: "28753430",
   },
 
   {
@@ -2469,7 +2601,8 @@ const DATA = [
       "Sensitivity, specificity, and false positive rate are heavily assay- and guide-RNA-dependent — a site absent from CHANGE-seq but present in GUIDE-seq (or vice versa) is biologically meaningful, not a technical artifact, and interpretation requires experienced judgment"
     ],
     details: "GUIDE-seq (Tsai 2015, Nat Biotech): dsODN integration at DSBs → translocation sequencing; ~1000x more sensitive than ChIP-seq; cell-based; standard for IND. GUIDE-seq2 (Listgarten 2018): improved dsODN design with UMIs for quantitative off-target frequency; reduces background. rhAmpSeq (IDT/Giannoukos): amplicon-based, uses RNase H-dependent primers for selective amplification at predicted off-target loci; high specificity, targeted. CIRCLE-seq (Kleinstiver 2016, Nat Methods): circularized naked genomic DNA + recombinant Cas9 in vitro; hypersensitive biochemical screen; no cellular context. CHANGE-seq (Lazzarotto 2020, Nat Biotech): tagmentation-based genome-wide in vitro cleavage; ~10x more sensitive than CIRCLE-seq; rapid library prep; discovers rare sites. ONE-seq (Hana et al. 2021): oligonucleotide-based enrichment of cleavage products; orthogonal biochemical screen. Digenome-seq (Kim 2015, Nat Methods): Cas9 digestion of naked genomic DNA + whole-genome sequencing for uniform cut ends; simple but lower throughput. DISCOVER-seq (Wienert 2019, Nat Methods): Cas9 recruits MRE11 (DSB sensor) → ChIP of MRE11 marks DSBs; cell-based, no exogenous tag. HTGTS (High-Throughput Genome-wide Translocation Sequencing, Frock 2015): prey-bait ligation capture of translocations; quantifies chromosomal rearrangements from all DSBs. CAST-seq (Turchiano 2021, Nat Protocols): targeted sequencing of chromosomal rearrangements around on-target site; clinically relevant structural variant detection. Recommended IND package: CHANGE-seq or CIRCLE-seq (biochemical screen) + GUIDE-seq or DISCOVER-seq (cell-based) + rhAmpSeq (deep targeted validation of top sites) + CAST-seq (translocation/rearrangement quantification). FDA guidance: 2024 draft guidance for genome editing recommends risk-stratified off-target assessment.",
-    url: "https://www.nature.com/articles/nbt.3117"
+    url: "https://www.nature.com/articles/nbt.3117",
+    pmid: "25513782",
   },
 
   // ── TRANSFORMER FOUNDATIONS ──────────────────────────────────────────────────
@@ -2554,7 +2687,8 @@ const DATA = [
       "Session files are not reliably portable across machines with different file path structures"
     ],
     details: "IGV renders pileup views of short-read alignments with coverage tracks, soft-clip visualization, and base-quality coloring. Key diagnostic views: color by strand (strand bias artifacts), group by sample (somatic variant confirmation), split-read view (structural variant breakpoints). igv.js (2019) is the JavaScript port used in cBioPortal, the UCSC Genome Browser, and clinical reporting pipelines. IGV-reports generates self-contained HTML files with embedded genome views for sharing variant callsets without requiring software installation.",
-    url: "https://www.nature.com/articles/nbt.1754"
+    url: "https://www.nature.com/articles/nbt.1754",
+    pmid: "21221095",
   },
   {
     id: 173, year: 2009, cats: ["visualization", "tools"], impact: 4,
@@ -2574,7 +2708,8 @@ const DATA = [
       "Circular layout wastes space compared to linear tracks for single-genome annotation"
     ],
     details: "Circos renders genomic data as concentric rings around a circular karyogram. Ribbon tracks connect genomic coordinates — used for SV breakpoints, synteny blocks, and gene fusions. Track types include histograms, scatter plots, heatmaps, tiles, and text. The R package `circlize` (Gu et al.) reimplements Circos logic in ggplot2-compatible R code and is now the primary tool for new work. Cancer genome atlases (TCGA, ICGC) popularized the format; virtually all pan-cancer papers include a Circos-style SV landscape figure.",
-    url: "https://genome.cshlp.org/content/19/9/1639"
+    url: "https://genome.cshlp.org/content/19/9/1639",
+    pmid: "19541911",
   },
   {
     id: 174, year: 2014, cats: ["visualization", "tools"], impact: 4,
@@ -2594,7 +2729,8 @@ const DATA = [
       "Intersections must be curated (e.g., minimum size filter) or the plot becomes cluttered with many near-zero bars"
     ],
     details: "UpSet uses a matrix where rows = sets and columns = intersections; filled dots indicate set membership. Bars above the matrix show intersection size (sorted descending by default). Horizontal bars on the left show total set size. Key implementations: UpSetR (Conway et al., 2017 — adds attribute boxplots above intersection bars), upsetplot (Python, matplotlib-based), ComplexUpset (R, ggplot2-based with full geom support). Common genomics use cases: overlap of differentially expressed genes across timepoints, comparison of variant callers, intersection of regulatory element annotations across cell types.",
-    url: "https://doi.org/10.1109/TVCG.2014.2346248"
+    url: "https://doi.org/10.1109/TVCG.2014.2346248",
+    pmid: "26356912",
   },
   {
     id: 175, year: 2016, cats: ["visualization", "tools"], impact: 5,
@@ -2614,7 +2750,8 @@ const DATA = [
       "Default color palette choices (red-white-blue) are perceptually non-uniform; requires manual override for publication figures"
     ],
     details: "Core concept: `Heatmap()` objects are combined with `+` (horizontal) or `%v%` (vertical) to build panels. Annotations use `HeatmapAnnotation()` with named list of vectors/matrices. Clustering: hierarchical (default) or k-means; clustering on subsets via `row_split`/`column_split`. Key extensions: `EnrichedHeatmap` for ChIP/ATAC signal around genomic features, `densityHeatmap` for expression distribution per sample. Used in virtually all TCGA, GTEx, and HCA analysis papers. The 2022 Bioinformatics update added interactive HTML output via `InteractiveComplexHeatmap`.",
-    url: "https://doi.org/10.1093/bioinformatics/btw313"
+    url: "https://doi.org/10.1093/bioinformatics/btw313",
+    pmid: "27207943",
   },
   {
     id: 176, year: 2013, cats: ["ml_ai", "foundation_models"], impact: 5,
@@ -2746,6 +2883,7 @@ function renderCard(d) {
         <span class="card-journal">${d.journal}</span>
         <div style="display:flex;gap:8px;align-items:center;">
           <a class="card-link" href="${d.url}" target="_blank">source</a>
+          ${d.pmid ? `<a class="card-link" href="https://pubmed.ncbi.nlm.nih.gov/${d.pmid}/" target="_blank" style="color:var(--muted);font-size:11px;">PMID:${d.pmid}</a>` : ''}
           <button class="read-btn" data-read-id="${d.id}" title="Mark as read">📖 mark read</button>
         </div>
       </div>

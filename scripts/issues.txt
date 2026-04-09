@@ -1,0 +1,109 @@
+=== DUPLICATE URLs ===
+  IDs [61, 169]: https://arxiv.org/abs/1706.03762
+  IDs [76, 82]: https://www.nature.com/articles/s41587-022-01527-4
+
+=== PER-ENTRY RESULTS ===
+  ID   1 [Pacific Biosciences SMRT Sequencing: long reads ar]: DOI 404: 10.1126/science.1162986
+  ID   1 [Pacific Biosciences SMRT Sequencing: long reads ar]: DOI 404: 10.1126/science.1162986
+  ID   4 [Telomere-to-Telomere (T2T) human genome assembly]: DOI 404: 10.1126/science.abj6987
+  ID   4 [Telomere-to-Telomere (T2T) human genome assembly]: DOI 404: 10.1126/science.abj6987
+  ID   5 [CRISPR-Cas9 programmable genome editing]: DOI 404: 10.1126/science.1225829
+  ID   5 [CRISPR-Cas9 programmable genome editing]: DOI 404: 10.1126/science.1225829
+  ID  10 [CRISPR base editing in vivo: NTLA-2001 (TTR amyloi]: DOI 404: 10.1056/NEJMoa2107454
+  ID  10 [CRISPR base editing in vivo: NTLA-2001 (TTR amyloi]: DOI 404: 10.1056/NEJMoa2107454
+  ID  14 [ESM-2 / ESMFold: protein language models]: No DOI extracted from URL; title search → not found
+  ID  15 [Enformer: long-range gene expression prediction]: DOI 404: 10.1038/s41592-021-01270-1
+  ID  15 [Enformer: long-range gene expression prediction]: No PMID for DOI 10.1038/s41592-021-01270-1 — trying title search → found 34608324
+  ID  16 [Evo / Hyena: DNA foundation models at genome scale]: DOI 404: 10.1126/science.ado9336
+  ID  16 [Evo / Hyena: DNA foundation models at genome scale]: DOI 404: 10.1126/science.ado9336
+  ID  25 [Immune repertoire sequencing (Rep-seq / TCR/BCR-se]: No DOI extracted from URL; title search → not found
+  ID  27 [COVID-19 mRNA vaccine immunogenicity & immune corr]: DOI 404: 10.1056/NEJMoa2034577
+  ID  27 [COVID-19 mRNA vaccine immunogenicity & immune corr]: DOI 404: 10.1056/NEJMoa2034577
+  ID  28 [CAR-T cell therapy: axicabtagene and tisagenlecleu]: DOI 404: 10.1056/NEJMoa1707447
+  ID  28 [CAR-T cell therapy: axicabtagene and tisagenlecleu]: DOI 404: 10.1056/NEJMoa1707447
+  ID  34 [Deep learning for drug-target interaction (DeepDTA]: No DOI extracted from URL; title search → not found
+  ID  35 [Chemprop: directed message passing neural networks]: DOI 404: 10.1021/acs.jcim.9b00237
+  ID  35 [Chemprop: directed message passing neural networks]: DOI 404: 10.1021/acs.jcim.9b00237
+  ID  36 [Genetic target validation: human genetics for drug]: DOI 404: 10.1126/science.aaa1348
+  ID  36 [Genetic target validation: human genetics for drug]: DOI 404: 10.1126/science.aaa1348
+  ID  37 [BioGPT / Med-PaLM: large language models for biome]: No DOI extracted from URL; title search → not found
+  ID  39 [seqFISH / MERFISH: spatial transcriptomics via sin]: DOI 404: 10.1126/science.aaa6090
+  ID  39 [seqFISH / MERFISH: spatial transcriptomics via sin]: DOI 404: 10.1126/science.aaa6090
+  ID  42 [STAR aligner: fast splice-aware RNA-seq alignment]: No DOI extracted from URL; title search → not found
+  ID  49 [Polaris / TDC: benchmarking ML models in drug disc]: DOI 404: 10.1038/s41589-022-01131-4
+  ID  49 [Polaris / TDC: benchmarking ML models in drug disc]: No PMID for DOI 10.1038/s41589-022-01131-4 — trying title search → not found
+  ID  54 [BWA-MEM / Bowtie2: short-read DNA alignment]: No DOI extracted from URL; title search → not found
+  ID  64 [AlphaFold2 impact on structure-based drug discover]: DOI 404: 10.1038/s41589-022-01060-2
+  ID  64 [AlphaFold2 impact on structure-based drug discover]: No PMID for DOI 10.1038/s41589-022-01060-2 — trying title search → not found
+  ID  70 [Organoids and patient-derived models for translati]: DOI 404: 10.1038/s41568-018-0167-2
+  ID  70 [Organoids and patient-derived models for translati]: No PMID for DOI 10.1038/s41568-018-0167-2 — trying title search → not found
+  ID  75 [Homology-independent targeted integration (HITI) f]: DOI 404: 10.1038/nature20565
+  ID  75 [Homology-independent targeted integration (HITI) f]: DOI 404: 10.1038/nature20565
+  ID  83 [Orca-seq / long-read phased haplotyping of edited ]: DOI 404: 10.1038/s41592-022-01437-w
+  ID  83 [Orca-seq / long-read phased haplotyping of edited ]: No PMID for DOI 10.1038/s41592-022-01437-w — trying title search → not found
+  ID  89 [In vivo prime editing for genetic disease — mouse ]: DOI 404: 10.1126/scitranslmed.abl9238
+  ID  89 [In vivo prime editing for genetic disease — mouse ]: DOI 404: 10.1126/scitranslmed.abl9238
+  ID  90 [CRISPR-based diagnostics: SHERLOCK, DETECTR, and c]: DOI 404: 10.1126/science.aam9321
+  ID  90 [CRISPR-based diagnostics: SHERLOCK, DETECTR, and c]: DOI 404: 10.1126/science.aam9321
+  ID  91 [Baby KJ: first patient-specific in vivo base editi]: DOI 404: 10.1056/NEJMoa2504747
+  ID  91 [Baby KJ: first patient-specific in vivo base editi]: DOI 404: 10.1056/NEJMoa2504747
+  ID  92 [Milasen: first N-of-1 personalized ASO therapy (Ba]: DOI 404: 10.1056/NEJMoa1813279
+  ID  92 [Milasen: first N-of-1 personalized ASO therapy (Ba]: DOI 404: 10.1056/NEJMoa1813279
+  ID  94 [Peter Marks NEJM editorial: regulatory framework f]: DOI 404: 10.1056/NEJMe2505704
+  ID  94 [Peter Marks NEJM editorial: regulatory framework f]: DOI 404: 10.1056/NEJMe2505704
+  ID  97 [Tumor mutational burden (TMB) and MSI as immunothe]: DOI 404: 10.1200/JCO.19.02105
+  ID  97 [Tumor mutational burden (TMB) and MSI as immunothe]: DOI 404: 10.1200/JCO.19.02105
+  ID  99 [ACMG/AMP variant classification framework and Clin]: DOI 404: 10.1038/gim201530
+  ID  99 [ACMG/AMP variant classification framework and Clin]: No PMID for DOI 10.1038/gim201530 — trying title search → found 40661831
+  ID 101 [AAV serotype biology and capsid engineering for in]: No DOI extracted from URL; title search → not found
+  ID 102 [Ex vivo HSC gene therapy: lentiviral and RNP-based]: DOI 404: 10.1056/NEJMoa1705342
+  ID 102 [Ex vivo HSC gene therapy: lentiviral and RNP-based]: DOI 404: 10.1056/NEJMoa1705342
+  ID 104 [NHP translational studies as the regulatory bridge]: DOI 404: 10.1038/s41591-021-01625-3
+  ID 104 [NHP translational studies as the regulatory bridge]: No PMID for DOI 10.1038/s41591-021-01625-3 — trying title search → not found
+  ID 108 [SuSiE / FINEMAP / coloc: fine-mapping and colocali]: DOI 404: 10.1111/rssb.12388
+  ID 108 [SuSiE / FINEMAP / coloc: fine-mapping and colocali]: DOI 404: 10.1111/rssb.12388
+  ID 118 [Long noncoding RNAs: XIST, MALAT1, HOTAIR, and lnc]: DOI 404: 10.1038/s41576-022-00566-8
+  ID 118 [Long noncoding RNAs: XIST, MALAT1, HOTAIR, and lnc]: No PMID for DOI 10.1038/s41576-022-00566-8 — trying title search → not found
+  ID 120 [Mendelian randomization: genetic instruments for c]: No DOI extracted from URL; title search → 32591531
+  ID 126 [Mediation analysis in genomics: decomposing geneti]: No DOI extracted from URL; title search → not found
+  ID 128 [Antibody-drug conjugates (ADCs): T-DM1 to T-DXd an]: DOI 404: 10.1056/NEJMoa2105974
+  ID 128 [Antibody-drug conjugates (ADCs): T-DM1 to T-DXd an]: No PMID for DOI 10.1056/NEJMoa2105974 — trying title search → not found
+  ID 130 [Bispecific antibodies and T-cell engagers: blinatu]: DOI 404: 10.1056/NEJMoa2203478
+  ID 130 [Bispecific antibodies and T-cell engagers: blinatu]: DOI 404: 10.1056/NEJMoa2203478
+  ID 131 [siRNA and ASO therapeutics: inclisiran, nusinersen]: DOI 404: 10.1056/NEJMoa1912722
+  ID 131 [siRNA and ASO therapeutics: inclisiran, nusinersen]: No PMID for DOI 10.1056/NEJMoa1912722 — trying title search → not found
+  ID 132 [Molecular glues: IMiDs, GSPT1 degraders, and the n]: DOI 404: 10.1126/science.1248096
+  ID 132 [Molecular glues: IMiDs, GSPT1 degraders, and the n]: No PMID for DOI 10.1126/science.1248096 — trying title search → not found
+  ID 134 [RNA-targeted small molecules: ribocil, branaplam, ]: DOI 404: 10.1038/nature14870
+  ID 134 [RNA-targeted small molecules: ribocil, branaplam, ]: No PMID for DOI 10.1038/nature14870 — trying title search → not found
+  ID 135 [PCSK9: from human genetics loss-of-function to evo]: DOI 404: 10.1056/NEJMoa1615664
+  ID 135 [PCSK9: from human genetics loss-of-function to evo]: DOI 404: 10.1056/NEJMoa1615664
+  ID 136 [KRAS G12C: cracking the 'undruggable' GTPase with ]: No DOI extracted from URL; title search → not found
+  ID 137 [TTR amyloidosis: target convergence across four mo]: DOI 404: 10.1056/NEJMoa1716153
+  ID 137 [TTR amyloidosis: target convergence across four mo]: DOI 404: 10.1056/NEJMoa1716153
+  ID 138 [BCL11A enhancer: human genetics to Casgevy — sickl]: DOI 404: 10.1056/NEJMoa2031054
+  ID 138 [BCL11A enhancer: human genetics to Casgevy — sickl]: DOI 404: 10.1056/NEJMoa2031054
+  ID 139 [ANGPTL3: rare LoF variants, complete LDL/TG suppre]: DOI 404: 10.1056/NEJMoa1907377
+  ID 139 [ANGPTL3: rare LoF variants, complete LDL/TG suppre]: No PMID for DOI 10.1056/NEJMoa1907377 — trying title search → not found
+  ID 140 [TROP2 and HER2-low: expanding targetable antigen s]: DOI 404: 10.1056/NEJMoa2203690
+  ID 140 [TROP2 and HER2-low: expanding targetable antigen s]: DOI 404: 10.1056/NEJMoa2203690
+  ID 146 [ProGen2: protein language model for sequence gener]: No DOI extracted from URL; title search → not found
+  ID 148 [MolFormer / ChemBERTa: SMILES-based molecular foun]: No PMID for DOI 10.1038/s42256-022-00580-7 — trying title search → not found
+  ID 150 [Med-Gemini: multimodal clinical foundation model f]: DOI 404: 10.1038/s41591-025-03635-z
+  ID 150 [Med-Gemini: multimodal clinical foundation model f]: No PMID for DOI 10.1038/s41591-025-03635-z — trying title search → not found
+  ID 151 [GeneCompass: cross-species single-cell foundation ]: DOI 404: 10.1038/s41467-024-54963-z
+  ID 151 [GeneCompass: cross-species single-cell foundation ]: No PMID for DOI 10.1038/s41467-024-54963-z — trying title search → not found
+  ID 156 [Viromics and phage therapy: phage-host interaction]: DOI 404: 10.1038/s41564-018-0156-8
+  ID 156 [Viromics and phage therapy: phage-host interaction]: No PMID for DOI 10.1038/s41564-018-0156-8 — trying title search → not found
+  ID 157 [ESM Metagenomic Atlas and protein structure from m]: DOI 404: 10.1126/science.ade2574
+  ID 157 [ESM Metagenomic Atlas and protein structure from m]: DOI 404: 10.1126/science.ade2574
+  ID 159 [RoseTTAFold: accurate protein structure prediction]: DOI 404: 10.1126/science.abj8754
+  ID 159 [RoseTTAFold: accurate protein structure prediction]: DOI 404: 10.1126/science.abj8754
+  ID 160 [Protein structure databases: PDB, RCSB, AlphaFold ]: No DOI extracted from URL; title search → not found
+  ID 161 [Cryo-EM revolution: near-atomic resolution structu]: DOI 404: 10.1126/science.1244615
+  ID 161 [Cryo-EM revolution: near-atomic resolution structu]: No PMID for DOI 10.1126/science.1244615 — trying title search → found 32890683
+  ID 162 [Structural biology of CRISPR: Cas9, Cas12a, and pr]: No DOI extracted from URL; title search → not found
+  ID 164 [Cancer driver mutation discovery: COSMIC, OncoKB, ]: No DOI extracted from URL; title search → not found
+  ID 173 [Circos: An information aesthetic for comparative g]: No DOI extracted from URL; title search → 19541911
+  ID 175 [ComplexHeatmap: Complex heatmaps reveal patterns a]: DOI 404: 10.1093/bioinformatics/btw313
+  ID 175 [ComplexHeatmap: Complex heatmaps reveal patterns a]: DOI 404: 10.1093/bioinformatics/btw313

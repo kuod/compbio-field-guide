@@ -8,6 +8,7 @@ Output:
   - issues.txt : duplicate URLs, 404s, mismatches
 """
 
+import os
 import re
 import json
 import time
@@ -17,9 +18,10 @@ import urllib.parse
 import urllib.error
 from collections import defaultdict
 
-HTML_FILE = "../index.html"
-OUT_PMIDS = "pmids.json"
-OUT_ISSUES = "issues.txt"
+HERE = os.path.dirname(os.path.abspath(__file__))
+HTML_FILE = os.path.join(HERE, "..", "index.html")
+OUT_PMIDS = os.path.join(HERE, "pmids.json")
+OUT_ISSUES = os.path.join(HERE, "issues.txt")
 NCBI_ESEARCH = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi"
 NCBI_EFETCH  = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
 NCBI_RATE    = 0.4   # seconds between NCBI requests (≤3/sec without API key)
@@ -181,7 +183,12 @@ def main():
         url_to_ids[e["url"]].append(e["id"])
     dup_urls = {url: ids for url, ids in url_to_ids.items() if len(ids) > 1}
 
-    pmids   = {}   # id -> pmid
+    # id (str) -> pmid. Start from the existing file so manually verified
+    # corrections are never clobbered; lookups only fill in missing ids.
+    pmids = {}
+    if os.path.exists(OUT_PMIDS):
+        with open(OUT_PMIDS) as f:
+            pmids = json.load(f)
     issues  = []
 
     if dup_urls:
@@ -237,7 +244,7 @@ def main():
             note = f"No DOI extracted from URL; title search → {pmid or 'not found'}"
 
         if pmid:
-            pmids[eid] = pmid
+            pmids.setdefault(str(eid), pmid)
 
         status = f"PMID={pmid}" if pmid else ("SKIP" if skip else "NOT_FOUND")
         print(f"  [{eid:3d}] {status:25s} {title[:55]}")

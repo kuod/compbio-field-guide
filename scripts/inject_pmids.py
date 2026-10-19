@@ -3,10 +3,11 @@
 inject_pmids.py — Add pmid fields to DATA entries in index.html
 and fix known URL issues.
 """
-import json, re
+import json, os, re
 
-HTML = "../index.html"
-PMIDS = "pmids.json"
+HERE = os.path.dirname(os.path.abspath(__file__))
+HTML = os.path.join(HERE, "..", "index.html")
+PMIDS = os.path.join(HERE, "pmids.json")
 
 with open(PMIDS) as f:
     pmids = json.load(f)   # {str(id): str(pmid)}

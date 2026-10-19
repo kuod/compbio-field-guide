@@ -22,7 +22,7 @@ If $ARGUMENTS is empty, use AskUserQuestion to ask the user for the paper title 
 
 ## Step 3 — Fill in the schema
 
-You need values for every field below. Use your knowledge of the paper where confident. Use AskUserQuestion for anything you cannot determine — especially `cats`, `impact`, `job_impact`, `pros`, `cons`, and `details`.
+You need values for every field below. Use your knowledge of the paper where confident. Use AskUserQuestion for anything you cannot determine — especially `cats`, `impact`, `pros`, `cons`, and `details`.
 
 - `year` — publication year (integer)
 - `cats` — array of 1–3 category keys; show the user the valid options from catLabels and ask them to choose
@@ -31,11 +31,11 @@ You need values for every field below. Use your knowledge of the paper where con
 - `authors` — "LastName et al." or "ToolName (org)" format
 - `journal` — publication venue or platform (e.g. "Nature", "bioRxiv", "GitHub")
 - `summary` — 1–2 sentence plain-language overview of what the paper does
-- `job_impact` — 1–2 sentences on why this matters for biotech/pharma practitioners (hiring relevance)
 - `pros` — array of 2–4 concise advantage strings; may use abbreviations defined in the ABBR object
 - `cons` — array of 1–3 concise limitation strings
 - `details` — 2–4 sentence technical paragraph covering methods, key algorithms, and downstream tools
 - `url` — canonical link to the paper or resource
+- `pmid` — PubMed ID string (optional; omit for preprints/tools). For entries covering several papers, use `papers: [{label, url, pmid}]` instead.
 
 ## Step 4 — Insert the entry
 
@@ -47,5 +47,7 @@ Match the formatting of existing entries exactly:
 - End the new object with a trailing comma
 
 ## Step 5 — Confirm
+
+Run `node tests/validate-data.js` and fix anything it reports.
 
 Tell the user the entry was added with its assigned id and briefly summarize the title, year, and categories used.

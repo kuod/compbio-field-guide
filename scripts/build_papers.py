@@ -3,9 +3,10 @@
 build_papers.py — Build papers[] arrays for multi-paper entries.
 Looks up PMIDs via NCBI esearch, then injects papers: [...] into index.html.
 """
-import json, re, time, urllib.request, urllib.parse
+import json, os, re, time, urllib.request, urllib.parse
 
-HTML = "../index.html"
+HERE = os.path.dirname(os.path.abspath(__file__))
+HTML = os.path.join(HERE, "..", "index.html")
 RATE = 0.4
 
 def esearch_doi(doi):
@@ -16,7 +17,7 @@ def esearch_doi(doi):
             data = json.loads(r.read())
         ids = data.get("esearchresult", {}).get("idlist", [])
         return ids[0] if ids else None
-    except: return None
+    except Exception: return None
 
 def esearch_title(title, year=None):
     q = f'"{title[:70]}"[title]'
@@ -28,7 +29,7 @@ def esearch_title(title, year=None):
             data = json.loads(r.read())
         ids = data.get("esearchresult", {}).get("idlist", [])
         return ids[0] if ids else None
-    except: return None
+    except Exception: return None
 
 def esummary(pmid):
     url = f"https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id={pmid}&retmode=json"
@@ -37,7 +38,7 @@ def esummary(pmid):
             data = json.loads(r.read())
         art = data.get("result", {}).get(str(pmid), {})
         return art.get("title", ""), art.get("pubdate", "")
-    except: return "", ""
+    except Exception: return "", ""
 
 # ── Paper definitions for each entry ─────────────────────────────────────────
 # Format: {entry_id: [{"label", "url", "doi" or "title"+"year", "pmid"(optional)}]}

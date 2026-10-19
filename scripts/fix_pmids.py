@@ -3,7 +3,9 @@
 fix_pmids.py — Manual corrections + targeted NCBI lookups for NOT_FOUND entries.
 Outputs corrected pmids.json.
 """
-import json, time, urllib.request, urllib.parse
+import json, os, time, urllib.request, urllib.parse
+
+HERE = os.path.dirname(os.path.abspath(__file__))
 
 NCBI_ESEARCH = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi"
 NCBI_ESUMMARY = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi"
@@ -17,7 +19,7 @@ def esearch_doi(doi):
             data = json.loads(r.read())
         ids = data.get("esearchresult", {}).get("idlist", [])
         return ids[0] if ids else None
-    except: return None
+    except Exception: return None
 
 def esearch_title(title, year=None):
     q = f'"{title[:70]}"[title]'
@@ -29,7 +31,7 @@ def esearch_title(title, year=None):
             data = json.loads(r.read())
         ids = data.get("esearchresult", {}).get("idlist", [])
         return ids[0] if ids else None
-    except: return None
+    except Exception: return None
 
 def esummary_title(pmid):
     url = f"{NCBI_ESUMMARY}?db=pubmed&id={pmid}&retmode=json"
@@ -39,9 +41,10 @@ def esummary_title(pmid):
         result = data.get("result", {})
         article = result.get(str(pmid), {})
         return article.get("title", ""), article.get("pubdate", "")
-    except: return "", ""
+    except Exception: return "", ""
 
-with open("pmids.json") as f:
+PMIDS_FILE = os.path.join(HERE, "pmids.json")
+with open(PMIDS_FILE) as f:
     pmids = json.load(f)
 
 # ── Known corrections ─────────────────────────────────────────────────────────
@@ -50,10 +53,10 @@ with open("pmids.json") as f:
 corrections = {
     # ID 99 ACMG/AMP 2015 — Richards et al. Genetics in Medicine 2015
     "99":  "25741868",
-    # ID 120 MR — Davey Smith & Hemani IJE 2003 (the foundational MR paper)
-    "120": "12689957",
+    # ID 120 MR — Davey Smith & Ebrahim IJE 2003 (the foundational MR paper)
+    "120": "12689998",
     # ID 161 Cryo-EM revolution — Kühlbrandt Science 2014
-    "161": "25100049",
+    "161": "24675944",
 }
 for k, v in corrections.items():
     pmids[k] = v
@@ -129,6 +132,6 @@ for k, v in corrections.items():
     time.sleep(RATE)
     print(f"  ID {k} PMID {v}: {d} — {t[:70]}")
 
-with open("pmids.json", "w") as f:
+with open(PMIDS_FILE, "w") as f:
     json.dump(pmids, f, indent=2)
 print(f"\nWrote {len(pmids)} PMIDs to pmids.json")

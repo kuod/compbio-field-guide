@@ -3903,13 +3903,17 @@ let showUnreadOnly = false;
 
 function getRead() {
   const m = location.hash.match(/[#&]r=([^&]*)/);
-  if (m && m[1]) return new Set(m[1].split(',').filter(Boolean).map(Number));
+  if (m && m[1]) {
+    // Ignore malformed or stale ids so they cannot skew the unread counts.
+    const valid = new Set(DATA.map(d => d.id));
+    return new Set(m[1].split(',').map(x => /^\d+$/.test(x) ? Number(x) : NaN).filter(n => valid.has(n)));
+  }
   return new Set();
 }
 
 function saveRead(readSet) {
   const val = [...readSet].sort((a, b) => a - b).join(',');
-  history.replaceState(null, '', val ? '#r=' + val : location.pathname);
+  history.replaceState(null, '', val ? '#r=' + val : location.pathname + location.search);
 }
 
 // Migrate from localStorage if present and no hash yet

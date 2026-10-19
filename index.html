@@ -3113,7 +3113,9 @@ function render() {
 
 // Keyboard navigation
 document.addEventListener('keydown', e => {
-  if (e.target.tagName === 'INPUT') return;
+  if (e.defaultPrevented || e.ctrlKey || e.metaKey || e.altKey || e.shiftKey) return;
+  const t = e.target;
+  if (t && (/^(INPUT|SELECT|TEXTAREA)$/.test(t.tagName) || t.isContentEditable)) return;
   if (e.key === 'ArrowLeft')  goCarousel(-1);
   if (e.key === 'ArrowRight') goCarousel(+1);
 });

@@ -1304,7 +1304,6 @@ const DATA = [
     authors: "van der Maaten & Hinton",
     journal: "Journal of Machine Learning Research 2008",
     summary: "t-Distributed Stochastic Neighbor Embedding maps high-dimensional data to 2D by preserving local neighborhood structure. Became the dominant single-cell visualization method before UMAP, and remains widely used and cited.",
-    job_impact: "t-SNE plots defined the visual language of single-cell genomics for nearly a decade and are still routinely produced alongside UMAP. Understanding why t-SNE compresses dense clusters, why inter-cluster distances are meaningless, and when to prefer it over UMAP is expected knowledge in any single-cell role.",
     pros: [
       "Excellent local structure preservation — tight, well-separated clusters that are visually intuitive for biology audiences",
       "Perplexity parameter is interpretable as an approximate neighborhood size, making tuning principled",
@@ -2705,7 +2704,6 @@ const DATA = [
     authors: "Vaswani et al., Google Brain",
     journal: "NeurIPS 2017",
     summary: "Introduced the Transformer architecture, replacing recurrence and convolutions entirely with multi-head self-attention. Became the universal backbone for NLP, protein language models, genomics foundation models, and beyond.",
-    job_impact: "Every protein language model (ESM-2), DNA foundation model (Enformer, Evo), and single-cell transformer (scGPT) is built on this architecture — understanding attention, positional encoding, and the encoder/decoder stack is table stakes for modern computational biology.",
     pros: [
       "Parallelizable training over full sequence length — no sequential bottleneck of RNNs/LSTMs",
       "Self-attention captures arbitrary long-range dependencies in a single pass",
@@ -2726,7 +2724,6 @@ const DATA = [
     authors: "Devlin et al., Google AI",
     journal: "NAACL 2019",
     summary: "Introduced masked language modeling (MLM) and next sentence prediction for bidirectional transformer pre-training on unlabeled text. Established the pre-train → fine-tune paradigm that every biological sequence model follows.",
-    job_impact: "BERT's pre-train/fine-tune paradigm is directly instantiated in ESM-2 (proteins), DNABERT (DNA), and scBERT (single-cell) — interpreting embeddings, fine-tuning for variant effect, and understanding attention maps all require fluency with BERT concepts.",
     pros: [
       "Bidirectional context — sees both left and right sequence context simultaneously, unlike autoregressive models",
       "MLM pretraining on unlabeled sequences transfers directly to biological sequence problems with no task-specific labels",
@@ -2747,7 +2744,6 @@ const DATA = [
     authors: "Brown et al., OpenAI",
     journal: "NeurIPS 2020",
     summary: "Demonstrated that autoregressive language models at 175B parameters exhibit emergent few-shot and zero-shot generalization without gradient updates. Catalyzed the era of large foundation models across all modalities including biological sequences.",
-    job_impact: "GPT-3-style decoder-only generation directly inspired generative protein design (ProtGPT2, ProGen2) and single-cell generation (scGPT); understanding in-context learning and scaling laws is increasingly relevant for biomedical text mining and lab automation.",
     pros: [
       "Few-shot and zero-shot task performance without any fine-tuning — in-context learning is a fundamentally new paradigm",
       "175B parameter scale revealed emergent capabilities not present in smaller models; scaling laws make this predictable",
@@ -2767,7 +2763,6 @@ const DATA = [
     authors: "Robinson et al., Broad Institute",
     journal: "Nature Biotechnology 2011",
     summary: "Desktop and web genome browser for interactive visual exploration of aligned reads, variant calls, and annotation tracks. The universal final-step tool for validating any genomic result before reporting it.",
-    job_impact: "IGV is required fluency for any genomics role. Verifying variant calls visually, spotting alignment artifacts (e.g., strand bias, low mapping quality), and inspecting RNA-seq splicing patterns are daily tasks. igv.js enables embedding genome views directly in web applications and notebooks.",
     pros: [
       "Handles gigabyte-scale BAM, CRAM, VCF, bigWig, and BED files both locally and from remote URLs/cloud buckets",
       "igv.js port enables programmatic embedding in Jupyter notebooks, web apps, and reports",
@@ -2788,7 +2783,6 @@ const DATA = [
     authors: "Krzywinski et al., BCGSC",
     journal: "Genome Research 2009",
     summary: "Circular genome visualization framework for displaying structural variants, synteny, chromosomal rearrangements, and multi-track data in a radial layout. Established the iconic 'circus plot' figure type that defines cancer genomics papers.",
-    job_impact: "Circos figures appear on the cover of Nature and Science routinely for cancer genomics and comparative genomics studies. Understanding how to read and produce circular genome plots — even via R/Python wrappers — is expected for computational oncology and comparative genomics roles.",
     pros: [
       "Uniquely effective at showing genome-scale rearrangements (translocations, inversions, fusions) — linear browsers cannot capture these",
       "Handles multi-species synteny and comparative genomics with ribbon tracks connecting orthologous regions",
@@ -2809,7 +2803,6 @@ const DATA = [
     authors: "Lex et al., Harvard",
     journal: "IEEE Transactions on Visualization and Computer Graphics 2014",
     summary: "Matrix-based alternative to Venn diagrams for comparing overlaps across many sets simultaneously. Replaces unintelligible multi-circle Venn diagrams with sorted bar charts showing intersection sizes alongside a binary membership matrix.",
-    job_impact: "Standard figure type in multi-cohort genomics, comparing variant callsets, DEG lists, CRISPR hit lists, or genomic feature sets across conditions. UpSetR (R) and upsetplot (Python) are the go-to implementations — reviewers increasingly expect UpSet over Venn for >3 sets.",
     pros: [
       "Scales to any number of sets — practically handles 5–20 sets where Venn diagrams become impossible to read",
       "Sorted by intersection size makes the largest overlaps immediately visible without mental area estimation",
@@ -2830,7 +2823,6 @@ const DATA = [
     authors: "Gu et al., DKFZ",
     journal: "Bioinformatics 2016",
     summary: "R/Bioconductor package for richly annotated genomic heatmaps with synchronized row/column annotation bars, multiple concatenated heatmap panels, and publication-quality rendering. The de facto standard for genomic expression heatmap figures.",
-    job_impact: "ComplexHeatmap produces the heatmap figures in the majority of published genomics papers. Multi-omic integration panels, RNA-seq expression matrices with clinical annotation bars, and ChIP-seq signal heatmaps sorted by clustering all use this package — fluency is expected in any computational biology role requiring R.",
     pros: [
       "Rich annotation tracks — bar, box, violin, density, and genome-axis annotations attachable to any row/column",
       "Multiple heatmaps concatenated with shared dendrograms enable multi-omic comparison panels in a single figure",
@@ -2852,7 +2844,6 @@ const DATA = [
     authors: "Mikolov et al., Google",
     journal: "ICLR 2013",
     summary: "Introduced shallow neural network architectures (Skip-gram and CBOW) that learn dense vector representations of words from raw text, capturing semantic and syntactic relationships via vector arithmetic (king − man + woman ≈ queen). The conceptual ancestor of all biological sequence embedding models.",
-    job_impact: "Word2Vec's embedding paradigm maps directly onto biological sequences: BioVectors (protein k-mers), Seq2Vec, and the training philosophy behind ESM and DNABERT all inherit skip-gram intuitions. Understanding why co-occurrence in context encodes meaning helps interpret why positional neighbors in protein sequences encode structural relationships.",
     pros: [
       "Extremely efficient — trains on billions of words in hours on a single machine; inspired all subsequent sequence embedding work",
       "Vector arithmetic captures meaningful semantic structure (analogies, synonyms) in learned space",
@@ -2873,7 +2864,6 @@ const DATA = [
     authors: "Pennington et al., Stanford NLP",
     journal: "EMNLP 2014",
     summary: "Introduced a log-bilinear model trained on global word-word co-occurrence statistics rather than local windows, combining the efficiency of Word2Vec with the statistical power of matrix factorization methods like LSA. Demonstrated that global co-occurrence ratios encode semantic meaning more directly than local context prediction.",
-    job_impact: "GloVe's global co-occurrence framing influenced single-cell embedding methods: scGLUE and harmony use analogous cross-domain co-occurrence statistics. The contrast between GloVe (global statistics) and Word2Vec (local prediction) is the same design choice faced when choosing between count-based and neural embedding approaches for gene expression data.",
     pros: [
       "Explicit objective tied to global co-occurrence ratios — more interpretable training signal than Word2Vec's implicit compression",
       "Produces representations that outperform Word2Vec on word analogy and similarity benchmarks",
@@ -2894,7 +2884,6 @@ const DATA = [
     authors: "Blei, Ng, Jordan, UC Berkeley / Stanford",
     journal: "Journal of Machine Learning Research 2003",
     summary: "Introduced a generative probabilistic model where documents are mixtures of latent topics and topics are distributions over words. Established the dominant framework for unsupervised topic discovery in text, and directly inspired an entire class of single-cell and epigenomics dimensionality reduction methods.",
-    job_impact: "LDA's document-topic-word framework maps cleanly onto biological data: cells as documents, topics as cell programs, genes as words. cisTopic (scATAC topic modeling), Topyfic, and bayesian NMF in single-cell all inherit LDA's generative logic. Understanding Dirichlet priors and variational inference is needed to interpret topic coherence and select the number of topics.",
     pros: [
       "Generative model with interpretable latent structure — topics are coherent distributions over vocabulary items, not abstract axes",
       "Dirichlet priors on topic mixtures enforce sparsity — each document (cell) uses only a few topics (programs)",

@@ -3003,6 +3003,10 @@ function getFiltered() {
       (d.cons || []).join(' ').toLowerCase().includes(q)
     );
   }
+  if (showUnreadOnly) {
+    const r = getRead();
+    data = data.filter(d => !r.has(d.id));
+  }
   if (currentSort === 'year_desc') data.sort((a,b) => b.year - a.year);
   else if (currentSort === 'year_asc') data.sort((a,b) => a.year - b.year);
   else if (currentSort === 'impact') data.sort((a,b) => b.impact - a.impact);
@@ -3055,6 +3059,7 @@ function renderCarousel() {
     dots.innerHTML = '';
     arrowL.disabled = true;
     arrowR.disabled = true;
+    updateReadState();
     return;
   }
 
@@ -3088,6 +3093,9 @@ function renderCarousel() {
       renderCarousel();
     });
   });
+
+  // Freshly rendered cards carry no read markup; apply it (and counts) now.
+  updateReadState();
 }
 
 function goCarousel(dir) {
@@ -3973,16 +3981,7 @@ document.getElementById('unread-filter-btn').addEventListener('click', () => {
   showUnreadOnly = !showUnreadOnly;
   const btn = document.getElementById('unread-filter-btn');
   btn.classList.toggle('active', showUnreadOnly);
-  // Re-render with filter applied
-  if (showUnreadOnly) {
-    const r = getRead();
-    _carouselData = getFiltered().filter(d => !r.has(d.id));
-  } else {
-    _carouselData = getFiltered();
-  }
-  _carouselIdx = 0;
-  renderCarousel();
-  updateReadState();
+  render();
 });
 
 // Delegate read-btn clicks on carousel track
@@ -3994,8 +3993,7 @@ document.getElementById('carousel-track').addEventListener('click', e => {
   toggleRead(id);
   // If in unread-only mode, advance carousel past this now-read card
   if (showUnreadOnly) {
-    const r = getRead();
-    _carouselData = getFiltered().filter(d => !r.has(d.id));
+    _carouselData = getFiltered();
     if (_carouselIdx >= _carouselData.length) _carouselIdx = Math.max(0, _carouselData.length - 1);
     renderCarousel();
   }
@@ -4005,7 +4003,6 @@ document.getElementById('carousel-track').addEventListener('click', e => {
 
 
 render();
-updateReadState();
 
 // ── Abbreviation tooltip positioning ─────────────────────────────────────────
 (function() {

@@ -431,7 +431,7 @@ const DATA = [
     ],
   },
   {
-    id: 3, year: 2019, cats: ["sequencing"], impact: 4,
+    id: 3, year: 2016, cats: ["sequencing"], impact: 4,
     citations: 5755,
     title: "Linked-Read / 10x Chromium for WGS phasing",
     authors: "Zheng et al., 10x Genomics",
@@ -472,7 +472,7 @@ const DATA = [
     pmid: "22745249",
   },
   {
-    id: 6, year: 2016, cats: ["crispr"], impact: 5,
+    id: 6, year: 2015, cats: ["crispr"], impact: 5,
     citations: 2052,
     title: "GUIDE-seq: genome-wide unbiased off-target detection",
     authors: "Tsai et al., Joung Lab",
@@ -498,7 +498,7 @@ const DATA = [
     pmid: "27096365",
     papers: [
       { url: "https://www.nature.com/articles/nature17946", pmid: "27096365", label: "Komor 2016 (C→T)" },
-      { url: "https://www.nature.com/articles/nature24644", pmid: "28953375", label: "Gaudelli 2017 (A→G)" },
+      { url: "https://www.nature.com/articles/nature24644", pmid: "29160308", label: "Gaudelli 2017 (A→G)" },
     ],
   },
   {
@@ -515,7 +515,7 @@ const DATA = [
     pmid: "31634902",
   },
   {
-    id: 9, year: 2020, cats: ["crispr"], impact: 4,
+    id: 9, year: 2014, cats: ["crispr"], impact: 4,
     citations: 1640,
     title: "CRISPRi/CRISPRa genome-wide functional screens",
     authors: "Kampmann Lab, Weissman Lab, Gilbert et al.",
@@ -524,15 +524,15 @@ const DATA = [
     pros: ["No DNA cleavage, fully reversible transcriptional perturbation", "Compatible with scRNA-seq (Perturb-seq) for rich phenotypic readout", "CRISPRa enables testing of gain-of-function hypotheses without overexpression artifacts"],
     cons: ["Requires stable dCas9-effector expression, complicates primary cell delivery", "Incomplete repression (knockdown, not knockout) can obscure phenotypes", "Large effector constructs reduce library encoding capacity per lentiviral vector"],
     details: "MOI optimization (Poisson <0.3). MAGeCK/BAGEL2 for hit calling. Perturb-seq: 10x Chromium + CRISPRi, maps gene function at single-cell resolution. Genome-wide Perturb-seq (Replogle 2022).",
-    url: "https://www.nature.com/articles/nmeth.2869",
-    pmid: "24584193",
+    url: "https://doi.org/10.1016/j.cell.2014.09.029",
+    pmid: "25307932",
     papers: [
-      { url: "https://www.nature.com/articles/nmeth.2869", pmid: "24584193", label: "Gilbert 2014 (CRISPRi)" },
+      { url: "https://doi.org/10.1016/j.cell.2014.09.029", pmid: "25307932", label: "Gilbert 2014 (CRISPRi)" },
       { url: "https://www.nature.com/articles/nature14136", pmid: "25494202", label: "Konermann 2015 (CRISPRa)" },
     ],
   },
   {
-    id: 10, year: 2022, cats: ["crispr"], impact: 4,
+    id: 10, year: 2021, cats: ["crispr"], impact: 4,
     citations: 1063,
     title: "CRISPR base editing in vivo: NTLA-2001 (TTR amyloidosis)",
     authors: "Gillmore et al., Intellia/Regeneron",
@@ -547,7 +547,7 @@ const DATA = [
 
   // ── ML / AI ──────────────────────────────────────────────────────────────────
   {
-    id: 11, year: 2016, cats: ["ml_ai"], impact: 5,
+    id: 11, year: 2015, cats: ["ml_ai"], impact: 5,
     citations: 2635,
     title: "DeepBind / DeepSEA: CNNs for regulatory sequence",
     authors: "Alipanahi et al. (DeepBind 2015); Zhou & Troyanskaya (DeepSEA 2015)",
@@ -616,7 +616,7 @@ const DATA = [
     pmid: "34608324",
   },
   {
-    id: 16, year: 2023, cats: ["ml_ai", "foundation_models"], impact: 5,
+    id: 16, year: 2024, cats: ["ml_ai", "foundation_models"], impact: 5,
     citations: 182,
     title: "Evo / Hyena: DNA foundation models at genome scale",
     authors: "Nguyen et al., Hazy Research / Arc Institute",
@@ -674,7 +674,7 @@ const DATA = [
     pmid: "26000488",
   },
   {
-    id: 20, year: 2018, cats: ["single_cell"], impact: 5,
+    id: 20, year: 2017, cats: ["single_cell"], impact: 5,
     citations: 2147,
     title: "CITE-seq: protein + RNA co-profiling via antibody-oligo barcodes",
     authors: "Stoeckius et al., Satija Lab",
@@ -754,7 +754,7 @@ const DATA = [
     pmid: "19706884",
   },
   {
-    id: 26, year: 2018, cats: ["immunology", "ml_ai"], impact: 5,
+    id: 26, year: 2017, cats: ["immunology", "ml_ai"], impact: 5,
     citations: 310,
     title: "TCR-pMHC specificity prediction and neoantigen identification",
     authors: "Glanville et al. (2018); Jurtz et al. — NetMHCpan",
@@ -763,8 +763,8 @@ const DATA = [
     pros: ["NetMHCpan4.1 trained on MS eluted ligands; pan-allele coverage including rare HLAs", "Integrated in pVACseq with somatic calling for clinical neoantigen ranking", "MHCflurry is open-source and fast; enables proteome-wide scanning"],
     cons: ["False positive rate for actionable neoantigens remains high (~1–5% T cell response rate)", "CD4+ epitope (MHC class II) prediction substantially less accurate than class I", "Immunogenicity depends on TCR repertoire and self-tolerance; binding is necessary but not sufficient"],
     details: "NetMHCpan4.1: trained on MS eluted ligands + binding affinity data. %Rank, EL score metrics. pVACseq integrates somatic calling + neoantigen ranking. TMB-high tumors (NSCLC, melanoma) primary application.",
-    url: "https://www.nature.com/articles/s41586-018-0418-2",
-    pmid: "30135528",
+    url: "https://www.nature.com/articles/nature22976",
+    pmid: "28636589",
   },
   {
     id: 27, year: 2020, cats: ["immunology"], impact: 5,
@@ -801,7 +801,7 @@ const DATA = [
     ],
   },
   {
-    id: 29, year: 2023, cats: ["immunology", "single_cell"], impact: 4,
+    id: 29, year: 2021, cats: ["immunology", "single_cell"], impact: 4,
     citations: 405,
     title: "Multimodal immune profiling: DOGMA-seq / TEA-seq",
     authors: "Mimitou et al. (DOGMA-seq 2021); Swanson et al. (TEA-seq 2021)",
@@ -820,7 +820,7 @@ const DATA = [
 
   // ── EPIGENOMICS ──────────────────────────────────────────────────────────────
   {
-    id: 30, year: 2013, cats: ["epigenomics"], impact: 5,
+    id: 30, year: 2012, cats: ["epigenomics"], impact: 5,
     citations: 16635,
     title: "ENCODE Project Phase 2: functional elements in the human genome",
     authors: "ENCODE Consortium",
@@ -833,7 +833,7 @@ const DATA = [
     pmid: "22955616",
   },
   {
-    id: 31, year: 2015, cats: ["epigenomics"], impact: 5,
+    id: 31, year: 2009, cats: ["epigenomics"], impact: 5,
     citations: 2501,
     title: "WGBS / RRBS: single-base methylation mapping",
     authors: "Lister et al. (WGBS 2009); Meissner et al. (RRBS 2008)",
@@ -842,8 +842,8 @@ const DATA = [
     pros: ["Single-base resolution across all cytosine contexts (CpG, CHG, CHH)", "Horvath clock (353 CpGs) and GrimAge provide robust biological aging biomarkers", "Methylation classifiers now FDA-recognized for CNS tumor diagnosis (Capper et al.)"],
     cons: ["Bisulfite conversion destroys ~99% of DNA and creates C→T noise that confounds SNP calling", "~30x coverage required for reliable DMR detection: expensive at $500–2,000/sample", "Cannot distinguish 5mC from 5hmC; oxidative bisulfite-seq (oxBS) needed for distinction"],
     details: "WGBS: genome-wide, ~30x. RRBS: reduced representation, cost-effective for CpG-rich regions. Bismark for alignment. DSS, methylKit for DMR calling. Aging clocks: Horvath 2013, GrimAge, DunedinPACE.",
-    url: "https://www.nature.com/articles/nature07829",
-    pmid: "19295514",
+    url: "https://www.nature.com/articles/nature08514",
+    pmid: "19829295",
   },
   {
     id: 32, year: 2017, cats: ["epigenomics"], impact: 5,
@@ -904,7 +904,7 @@ const DATA = [
     pmid: "31361484",
   },
   {
-    id: 36, year: 2020, cats: ["pop_genomics", "drug_discovery"], impact: 5,
+    id: 36, year: 2015, cats: ["pop_genomics", "drug_discovery"], impact: 5,
     citations: 6512,
     title: "Genetic target validation: human genetics for drug development",
     authors: "Nelson et al. (Science 2015); Hingorani et al.",
@@ -913,8 +913,8 @@ const DATA = [
     pros: ["Human genetic validation reduces clinical attrition: validated targets 2x success rate", "Mendelian randomization provides causal inference without expensive interventional studies", "OpenTargets integrates multi-omic genetic evidence scores across >60,000 targets"],
     cons: ["GWAS identifies associations, not mechanisms; most signals are in non-coding regulatory regions", "Common variant effects are small; polygenic targets resist single-gene drug strategies", "Target druggability and tissue expression may not align with genetic signal tissue"],
     details: "PLINK2 (GWAS), REGENIE (biobank-scale), coloc (GWAS + eQTL colocalization), SuSiE (fine-mapping), PoPS (polygenic priority score). OpenTargets. PheWAS in UK Biobank.",
-    url: "https://www.science.org/doi/10.1126/science.aaa1348",
-    pmid: "25765070",
+    url: "https://www.nature.com/articles/ng.3314",
+    pmid: "26121088",
   },
   {
     id: 37, year: 2022, cats: ["drug_discovery", "foundation_models"], impact: 5,
@@ -1007,8 +1007,8 @@ const DATA = [
     pros: ["Comprehensive end-to-end single-cell workflow in one package with active development", "WNN enables seamless multimodal (RNA + CITE-seq + ATAC) data integration", "Large community, extensive documentation, and Vignettes lower onboarding barrier"],
     cons: ["R memory management struggles with >500K cell datasets without BPCells", "UMAP is stochastic; reproducibility requires seed-setting and is not globally faithful to distances", "Some Seurat defaults (e.g., log-normalization vs. SCTransform) can give different results; choice matters"],
     details: "V3: SCTransform. V4: WNN for multimodal. V5: BPCells for million-cell scale. Python ecosystem: Scanpy/AnnData is the alternative. Key: SCTransform vs. log-norm for downstream DE.",
-    url: "https://www.nature.com/articles/nbt.3154",
-    pmid: "25664528",
+    url: "https://www.nature.com/articles/nbt.3192",
+    pmid: "25867923",
   },
   {
     id: 44, year: 2017, cats: ["tools"], impact: 5,
@@ -1082,7 +1082,7 @@ const DATA = [
     pmid: "28448067",
   },
   {
-    id: 49, year: 2023, cats: ["tools"], impact: 4,
+    id: 49, year: 2022, cats: ["tools"], impact: 4,
     title: "Polaris / TDC: benchmarking ML models in drug discovery",
     authors: "Huang et al. (TDC 2021); Polaris Hub (2023)",
     journal: "Nature Chemical Biology 2022",
@@ -1143,7 +1143,7 @@ const DATA = [
     ],
   },
   {
-    id: 53, year: 2014, cats: ["epigenomics", "sequencing"], impact: 5,
+    id: 53, year: 2013, cats: ["epigenomics", "sequencing"], impact: 5,
     citations: 5755,
     title: "ATAC-seq: fast, low-input chromatin accessibility profiling",
     authors: "Buenrostro et al., Greenleaf Lab",
@@ -1181,7 +1181,7 @@ const DATA = [
     url: "https://dl.acm.org/doi/10.1145/2939672.2939785"
   },
   {
-    id: 56, year: 2016, cats: ["epigenomics"], impact: 4,
+    id: 56, year: 2012, cats: ["epigenomics"], impact: 4,
     citations: 2351,
     title: "chromHMM / Segway: chromatin state segmentation",
     authors: "Ernst & Kellis (chromHMM 2012); Hoffman et al. (Segway 2012)",
@@ -1194,7 +1194,7 @@ const DATA = [
     pmid: "22373907",
   },
   {
-    id: 57, year: 2017, cats: ["single_cell"], impact: 4,
+    id: 57, year: 2019, cats: ["single_cell"], impact: 4,
     citations: 7279,
     title: "Harmony: fast scalable integration of single-cell data across batches",
     authors: "Korsunsky et al., Raychaudhuri Lab",
@@ -1287,7 +1287,7 @@ const DATA = [
     ],
   },
   {
-    id: 63, year: 2020, cats: ["single_cell", "visualization"], impact: 4,
+    id: 63, year: 2019, cats: ["single_cell", "visualization"], impact: 4,
     citations: 11794,
     title: "UMAP: dimensionality reduction for single-cell visualization",
     authors: "McInnes, Healy, Melville",
@@ -1329,7 +1329,7 @@ const DATA = [
     url: "https://www.nature.com/articles/s41589-022-01060-2"
   },
   {
-    id: 65, year: 2020, cats: ["immunology", "spatial"], impact: 4,
+    id: 65, year: 2018, cats: ["immunology", "spatial"], impact: 4,
     title: "Spatial immune profiling: multiplex immunofluorescence (CODEX/PhenoCycler)",
     authors: "Goltsev et al. (CODEX 2018); various",
     journal: "Cell 2018",
@@ -1353,7 +1353,7 @@ const DATA = [
     url: "https://arxiv.org/abs/2312.00752"
   },
   {
-    id: 67, year: 2021, cats: ["epigenomics"], impact: 4,
+    id: 67, year: 2015, cats: ["epigenomics"], impact: 4,
     citations: 5946,
     title: "Roadmap Epigenomics: reference epigenome atlas",
     authors: "Roadmap Epigenomics Consortium",
@@ -1452,7 +1452,7 @@ const DATA = [
 
   // ── GENE EDITING / LARGE INSERTIONS / PREPRINTS ──────────────────────────────
   {
-    id: 75, year: 2019, cats: ["gene_editing"], impact: 5,
+    id: 75, year: 2016, cats: ["gene_editing"], impact: 5,
     citations: 1041,
     title: "Homology-independent targeted integration (HITI) for large cargo insertion",
     authors: "Suzuki et al., Salk Institute",
@@ -1465,7 +1465,7 @@ const DATA = [
     pmid: "27851729",
   },
   {
-    id: 76, year: 2020, cats: ["gene_editing"], impact: 5,
+    id: 76, year: 2023, cats: ["gene_editing"], impact: 5,
     citations: 327,
     title: "Programmable addition via site-specific targeting elements (PASTE)",
     authors: "Yarnall et al., Bhatt/Liu Labs",
@@ -1517,7 +1517,7 @@ const DATA = [
     pmid: "33503446",
   },
   {
-    id: 80, year: 2023, cats: ["gene_editing"], impact: 5,
+    id: 80, year: 2015, cats: ["gene_editing"], impact: 5,
     citations: 4097,
     title: "CRISPR-Cas12a (Cpf1): staggered cuts, PAM-distal editing, and multiplex arrays",
     authors: "Zetsche et al., Zhang Lab",
@@ -1530,7 +1530,7 @@ const DATA = [
     pmid: "26422227",
   },
   {
-    id: 81, year: 2023, cats: ["gene_editing"], impact: 5,
+    id: 81, year: 2011, cats: ["gene_editing"], impact: 5,
     citations: 120,
     title: "Phage-assisted continuous evolution (PACE) for editing enzyme engineering",
     authors: "Esvelt et al. / Liu Lab (PACE 2011); various evolved editors",
@@ -1539,8 +1539,8 @@ const DATA = [
     pros: ["Explores vast sequence space inaccessible to rational design: millions of variants per experiment", "Selects for complex multi-parameter traits (efficiency + specificity simultaneously) in continuous culture", "Produced clinically relevant editors: ABE8e (100x more efficient than ABE7.10), SpRY (near-PAMless)"],
     cons: ["PACE infrastructure is specialized and not widely accessible outside Broad/Liu Lab ecosystem", "Evolution can optimize for selection criteria that don't fully translate to primary cell contexts", "Evolved variants may accumulate off-target mutations not immediately apparent by selection"],
     details: "PACE: phage gene III (pIII) fitness linked to desired activity via Accessory Plasmid circuit. Evolved: evoAPOBEC1, ABE8e (TadA-8e), SpRY (near-PAMless, NRNH PAM), SaKKH. PANCE: non-continuous version for relaxed evolution. Key: >100 evolutions since 2011.",
-    url: "https://www.nature.com/articles/nature09811",
-    pmid: "21455178",
+    url: "https://www.nature.com/articles/nature09929",
+    pmid: "21478873",
   },
   {
     id: 82, year: 2023, cats: ["gene_editing"], impact: 5,
@@ -1565,7 +1565,7 @@ const DATA = [
     url: "https://www.nature.com/articles/s41592-022-01437-w"
   },
   {
-    id: 84, year: 2024, cats: ["gene_editing"], impact: 5,
+    id: 84, year: 2022, cats: ["gene_editing"], impact: 5,
     citations: 433,
     title: "Twin prime editing (twinPE) and PEmax for large sequence replacement",
     authors: "Anzalone et al., Liu Lab",
@@ -1591,7 +1591,7 @@ const DATA = [
     pmid: "34795270",
   },
   {
-    id: 86, year: 2024, cats: ["gene_editing"], impact: 5,
+    id: 86, year: 2022, cats: ["gene_editing"], impact: 5,
     citations: 186,
     title: "Engineered virus-like particles (eVLPs) for nuclease RNP delivery",
     authors: "Banskota et al., Liu Lab",
@@ -1600,8 +1600,8 @@ const DATA = [
     pros: ["Transient protein delivery: no DNA integration risk, reduced immunogenicity vs. AAV capsid", "Higher efficiency than LNPs for some cell types (neurons, HSCs) that are hard to transfect", "Modular pseudotyping enables cell-type targeting via envelope protein swapping"],
     cons: ["Production and QC of VLP preparations is complex; scaling to GMP is not yet established", "Packaging capacity limits: large base editors (>200 kDa) may exceed loading efficiency", "Immunogenicity from viral structural proteins (Gag, VSV-G) not fully characterized for clinical use"],
     details: "Gag-Pol fusion packages RNP cargo. VSV-G pseudotype for broad cell tropism; can be swapped for LY6E (lung), ASGR (hepatocyte), CD4 (T cell). Demonstrated: >60% in vivo base editing in mouse liver, brain. Related: GeRPs, LNP-eVLP hybrids.",
-    url: "https://doi.org/10.1016/j.cell.2022.08.003",
-    pmid: "36070752",
+    url: "https://doi.org/10.1016/j.cell.2021.12.021",
+    pmid: "35021064",
   },
   {
     id: 87, year: 2025, cats: ["crispr", "gene_editing"], impact: 4,
@@ -1617,7 +1617,7 @@ const DATA = [
     pmid: "30010673",
   },
   {
-    id: 88, year: 2025, cats: ["gene_editing"], impact: 5,
+    id: 88, year: 2023, cats: ["gene_editing"], impact: 5,
     citations: 156,
     title: "Fanzor and other eukaryotic RNA-guided endonucleases (preprint 2023)",
     authors: "Saito et al., Zhang Lab",
@@ -1711,7 +1711,7 @@ const DATA = [
 
 // ── CLINICAL GENOMICS / PRECISION MEDICINE ─────────────────────────────────
   {
-    id: 95, year: 2017, cats: ["clinical_genomics"], impact: 5,
+    id: 95, year: 2013, cats: ["clinical_genomics"], impact: 5,
     citations: 13,
     title: "Foundation Medicine CGP: comprehensive genomic profiling for oncology",
     authors: "Frampton et al., Foundation Medicine",
@@ -1720,11 +1720,11 @@ const DATA = [
     pros: ["Simultaneous capture of all clinically actionable variant classes (SNV, CNV, SV, TMB, MSI) in one assay", "FDA PMA approval as CDx enables direct reimbursement and regulatory use in clinical trials", "TMB (tumor mutational burden) from panel correlates with ICI response; MSI-H enables pembrolizumab use"],
     cons: ["Panel-based: misses variants outside gene list; whole-exome/genome needed for research-grade completeness", "Tissue biopsy required; spatial and temporal heterogeneity not captured in a single sample", "Variant interpretation (VUS classification) requires expert curation and is not standardized across labs"],
     details: "FoundationOne CDx: 324 genes, 2.1 Mb, hybrid capture, paired PBMC germline subtraction. SNV >99% sensitivity, CNV >95%, SV >95% for covered fusions. Approved CDx for 14+ drug-indication pairs (osimertinib/EGFR, olaparib/BRCA, etc.). ACMG/AMP 5-tier variant classification. MSI by indel instability. TMB: mut/Mb cutoff 10 for pembro. Competitors: Tempus xT, Caris MI, Guardant360 CDx.",
-    url: "https://www.nature.com/articles/nm.3823",
-    pmid: "25742452",
+    url: "https://www.nature.com/articles/nbt.2696",
+    pmid: "24142049",
   },
   {
-    id: 96, year: 2019, cats: ["clinical_genomics", "sequencing"], impact: 5,
+    id: 96, year: 2020, cats: ["clinical_genomics", "sequencing"], impact: 5,
     citations: 0,
     title: "Liquid biopsy: ctDNA detection and minimal residual disease (MRD)",
     authors: "Chabon et al. (CAPP-seq); Diehl et al.; multiple groups",
@@ -1733,8 +1733,8 @@ const DATA = [
     pros: ["Non-invasive; captures tumor heterogeneity better than single-site biopsy via shed DNA from multiple lesions", "Serial sampling enables real-time therapy monitoring, resistance detection, and MRD surveillance", "Grail/Galleri multi-cancer early detection extends liquid biopsy to screening context"],
     cons: ["Low ctDNA shedding in early-stage or CNS tumors severely limits sensitivity (<0.01% VAF)", "Error suppression (duplex sequencing, UMI barcoding) adds cost and complexity vs. standard NGS", "Regulatory path for MRD endpoints as drug approval surrogates still being established by FDA"],
     details: "CAPP-seq: hybrid capture + unique molecular identifiers (UMIs), ~0.001% VAF sensitivity. Duplex sequencing: both strands barcoded, ~1 error per 10^7 bases. cfDNA fragment size (~167 bp, nucleosome-protected) distinguishes from germline. Fragmentomics: end-motif and fragment size profiles inform tissue-of-origin. Guardant360, Foundation ACT: clinical-grade ctDNA panels. Grail Galleri: methylation-based multi-cancer early detection.",
-    url: "https://www.nature.com/articles/s41586-020-2444-0",
-    pmid: "32612235",
+    url: "https://www.nature.com/articles/s41586-020-2140-0",
+    pmid: "32269342",
   },
   {
     id: 97, year: 2020, cats: ["clinical_genomics"], impact: 4,
@@ -1971,7 +1971,7 @@ const DATA = [
   },
   // ── RNA BIOLOGY / TRANSCRIPTOMICS ────────────────────────────────────────────
   {
-    id: 115, year: 2012, cats: ["rna_biology"], impact: 5,
+    id: 115, year: 2009, cats: ["rna_biology"], impact: 5,
     citations: 86,
     title: "Ribosome profiling (Ribo-seq): codon-resolution translation mapping",
     authors: "Ingolia et al., Weissman Lab",
@@ -1980,8 +1980,8 @@ const DATA = [
     pros: ["Codon-resolution readout distinguishes actively translating ribosomes from stalled or queued ribosomes", "Genome-wide discovery of upstream ORFs (uORFs), downstream ORFs, and non-canonical translation initiation sites", "Translation efficiency (TE = Ribo-seq RPKM / RNA-seq RPKM) separates transcriptional from post-transcriptional regulation"],
     cons: ["CHX pretreatment biases ribosome density toward initiation sites; harringtonine/lactimidomycin needed for initiation mapping", "Protocol is technically demanding; RNase concentration and digestion time require careful optimization per cell type", "Low-expression genes have poor TE estimates; large read counts required for reliable codon-level analysis"],
     details: "Protocol: flash-freeze cells, RNase I digestion, monosome isolation, RPF extraction, ligation, RT-PCR, sequencing. Alignment: STAR to genome + transcriptome. ORF calling: RiboTaper, ORFquant, Ribotricer. TE: DESeq2 interaction term (condition × assay). smORFs: <100 aa peptides discovered by Ribo-seq in 5' UTRs and lncRNAs. mRNA therapeutic: validates that modified nucleoside mRNA is efficiently translated with expected reading frame.",
-    url: "https://www.nature.com/articles/nmeth.2247",
-    pmid: "23281573",
+    url: "https://www.science.org/doi/10.1126/science.1168978",
+    pmid: "19213877",
   },
   {
     id: 116, year: 2012, cats: ["rna_biology"], impact: 5,
@@ -2031,8 +2031,8 @@ const DATA = [
     pros: ["In-cell SHAPE/DMS-MaPseq captures functionally relevant RNA structures under physiological conditions; superior to in vitro folding", "Transcriptome-wide: simultaneously probes structure of thousands of transcripts in one experiment", "LinearDesign (Zhang et al. 2023) applies structure optimization to mRNA therapeutics; used by BioNTech for improved stability"],
     cons: ["Chemical probing is semi-quantitative; SHAPE reactivity reflects single-stranded accessibility, not complete 3D structure", "Ribosome-protected regions confound structure calls in translated mRNAs; must decouple from Ribo-seq signal", "Bioinformatic structure prediction from DMS data (RNAframework, DRACO) still requires experimental validation for clinical use"],
     details: "SHAPE reagents: 1M7, NMIA, NAI. DMS: methylates unpaired A and C; mutations detected by mutational profiling (SHAPE-MaP, DMS-MaPseq). PARIS: psoralen crosslinking for RNA-RNA interactions. SPLASH: scalable PARIS. LinearDesign (Zhang et al. 2023 Nature): codon optimization + structure MFE minimization for mRNA stability; 3–4x higher protein expression. RNAfold/RNAstructure for structure prediction with SHAPE constraints.",
-    url: "https://www.nature.com/articles/nmeth.4170",
-    pmid: "28139674",
+    url: "https://www.nature.com/articles/nmeth.4057",
+    pmid: "27819661",
   },
 
   // ── CAUSAL INFERENCE / BIOLOGICAL TARGETS ───────────────────────────────────
@@ -2332,7 +2332,7 @@ const DATA = [
 
   // ── FOUNDATION MODELS ────────────────────────────────────────────────────────
   {
-    id: 142, year: 2021, cats: ["foundation_models", "ml_ai"], impact: 5,
+    id: 142, year: 2023, cats: ["foundation_models", "ml_ai"], impact: 5,
     citations: 459,
     title: "HyenaDNA: long-range genomic sequence modeling with state-space models",
     authors: "Nguyen et al., Hazy Research / Stanford",
@@ -2344,7 +2344,7 @@ const DATA = [
     url: "https://arxiv.org/abs/2306.15794"
   },
   {
-    id: 143, year: 2022, cats: ["foundation_models", "ml_ai"], impact: 5,
+    id: 143, year: 2025, cats: ["foundation_models", "ml_ai"], impact: 5,
     citations: 163,
     title: "Nucleotide Transformer: multi-species DNA foundation model for variant effect prediction",
     authors: "Dalla-Torre et al., InstaDeep / EMBL-EBI",
@@ -2357,7 +2357,7 @@ const DATA = [
     pmid: "39609566",
   },
   {
-    id: 144, year: 2022, cats: ["foundation_models", "ml_ai"], impact: 4,
+    id: 144, year: 2024, cats: ["foundation_models", "ml_ai"], impact: 4,
     citations: 369,
     title: "DNABERT-2: efficient multi-species DNA language model with BPE tokenization",
     authors: "Zhou et al., Han Lab / UIUC",
@@ -2381,7 +2381,7 @@ const DATA = [
     url: "https://ieeexplore.ieee.org/document/9477085"
   },
   {
-    id: 146, year: 2022, cats: ["foundation_models", "ml_ai"], impact: 4,
+    id: 146, year: 2023, cats: ["foundation_models", "ml_ai"], impact: 4,
     citations: 10,
     title: "ProGen2: protein language model for sequence generation and fitness prediction",
     authors: "Nijkamp et al., Salesforce Research",
@@ -2394,7 +2394,7 @@ const DATA = [
     pmid: "37909046",
   },
   {
-    id: 147, year: 2023, cats: ["foundation_models", "single_cell"], impact: 5,
+    id: 147, year: 2024, cats: ["foundation_models", "single_cell"], impact: 5,
     citations: 447,
     title: "scFoundation: 100M cell single-cell foundation model",
     authors: "Hao et al., Tencent AI Lab",

@@ -1090,7 +1090,7 @@ const DATA = [
     pros: ["Standardized train/valid/test splits prevent leakage; enables fair model comparison", "66 tasks spanning ADMET, toxicity, interaction, activity, and clinical outcome prediction", "Polaris brings industry-validated experimental benchmarks beyond academic datasets"],
     cons: ["Many benchmark datasets are small (<1,000 compounds) and may not reflect real drug discovery distributions", "Leaderboard chasing incentivizes overfit to benchmark distributions vs. generalizable models", "No benchmark captures the multi-parameter optimization (MPO) complexity of real lead optimization"],
     details: "TDC: 66 tasks, standardized splits, leaderboards. Polaris: industry-grade with experimental validation. Key ADMET: Caco-2, hERG, CYP450, half-life. OGB for protein interaction.",
-    url: "https://www.nature.com/articles/s41589-022-01131-4",
+    url: "https://www.nature.com/articles/s41589-022-01131-2",
     pmid: "36131149",
   },
 
@@ -1391,7 +1391,7 @@ const DATA = [
     pmid: "35637307",
   },
   {
-    id: 70, year: 2022, cats: ["drug_discovery"], impact: 4,
+    id: 70, year: 2018, cats: ["drug_discovery"], impact: 4,
     citations: 2547,
     title: "Organoids and patient-derived models for translational genomics",
     authors: "Clevers Lab (intestinal organoids 2009); Drost & Clevers (review 2018)",
@@ -1400,7 +1400,7 @@ const DATA = [
     pros: ["Maintains tumor genetic heterogeneity better than 2D cell lines", "Enables patient-specific drug sensitivity testing with turnaround of days to weeks", "Biobanks (HUB, ORCA) provide libraries of PDOs for systematic pharmacogenomic studies"],
     cons: ["Lack of immune cells and vasculature; cannot model tumor-immune interactions without co-culture", "Derivation success rate varies by tumor type (CRC ~80%, PDAC ~50%, brain ~30%)", "Genomic drift during culture; long-term passages accumulate artifacts that diverge from primary tumor"],
     details: "Intestinal organoid: Lgr5+ stem cells in Matrigel with Wnt3a, EGF, Noggin. CancerCore (Sanger): PDOs + WGS + drug sensitivity. Organoid biobanks: HUB (Utrecht), ORCA (Dana-Farber). GSVA/fgsea for pathway analysis of organoid transcriptomes.",
-    url: "https://www.nature.com/articles/s41568-018-0167-2",
+    url: "https://www.nature.com/articles/s41568-018-0007-6",
     pmid: "29692415",
   },
   {
@@ -2018,7 +2018,7 @@ const DATA = [
     pros: ["XIST-based X-reactivation is a potential strategy for X-linked diseases (Rett syndrome, CDKL5) — therapeutic pipeline emerging", "eRNAs (enhancer RNAs) directly report active enhancer transcription; used as functional readout in CRISPR enhancer screens", "lncRNA-based therapies have distinct IP space vs. protein-targeting approaches; novel asset class for rare disease"],
     cons: ["Most lncRNA functional studies rely on loss-of-function; phenotypes often subtle or cell-type-specific", "lncRNA annotation is incomplete; many detected transcripts are artifacts of enhancer transcription rather than functional molecules", "Delivery of ASOs to nuclear-retained lncRNAs (XIST, NEAT1) requires specialized intracellular delivery for nuclear access"],
     details: "HOTAIR: PRC2 recruitment via H3K27me3 spreading. XIST: X-chromosome inactivation via Polycomb spreading + A-repeat RNA-protein interactions. NEAT1: paraspeckle scaffold via phase separation. MALAT1: splicing speckle component, regulates alternative splicing. eRNAs: bidirectional transcription from H3K27ac+ enhancers. FANTOM5: CAGE for lncRNA TSS mapping. GENCODE v44: 19,370 lncRNA genes.",
-    url: "https://www.nature.com/articles/s41576-022-00566-8",
+    url: "https://www.nature.com/articles/s41580-022-00566-8",
     pmid: "36596869",
   },
   {
@@ -2145,7 +2145,7 @@ const DATA = [
 
 // ── DRUG MODALITIES ──────────────────────────────────────────────────────────
   {
-    id: 128, year: 2019, cats: ["drug_modalities"], impact: 5,
+    id: 128, year: 2022, cats: ["drug_modalities"], impact: 5,
     citations: 1,
     title: "Antibody-drug conjugates (ADCs): T-DM1 to T-DXd and the payload revolution",
     authors: "Verma et al. (DESTINY-Breast03); Krop et al. (T-DM1 EMILIA)",
@@ -2154,7 +2154,7 @@ const DATA = [
     pros: ["Bystander effect of membrane-permeable payloads (T-DXd) kills antigen-negative neighboring tumor cells, addressing heterogeneity", "High DAR (~8 for T-DXd vs. ~3.5 for T-DM1) delivers more drug per antibody without aggregation due to novel linker chemistry", "Decouples antibody targeting from payload potency: same Ab scaffold can be combined with different payloads for different indications"],
     cons: ["Interstitial lung disease (ILD) is a class-wide ADC toxicity driven by off-target payload release in lung macrophages", "Linker stability in circulation vs. rapid cleavage in tumor lysosome is a narrow therapeutic window — payload release kinetics matter enormously", "Antigen heterogeneity and downregulation remain primary resistance mechanisms; combination strategies actively being explored"],
     details: "T-DM1 (ado-trastuzumab emtansine): DM1 maytansine payload, non-cleavable MCC linker, DAR ~3.5, no bystander. T-DXd: DXd (topoisomerase I inhibitor), cleavable tetrapeptide linker, DAR ~8, potent bystander. DESTINY-Breast03: T-DXd vs. T-DM1, ORR 79% vs. 35%. HER2-low definition: IHC 1+ or 2+/ISH-. ADC pipeline: ~100 ADCs in clinical trials as of 2024. Key: payload classes (MMAE, DM1, DXd, SN-38, PBD dimers), linker types (MCC, MC-GGFG, disulfide), DAR impact on PK/toxicity.",
-    url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2105974",
+    url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2115022",
     pmid: "35320644",
   },
   {
@@ -2184,7 +2184,7 @@ const DATA = [
     pmid: "35661166",
   },
   {
-    id: 131, year: 2021, cats: ["drug_modalities"], impact: 5,
+    id: 131, year: 2020, cats: ["drug_modalities"], impact: 5,
     citations: 38,
     title: "siRNA and ASO therapeutics: inclisiran, nusinersen, eplontersen chemical landscape",
     authors: "Ray et al. (inclisiran ORION-10); Finkel et al. (nusinersen ENDEAR); multiple",
@@ -2193,11 +2193,11 @@ const DATA = [
     pros: ["GalNAc-siRNA: hepatic delivery without LNP, subcutaneous injection, ~6-month durability per dose (inclisiran Q6M dosing)", "Broad target space: any transcript with sufficient expression in accessible tissue is theoretically druggable, including 'undruggable' proteins", "Splice-switching ASOs (nusinersen, milasen) can rescue partially functional transcripts rather than silencing — adds functionality, not just loss-of-function"],
     cons: ["Delivery beyond liver remains a major challenge: GalNAc targets hepatocytes specifically; CNS (intrathecal), muscle (conjugate strategies) require specialized delivery", "Immunostimulation: unmethylated CpG motifs in ASOs activate TLR9; PS backbone can activate complement — require extensive chemical optimization", "Off-target silencing through seed-region complementarity to unintended transcripts; complete transcriptome-wide off-target profiling needed"],
     details: "siRNA mechanism: RISC loading, Ago2-mediated mRNA cleavage. Chemical modifications: 2'-OMe, 2'-F, PS backbone (nuclease resistance + protein binding). GalNAc conjugate: targets ASGR1 on hepatocytes, endosomal escape limits efficiency (~1–2%). ASO mechanism: RNase H1 cleavage of RNA:DNA hybrid OR steric block of splicing/translation. PS backbone: sequence-independent protein binding → platelet activation (thrombocytopenia concern at high doses). Approved: inclisiran (PCSK9 siRNA, Q6M SC), nusinersen (SMN2 splice ASO, intrathecal), eplontersen (TTR ASO, SC, Q4W), vutrisiran (TTR GalNAc-siRNA). n-Lorem: personalized ASO N-of-1 program.",
-    url: "https://www.nejm.org/doi/full/10.1056/NEJMoa1912722",
-    pmid: "32197277",
+    url: "https://www.nejm.org/doi/full/10.1056/NEJMoa1912387",
+    pmid: "32187462",
   },
   {
-    id: 132, year: 2022, cats: ["drug_modalities"], impact: 4,
+    id: 132, year: 2014, cats: ["drug_modalities"], impact: 4,
     citations: 14910,
     title: "Molecular glues: IMiDs, GSPT1 degraders, and the neo-substrate paradigm",
     authors: "Krönke et al. (lenalidomide IKZF1/3 2014); Matyskiela et al. (CC-885 GSPT1)",
@@ -2206,7 +2206,7 @@ const DATA = [
     pros: ["Drug-like properties: MW <500 Da, orally bioavailable, single binding site — avoids PROTAC hook effect and molecular weight issues", "CRBN molecular glue discovery is scalable via DNA-encoded library screening for ternary complex stabilizers", "Retrospective discovery of IMiD mechanism opened rational neo-substrate prediction using structural biology (CRBN WD repeat pocket)"],
     cons: ["Target scope limited by E3 ligase surface geometry — not all proteins present a suitable neo-substrate interface to CRBN or other E3s", "Rational design is harder than PROTAC: no obvious warhead-linker-recruiter scaffold; relies heavily on structural biology and DEL screening", "Selectivity between neo-substrates (IKZF1 vs. IKZF3 vs. GSPT1) is driven by subtle structural features difficult to engineer"],
     details: "IMiD mechanism: lenalidomide binds CRBN, creates surface that recruits IKZF1/IKZF3 (myeloma) → ubiquitination → proteasomal degradation. Pomalidomide: IKZF1/3 + CK1α. CC-885: GSPT1 degrader (translation termination factor) — potent anti-proliferative. CFT7455: IKZF1/3 molecular glue, Phase 2 myeloma. Indisulam: CLK2-dependent DCAF15 molecular glue → RBM39 degradation. BI-0808658: DCAF11-based. Structural basis: CRBN β-hairpin loop accommodates hydrophobic degron of neo-substrate. DEL (DNA-encoded library) screening preferred for molecular glue discovery.",
-    url: "https://www.science.org/doi/10.1126/science.1248096",
+    url: "https://www.science.org/doi/10.1126/science.1244851",
     pmid: "24292625",
   },
   {
@@ -2223,7 +2223,7 @@ const DATA = [
     pmid: "29980667",
   },
   {
-    id: 134, year: 2023, cats: ["drug_modalities"], impact: 4,
+    id: 134, year: 2015, cats: ["drug_modalities"], impact: 4,
     citations: 1373,
     title: "RNA-targeted small molecules: ribocil, branaplam, and the RNA druggability frontier",
     authors: "Howe et al. (ribocil 2015); Palacino et al. (branaplam/NVS-SM2 2015); multiple",
@@ -2232,7 +2232,7 @@ const DATA = [
     pros: ["Targets RNA structures inaccessible to antibodies and traditionally requiring ASO or siRNA delivery constraints", "Small molecule oral bioavailability: branaplam is orally administered, unlike intrathecal nusinersen for the same SMN2 target", "Riboswitches are natural precedents for small molecule RNA binding with exquisite selectivity — validates the approach"],
     cons: ["RNA is highly dynamic and exists in multiple conformations in cells; in vitro structural binding may not translate to cellular activity", "Selectivity across the transcriptome is a key challenge — off-target RNA binding is hard to characterize systematically", "RBDD is nascent: no approved RNA-targeted small molecule yet; branaplam failed SMA Phase 2/3 partly due to off-target effects"],
     details: "Ribocil: binds FMN riboswitch in bacteria with antibiotic activity — proof-of-concept for de novo RNA small molecule discovery. Branaplam (NVS-SM2): SMN2 splice switching, also degrades HTT mRNA (dual mechanism found serendipitously). Risdiplam (Evrysdi): SMN2 splice modulator, first approved RNA-targeted small molecule (2020, SMA). Expansion Therapeutics: CGG repeat (FMR1, FXTAS), CUG repeat (DM1) — repeat expansion-specific binding. Arrakis: RBDD platform, internal ribosome entry sites. RNAFM: AI model for RNA druggability prediction.",
-    url: "https://www.nature.com/articles/nature14870",
+    url: "https://www.nature.com/articles/nature15542",
     pmid: "26416753",
   },
   // ── VALIDATED CLINICAL TARGETS ───────────────────────────────────────────────
@@ -2288,7 +2288,7 @@ const DATA = [
     pmid: "33283989",
   },
   {
-    id: 139, year: 2021, cats: ["validated_targets"], impact: 4,
+    id: 139, year: 2020, cats: ["validated_targets"], impact: 4,
     title: "ANGPTL3: rare LoF variants, complete LDL/TG suppression, and evinacumab",
     authors: "Musunuru et al. (ANGPTL3 LoF 2010); Rosenson et al. (ELIPSE HoFH 2020)",
     journal: "New England Journal of Medicine 2010; 2020",
@@ -2296,7 +2296,7 @@ const DATA = [
     pros: ["LoF carriers identified through UK Biobank and ARIC: 1-in-309 individuals carry a predicted LoF variant, all have dramatically reduced lipids", "ANGPTL3 inhibition works even in patients with no functional LDLR (homozygous FH) via LPL-dependent mechanism — complementary to statins and PCSK9i", "cis-pQTL for ANGPTL3 protein provides clean MR instrument for LDL/TG causal inference; well-colocalized with LDL GWAS"],
     cons: ["Evinacumab IV monthly administration and high cost limit use to severe HoFH patients; SC formulation in development", "Vupanorsen (Pfizer siRNA) failed Phase 2b — ANGPTL3 may not reduce cardiovascular events beyond LDL lowering in average-risk patients", "HDL lowering from ANGPTL3 inhibition raises theoretical concerns about HDL function, though LoF carrier studies suggest safety"],
     details: "ANGPTL3 mechanism: inhibits LPL (lipoprotein lipase) and EL (endothelial lipase) → blocking ANGPTL3 increases TG clearance via LPL, reduces LDL. Evinacumab (Regeneron): IgG4 mAb, ELIPSE HoFH: 49% LDL reduction in HoFH patients where PCSK9i fails. Eplontersen (Ionis/AZ): ANGPTL3 ASO. VERVE Nexus: ANGPTL3 base editing program (cis-ABE target). Musunuru 2010: ANGPTL3 LoF → combined hypolipidemia discovery paper (same Musunuru as Baby KJ — full circle).",
-    url: "https://www.nejm.org/doi/full/10.1056/NEJMoa1907377",
+    url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2031049",
     pmid: "33196153",
   },
   {
@@ -2452,7 +2452,7 @@ const DATA = [
     pros: ["Cross-species human+mouse pretraining (126M cells) enables direct mouse-human knowledge transfer without re-pretraining", "Biological prior integration (GRN, promoter sequence) improves few-shot performance on gene knockout phenotype prediction vs. expression-only FMs", "Hierarchical attention: gene-level and pathway-level attention heads capture both local and systems-level regulatory logic"],
     cons: ["Prior knowledge integration increases model complexity and training data requirements; GRN quality is a key bottleneck for performance", "126M cell training corpus requires careful quality control; batch effects from diverse protocols can corrupt learned representations", "Performance advantages over scGPT/Geneformer are modest on standard benchmarks; biological prior benefit clearest on systems-level tasks"],
     details: "Architecture: Transformer encoder with multi-level biological prior encoders (GRN adjacency, promoter k-mer embedding, co-expression graph). Pretraining: 126M human + mouse cells from CELLxGENE, GEO. Biological priors: STRING GRN, Ensembl promoter sequences, HPA co-expression. Tasks: cell annotation, perturbation prediction (Norman combinatorial CRISPRa), drug response, GRN inference. Available: github.com/xCompass-AI/GeneCompass. Related: scGPT (Chen 2024), Geneformer (Theodoris 2023), scFoundation (Hao 2024).",
-    url: "https://www.nature.com/articles/s41467-024-54963-z",
+    url: "https://www.nature.com/articles/s41422-024-01034-y",
     pmid: "39375485",
   },
 
@@ -2576,7 +2576,7 @@ const DATA = [
     pmid: "10592235",
   },
   {
-    id: 161, year: 2023, cats: ["protein_folding", "drug_discovery"], impact: 4,
+    id: 161, year: 2014, cats: ["protein_folding", "drug_discovery"], impact: 4,
     citations: 8922,
     title: "Cryo-EM revolution: near-atomic resolution structures for drug discovery",
     authors: "Kühlbrandt (resolution revolution 2014); Cheng (review 2018); multiple",
@@ -2585,7 +2585,7 @@ const DATA = [
     pros: ["No crystallization required: works for flexible complexes, membrane proteins, and heterogeneous samples intractable to X-ray crystallography", "Single-particle analysis enables multiple conformational states from one dataset — captures dynamics relevant to drug binding", "Cryo-EM subtomogram averaging enables in situ structural biology inside intact cells"],
     cons: ["Resolution limit: most cryo-EM structures 2.5–4 Å, lower than best X-ray structures (0.8–1.5 Å); may miss details for precise pharmacophore placement", "Preferred orientation problem: some particles adopt preferred orientations on the grid, causing anisotropic resolution and model bias", "Sample preparation is art and science: vitrification quality, particle concentration, and detergent choice for membrane proteins are highly empirical"],
     details: "Key advances: direct electron detectors (Gatan K3, Thermo Falcon4) replace film/CCD. MotionCor2: beam-induced motion correction. RELION, cryoSPARC: single-particle reconstruction packages. Resolution revolution: D2-symmetric aldehyde dehydrogenase at 3.3 Å (Henderson 2013) sparked modern era. Cryo-EM milestones: TRPV1 ion channel (2013, 3.4 Å), β2-adrenergic receptor (2020, 3.2 Å). FSC (Fourier shell correlation) 0.143 criterion for resolution reporting. Top cryo-EM drug targets: PCSK9, KRAS, EGFR complexes, ribosomes for antibiotic development.",
-    url: "https://www.science.org/doi/10.1126/science.1244615",
+    url: "https://www.science.org/doi/10.1126/science.1251652",
     pmid: "24675944",
   },
   {

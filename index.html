@@ -1069,7 +1069,7 @@ const DATA = [
     url: "https://terra.bio/"
   },
   {
-    id: 48, year: 2022, cats: ["tools"], impact: 4,
+    id: 48, year: 2017, cats: ["tools"], impact: 4,
     citations: 2,
     title: "CellRanger / Cell Ranger ARC: 10x Genomics data processing",
     authors: "10x Genomics",
@@ -1078,8 +1078,8 @@ const DATA = [
     pros: ["Official 10x pipeline: consistent, well-tested, and familiar to reviewers and collaborators", "cellranger multi combines GEX + VDJ + ATAC + ADT in a single run", "Cell calling algorithm (EmptyDrops) is more accurate than fixed barcode thresholds"],
     cons: ["Proprietary; limited visibility into implementation details for troubleshooting", "Slow compared to STARsolo for simple GEX-only use cases; resource-intensive", "Version updates occasionally change cell calling parameters, affecting reproducibility across batches"],
     details: "cell ranger count → filtered_feature_bc_matrix (MEX). cellranger multi for combined libraries. QC: knee plot, Q30, sequencing saturation (>60%). CellBender/SoupX for ambient RNA post-processing.",
-    url: "https://www.nature.com/articles/nmeth.4277",
-    pmid: "28448067",
+    url: "https://doi.org/10.1038/ncomms14049",
+    pmid: "28091601",
   },
   {
     id: 49, year: 2022, cats: ["tools"], impact: 4,
@@ -1487,11 +1487,15 @@ const DATA = [
     pros: ["Donor DNA produced intracellularly from RNA template — eliminates exogenous ssDNA toxicity", "Highly scalable for pooled screens (barcode-to-edit mapping)", "Demonstrated for large-scale variant functional characterization"],
     cons: ["Lower editing efficiency than Cas9 + HDR template in most mammalian cell contexts tested", "Retron RT and donor components add significant payload size", "Mechanism and key parameters not fully optimized for therapeutic primary cell use"],
     details: "Retron: reverse transcriptase produces RT-DNA (ssDNA) covalently linked to msr/msd RNA template. Combined with Cas9 nickase or DSB for editing. Sharon et al.: yeast barcode screens. Schubert et al.: mammalian precision editing. CRISPEY: retron + CRISPR for combinatorial variant screens.",
-    url: "https://doi.org/10.1016/j.cell.2021.05.020",
-    pmid: "34166614",
+    url: "https://doi.org/10.1073/pnas.2018181118",
+    pmid: "33906944",
+    papers: [
+      { url: "https://doi.org/10.1073/pnas.2018181118", pmid: "33906944", label: "Schubert 2021 (retron ssDNA variant screens)" },
+      { url: "https://doi.org/10.1016/j.cell.2018.08.057", pmid: "30245013", label: "Sharon 2018 (CRISPEY)" },
+    ],
   },
   {
-    id: 78, year: 2022, cats: ["gene_editing"], impact: 5,
+    id: 78, year: 2021, cats: ["gene_editing"], impact: 5,
     citations: 77,
     title: "Transposon-based large cargo insertion: CHARM / TnpB / IS110",
     authors: "Yao et al. (CHARM 2022); Schultz et al. (IS110 2023); Altae-Tran et al. (TnpB 2022)",
@@ -1500,11 +1504,15 @@ const DATA = [
     pros: ["No DSB: transposition via excision-integration mechanism avoids genotoxicity", "Compact payload: TnpB is ~400 aa vs. SpCas9 (~1,368 aa), enabling single AAV delivery", "IS110 bridgeRNA enables fully programmable recombination of any two DNA sequences"],
     cons: ["Efficiency in mammalian cells still substantially lower than viral integration or HDR-based methods", "Cargo size limitations vary by transposon system; not all handle full therapeutic gene payloads", "Off-target transposition hotspots not fully characterized in primary human cells"],
     details: "TnpB: IscB evolutionary ancestor of Cas9, guides via ωRNA (~ crRNA). IS110 bridgeRNA: single RNA programs both targeting and recombination simultaneously. CHARM: CRISPR-Cas-guided transposition. CAST: Tn7-based, site-specific. Cargo: up to 10 kb demonstrated.",
-    url: "https://www.nature.com/articles/s41586-022-05343-3",
-    pmid: "36289326",
+    url: "https://doi.org/10.1126/science.abj6856",
+    pmid: "34591643",
+    papers: [
+      { url: "https://doi.org/10.1126/science.abj6856", pmid: "34591643", label: "Altae-Tran 2021 (TnpB)" },
+      { url: "https://doi.org/10.1038/s41586-024-07552-4", pmid: "38926615", label: "Durrant 2024 (IS110 bridge RNA)" },
+    ],
   },
   {
-    id: 79, year: 2022, cats: ["gene_editing"], impact: 4,
+    id: 79, year: 2021, cats: ["gene_editing"], impact: 4,
     citations: 361,
     title: "Epigenome editing: DNMT3A/TET1 fusion writers and erasers",
     authors: "Liu et al. (dCas9-DNMT3A 2018); Xu et al. (CRISPRoff 2021)",
@@ -1513,8 +1521,12 @@ const DATA = [
     pros: ["Sequence-neutral: no DNA mutation risk, fully reversible in principle", "CRISPRoff silencing is heritable across >450 cell divisions without ongoing guide expression", "Opens repeat expansion disorders and dosage-sensitive genes to therapeutic intervention"],
     cons: ["Heritability varies by genomic context; some loci reset methylation after guide withdrawal", "Delivery of large dCas9-effector fusion still requires LNP or viral vectors", "Long-term safety of sustained epigenetic silencing in therapeutic contexts unknown"],
     details: "dCas9-DNMT3A-DNMT3L: de novo CpG methylation at promoters. TET1 fusion: oxidative demethylation for targeted activation. CRISPRoff (Nunez 2021, Cell): combined methylation of CpG island + H3K9me3 gives >90% heritable silencing. Tune Tx, Chroma Med are building clinical programs.",
-    url: "https://doi.org/10.1016/j.cell.2021.01.004",
-    pmid: "33503446",
+    url: "https://doi.org/10.1016/j.cell.2021.03.025",
+    pmid: "33838111",
+    papers: [
+      { url: "https://doi.org/10.1016/j.cell.2021.03.025", pmid: "33838111", label: "Nunez 2021 (CRISPRoff)" },
+      { url: "https://doi.org/10.1016/j.cell.2016.08.056", pmid: "27662091", label: "Liu 2016 (dCas9-DNMT3A/TET1)" },
+    ],
   },
   {
     id: 80, year: 2015, cats: ["gene_editing"], impact: 5,
